@@ -8,17 +8,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Farmhouse & Fields Dog Daycare</title>
+  <title>Farmhouse & Fields Dog Daycare | Canning, Nova Scotia</title>
 
   <meta
     name="description"
-    content="Farmhouse & Fields Dog Daycare — your dog's home away from home."
+    content="Farmhouse & Fields Dog Daycare in Canning, Nova Scotia. Your dog's home away from home, with room to run, familiar faces, and plenty of time to just be dogs."
   >
 
   <!-- DM SANS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
     rel="stylesheet"
@@ -27,7 +26,7 @@
   <style>
 
     /* =========================================================
-       LOCAL AUBREY
+       AUBREY
     ========================================================= */
 
     @font-face {
@@ -38,29 +37,36 @@
       font-display: swap;
     }
 
+
     /* =========================================================
        BRAND
     ========================================================= */
 
     :root {
       --wine: #6E1413;
-      --wine-dark: #57100F;
+      --wine-hover: #58100F;
 
       --river: #385D6B;
+      --river-dark: #294853;
 
       --oat: #E7DDCD;
+      --oat-light: #F2ECE3;
+
       --warm-white: #FCFBF8;
+      --cream: #F8F4EE;
 
       --ink: #2A2926;
       --body: #5B5751;
+      --muted: #77716A;
 
-      --border: #E9E4DC;
+      --border: #E7E0D6;
 
-      --max-width: 1320px;
+      --max-width: 1280px;
     }
 
+
     /* =========================================================
-       BASE
+       RESET
     ========================================================= */
 
     * {
@@ -73,8 +79,10 @@
 
     body {
       margin: 0;
+
       font-family: "DM Sans", sans-serif;
       color: var(--ink);
+
       background: var(--warm-white);
 
       -webkit-font-smoothing: antialiased;
@@ -90,9 +98,115 @@
       color: inherit;
     }
 
-    button {
+    button,
+    input,
+    textarea,
+    select {
       font: inherit;
     }
+
+
+    /* =========================================================
+       SHARED
+    ========================================================= */
+
+    .container {
+      width: min(90%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 17px;
+
+      color: var(--river);
+
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+    }
+
+    .section-title {
+      margin: 0;
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(44px, 4.8vw, 70px);
+      font-weight: 400;
+      line-height: 1;
+
+      color: var(--wine);
+    }
+
+    .section-copy {
+      color: var(--body);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .button-primary {
+      min-height: 50px;
+      padding: 0 24px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 11px;
+
+      background: var(--wine);
+      color: #fff;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .button-primary:hover,
+    .button-primary:focus-visible {
+      background: var(--wine-hover);
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 8px 22px rgba(110, 20, 19, 0.14);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      color: var(--river);
+
+      font-size: 14px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition: color 0.18s ease;
+    }
+
+    .text-link span {
+      transition: transform 0.18s ease;
+    }
+
+    .text-link:hover,
+    .text-link:focus-visible {
+      color: var(--wine);
+    }
+
+    .text-link:hover span,
+    .text-link:focus-visible span {
+      transform: translateX(4px);
+    }
+
 
     /* =========================================================
        HEADER
@@ -110,43 +224,63 @@
       border-bottom: 1px solid transparent;
 
       transition:
+        min-height 0.2s ease,
         border-color 0.2s ease,
         box-shadow 0.2s ease;
     }
 
     .site-header.scrolled {
-      border-color: var(--border);
-      box-shadow: 0 8px 30px rgba(42, 41, 38, 0.055);
+      border-color: rgba(231, 224, 214, 0.85);
+
+      box-shadow:
+        0 7px 24px rgba(42, 41, 38, 0.055);
     }
 
+
     /* =========================================================
-       NAV
+       NAVIGATION
     ========================================================= */
 
     .nav-wrap {
-      width: min(94%, var(--max-width));
-      min-height: 104px;
+      width: min(90%, var(--max-width));
+      min-height: 106px;
 
       margin: 0 auto;
 
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 30px;
+
+      transition: min-height 0.2s ease;
     }
+
+    .site-header.scrolled .nav-wrap {
+      min-height: 86px;
+    }
+
 
     /* LOGO */
 
     .brand-logo {
+      flex: 0 0 auto;
+
       display: flex;
       align-items: center;
-      flex: 0 0 auto;
+
       text-decoration: none;
     }
 
     .brand-logo img {
-      width: 215px;
+      width: 205px;
       height: auto;
+
+      transition: width 0.2s ease;
     }
+
+    .site-header.scrolled .brand-logo img {
+      width: 180px;
+    }
+
 
     /* MAIN NAV */
 
@@ -155,17 +289,17 @@
 
       display: flex;
       align-items: center;
-      gap: 3px;
+      gap: 5px;
     }
 
     .nav-link {
-      padding: 12px 13px;
+      padding: 12px 11px;
 
       color: var(--ink);
 
       font-size: 14px;
-      font-weight: 500;
       line-height: 1;
+      font-weight: 500;
 
       text-decoration: none;
 
@@ -181,13 +315,15 @@
       font-weight: 700;
     }
 
+
     /* NAV ACTIONS */
 
     .nav-actions {
+      flex: 0 0 auto;
+
       display: flex;
       align-items: center;
-      gap: 19px;
-      flex: 0 0 auto;
+      gap: 20px;
     }
 
     .client-link {
@@ -208,17 +344,17 @@
     }
 
     .waitlist-button {
-      min-height: 47px;
-      padding: 0 22px;
+      min-height: 46px;
+      padding: 0 20px;
 
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
-      border-radius: 999px;
+      border-radius: 11px;
 
       background: var(--wine);
-      color: #FFFFFF;
+      color: #fff;
 
       font-size: 13px;
       font-weight: 600;
@@ -228,19 +364,18 @@
 
       transition:
         background 0.18s ease,
-        transform 0.18s ease,
-        box-shadow 0.18s ease;
+        transform 0.18s ease;
     }
 
     .waitlist-button:hover,
     .waitlist-button:focus-visible {
-      background: var(--wine-dark);
+      background: var(--wine-hover);
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(110, 20, 19, 0.16);
     }
 
+
     /* =========================================================
-       MOBILE MENU BUTTON
+       MOBILE MENU
     ========================================================= */
 
     .menu-toggle {
@@ -260,14 +395,15 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+
       gap: 5px;
     }
 
     .menu-toggle span {
-      width: 20px;
+      width: 21px;
       height: 2px;
 
-      border-radius: 20px;
+      border-radius: 10px;
 
       background: var(--ink);
 
@@ -288,10 +424,6 @@
       transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
-
     .mobile-menu {
       max-height: 0;
       overflow: hidden;
@@ -311,8 +443,10 @@
 
     .mobile-menu-inner {
       width: min(90%, 620px);
+
       margin: 0 auto;
-      padding: 8px 0 32px;
+
+      padding: 4px 0 30px;
     }
 
     .mobile-menu a {
@@ -324,7 +458,7 @@
 
       color: var(--ink);
 
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
 
       text-decoration: none;
@@ -337,7 +471,8 @@
     }
 
     .mobile-menu .mobile-client {
-      margin-top: 12px;
+      margin-top: 10px;
+
       border-bottom: 0;
 
       color: var(--river);
@@ -351,10 +486,10 @@
       padding: 15px 20px;
 
       border: 0;
-      border-radius: 999px;
+      border-radius: 10px;
 
       background: var(--wine);
-      color: #FFFFFF;
+      color: #fff;
 
       text-align: center;
 
@@ -362,166 +497,36 @@
       font-weight: 600;
     }
 
+
     /* =========================================================
        HERO
     ========================================================= */
 
     .home-hero {
-      width: 100%;
+      position: relative;
 
-      display: grid;
-      grid-template-columns: 44% 56%;
-
-      min-height: 660px;
-
-      background: var(--warm-white);
-    }
-
-    /* HERO COPY */
-
-    .hero-copy {
-      display: flex;
-      align-items: center;
-
-      padding:
-        78px
-        clamp(42px, 5vw, 82px)
-        82px
-        max(5vw, calc((100vw - var(--max-width)) / 2));
-    }
-
-    .hero-copy-inner {
-      width: 100%;
-      max-width: 565px;
-    }
-
-    .hero-eyebrow {
-      margin: 0 0 21px;
-
-      color: var(--river);
-
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.3;
-
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .hero-title {
-      margin: 0;
-
-      color: var(--wine);
-
-      font-family: "Aubrey", serif;
-      font-size: clamp(58px, 5.4vw, 86px);
-      font-weight: 400;
-
-      line-height: 0.98;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-tagline {
-      margin: 28px 0 0;
-
-      color: var(--ink);
-
-      font-size: clamp(20px, 1.7vw, 25px);
-      font-weight: 600;
-
-      line-height: 1.35;
-    }
-
-    .hero-description {
-      max-width: 505px;
-      margin: 16px 0 0;
-
-      color: var(--body);
-
-      font-size: 17px;
-      font-weight: 400;
-
-      line-height: 1.7;
-    }
-
-    /* HERO ACTIONS */
-
-    .hero-actions {
-      margin-top: 35px;
+      min-height: 690px;
 
       display: flex;
-      align-items: center;
-      gap: 26px;
+      align-items: stretch;
+
+      overflow: hidden;
+
+      background: var(--cream);
     }
 
-    .hero-primary {
-      min-height: 50px;
-      padding: 0 25px;
 
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 999px;
-
-      background: var(--wine);
-      color: #FFFFFF;
-
-      font-size: 14px;
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition:
-        background 0.18s ease,
-        transform 0.18s ease,
-        box-shadow 0.18s ease;
-    }
-
-    .hero-primary:hover,
-    .hero-primary:focus-visible {
-      background: var(--wine-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 9px 22px rgba(110, 20, 19, 0.16);
-    }
-
-    .hero-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-
-      color: var(--river);
-
-      font-size: 14px;
-      font-weight: 600;
-
-      text-decoration: none;
-
-      transition: color 0.18s ease;
-    }
-
-    .hero-secondary-arrow {
-      display: inline-block;
-      transition: transform 0.18s ease;
-    }
-
-    .hero-secondary:hover,
-    .hero-secondary:focus-visible {
-      color: var(--wine);
-    }
-
-    .hero-secondary:hover .hero-secondary-arrow,
-    .hero-secondary:focus-visible .hero-secondary-arrow {
-      transform: translateX(4px);
-    }
-
-    /* =========================================================
-       HERO IMAGE
-    ========================================================= */
+    /* PHOTO */
 
     .hero-image-wrap {
-      position: relative;
-      min-height: 660px;
+      position: absolute;
+
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 67%;
+
       overflow: hidden;
     }
 
@@ -530,18 +535,668 @@
       height: 100%;
 
       object-fit: cover;
-      object-position: center center;
+
+      /*
+        Slight zoom + upward crop:
+        keeps the standing dogs front and centre
+        and largely removes the dog lying at bottom right.
+      */
+      object-position: 51% 35%;
+      transform: scale(1.095);
+      transform-origin: center 35%;
     }
+
+    .hero-image-wrap::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--cream) 0%,
+          rgba(248, 244, 238, 0.99) 7%,
+          rgba(248, 244, 238, 0.92) 15%,
+          rgba(248, 244, 238, 0.67) 26%,
+          rgba(248, 244, 238, 0.24) 38%,
+          rgba(248, 244, 238, 0) 49%
+        );
+
+      pointer-events: none;
+    }
+
+
+    /* COPY */
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+
+      width: min(90%, var(--max-width));
+      min-height: 690px;
+
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-copy-inner {
+      width: 46%;
+      max-width: 565px;
+
+      padding: 75px 0 80px;
+    }
+
+    .hero-eyebrow {
+      margin: 0 0 18px;
+
+      color: var(--river);
+
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3;
+
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-title {
+      margin: 0;
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(64px, 5.35vw, 90px);
+      font-weight: 400;
+
+      line-height: 0.94;
+
+      color: var(--wine);
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-tagline {
+      margin: 27px 0 0;
+
+      color: var(--ink);
+
+      font-size: clamp(20px, 1.65vw, 24px);
+      font-weight: 650;
+
+      line-height: 1.4;
+    }
+
+    .hero-description {
+      max-width: 480px;
+
+      margin: 14px 0 0;
+
+      color: var(--body);
+
+      font-size: 17px;
+      line-height: 1.68;
+    }
+
+    .hero-actions {
+      margin-top: 31px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 25px;
+    }
+
+
+    /* =========================================================
+       INTRO / WHY IT WORKS
+    ========================================================= */
+
+    .farmhouse-intro {
+      padding: 110px 0 105px;
+
+      background: var(--warm-white);
+    }
+
+    .intro-heading-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+
+      gap: 90px;
+
+      align-items: end;
+    }
+
+    .intro-heading-row .section-copy {
+      max-width: 600px;
+      margin: 0 0 3px;
+    }
+
+    .intro-points {
+      margin-top: 75px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 52px;
+    }
+
+    .intro-point {
+      position: relative;
+
+      padding-top: 24px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .intro-point h3 {
+      margin: 0 0 12px;
+
+      color: var(--ink);
+
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    .intro-point p {
+      margin: 0;
+
+      color: var(--body);
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       BLUE STORY BAND
+    ========================================================= */
+
+    .story-band {
+      padding: 92px 0;
+
+      background: var(--river);
+      color: #fff;
+    }
+
+    .story-band-inner {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+
+      gap: 90px;
+
+      align-items: center;
+    }
+
+    .story-band .eyebrow {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .story-band-title {
+      max-width: 470px;
+
+      margin: 0;
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(44px, 4.4vw, 68px);
+      font-weight: 400;
+      line-height: 1;
+
+      color: #fff;
+    }
+
+    .story-copy {
+      max-width: 650px;
+    }
+
+    .story-copy p {
+      margin: 0 0 18px;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .story-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       FROM THE FARMHOUSE / FACEBOOK
+    ========================================================= */
+
+    .from-farmhouse {
+      padding: 110px 0 115px;
+
+      background: var(--warm-white);
+    }
+
+    .from-farmhouse-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      gap: 40px;
+
+      margin-bottom: 46px;
+    }
+
+    .from-farmhouse-heading-copy {
+      max-width: 650px;
+    }
+
+    .from-farmhouse-heading-copy .section-copy {
+      margin: 18px 0 0;
+    }
+
+    .facebook-link {
+      flex: 0 0 auto;
+
+      margin-bottom: 5px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .social-card {
+      overflow: hidden;
+
+      background: #fff;
+
+      border: 1px solid var(--border);
+      border-radius: 17px;
+
+      box-shadow:
+        0 11px 35px rgba(42, 41, 38, 0.045);
+    }
+
+    .social-card-image {
+      aspect-ratio: 1 / 0.78;
+
+      overflow: hidden;
+
+      background: var(--oat-light);
+    }
+
+    .social-card-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .social-card-body {
+      padding: 24px 24px 26px;
+    }
+
+    .social-card-source {
+      margin: 0 0 10px;
+
+      color: var(--river);
+
+      font-size: 11px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .social-card p:last-child {
+      margin: 0;
+
+      color: var(--ink);
+
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       DAYCARE PREVIEW
+    ========================================================= */
+
+    .daycare-preview {
+      padding: 110px 0;
+
+      background: var(--oat-light);
+    }
+
+    .daycare-preview-inner {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+
+      gap: 95px;
+
+      align-items: start;
+    }
+
+    .daycare-intro .section-copy {
+      max-width: 520px;
+
+      margin: 21px 0 0;
+    }
+
+    .daycare-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+    }
+
+    .detail-card {
+      min-height: 185px;
+
+      padding: 29px 28px;
+
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, 0.67);
+
+      border: 1px solid rgba(110, 20, 19, 0.08);
+    }
+
+    .detail-card h3 {
+      margin: 0 0 10px;
+
+      color: var(--wine);
+
+      font-size: 17px;
+      font-weight: 650;
+    }
+
+    .detail-card p {
+      margin: 0;
+
+      color: var(--body);
+
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .daycare-actions {
+      margin-top: 30px;
+
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .home-cta {
+      padding: 105px 0;
+
+      background: var(--wine);
+      color: #fff;
+
+      text-align: center;
+    }
+
+    .home-cta-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .home-cta .eyebrow {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .home-cta h2 {
+      margin: 0;
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(48px, 5vw, 74px);
+      font-weight: 400;
+      line-height: 1;
+
+      color: #fff;
+    }
+
+    .home-cta p {
+      max-width: 600px;
+
+      margin: 21px auto 0;
+
+      color: rgba(255, 255, 255, 0.88);
+
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .cta-actions {
+      margin-top: 31px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 18px;
+    }
+
+    .cta-light {
+      min-height: 50px;
+      padding: 0 24px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 11px;
+
+      background: var(--warm-white);
+      color: var(--wine);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .cta-light:hover,
+    .cta-light:focus-visible {
+      transform: translateY(-1px);
+      background: #fff;
+    }
+
+    .cta-outline {
+      min-height: 50px;
+      padding: 0 24px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      border-radius: 11px;
+
+      color: #fff;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition:
+        background 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .cta-outline:hover,
+    .cta-outline:focus-visible {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: #fff;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+      padding: 105px 0 100px;
+
+      background: var(--warm-white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+
+      gap: 95px;
+    }
+
+    .contact-heading .section-copy {
+      max-width: 440px;
+      margin: 20px 0 0;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 34px 55px;
+    }
+
+    .contact-item {
+      padding-bottom: 24px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-label {
+      margin: 0 0 8px;
+
+      color: var(--river);
+
+      font-size: 11px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .contact-value,
+    .contact-value a {
+      margin: 0;
+
+      color: var(--ink);
+
+      font-size: 16px;
+      line-height: 1.55;
+
+      text-decoration: none;
+    }
+
+    .contact-value a:hover,
+    .contact-value a:focus-visible {
+      color: var(--wine);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .site-footer {
+      padding: 58px 0 34px;
+
+      background: #242321;
+      color: #fff;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .footer-brand img {
+      width: 205px;
+
+      /*
+        The supplied logo is black.
+        This puts it on a light box rather than attempting
+        to recolour the image.
+      */
+      padding: 13px;
+
+      border-radius: 10px;
+
+      background: var(--warm-white);
+    }
+
+    .footer-tagline {
+      max-width: 420px;
+
+      margin: 24px 0 0;
+
+      font-family: "Aubrey", serif;
+      font-size: 33px;
+      line-height: 1.1;
+
+      color: var(--oat);
+    }
+
+    .footer-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px 30px;
+    }
+
+    .footer-nav a {
+      color: rgba(255, 255, 255, 0.82);
+
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a:focus-visible {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      margin-top: 48px;
+      padding-top: 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+      color: rgba(255, 255, 255, 0.52);
+
+      font-size: 12px;
+    }
+
 
     /* =========================================================
        TABLET
     ========================================================= */
 
-    @media (max-width: 1100px) {
-
-      .brand-logo img {
-        width: 185px;
-      }
+    @media (max-width: 1080px) {
 
       .main-nav,
       .nav-actions {
@@ -552,125 +1207,252 @@
         display: flex;
       }
 
-      .nav-wrap {
-        min-height: 88px;
+      .nav-wrap,
+      .site-header.scrolled .nav-wrap {
+        min-height: 84px;
       }
 
-      .home-hero {
-        grid-template-columns: 46% 54%;
-        min-height: 610px;
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img {
+        width: 175px;
       }
 
+
+      /* HERO */
+
+      .home-hero,
       .hero-copy {
-        padding:
-          65px
-          40px
-          70px
-          5vw;
+        min-height: 640px;
       }
 
       .hero-image-wrap {
-        min-height: 610px;
+        width: 64%;
+      }
+
+      .hero-copy-inner {
+        width: 49%;
+      }
+
+      .hero-title {
+        font-size: clamp(56px, 7vw, 75px);
+      }
+
+
+      /* SECTIONS */
+
+      .intro-heading-row,
+      .story-band-inner,
+      .daycare-preview-inner,
+      .contact-grid {
+        gap: 55px;
+      }
+
+      .social-grid {
+        gap: 18px;
       }
 
     }
+
 
     /* =========================================================
        MOBILE
     ========================================================= */
 
-    @media (max-width: 760px) {
+    @media (max-width: 780px) {
 
-      .nav-wrap {
-        width: 91%;
-        min-height: 80px;
+      .container,
+      .nav-wrap,
+      .hero-copy {
+        width: min(89%, var(--max-width));
       }
 
-      .brand-logo img {
-        width: 165px;
-      }
+
+      /* HERO */
 
       .home-hero {
-        display: flex;
-        flex-direction: column;
+        display: block;
+
         min-height: auto;
+
+        background: var(--cream);
       }
 
       .hero-copy {
-        padding:
-          54px
-          6vw
-          46px;
+        min-height: auto;
+
+        padding: 58px 0 48px;
       }
 
       .hero-copy-inner {
-        max-width: 600px;
-      }
+        width: 100%;
+        max-width: 620px;
 
-      .hero-eyebrow {
-        margin-bottom: 17px;
-        font-size: 11px;
+        padding: 0;
       }
 
       .hero-title {
-        font-size: clamp(52px, 15vw, 72px);
-        line-height: 0.99;
+        font-size: clamp(55px, 15vw, 74px);
       }
 
       .hero-tagline {
         margin-top: 22px;
-        font-size: 20px;
       }
 
       .hero-description {
-        margin-top: 14px;
-        font-size: 16px;
-        line-height: 1.65;
+        max-width: 520px;
       }
 
       .hero-actions {
-        margin-top: 29px;
         flex-wrap: wrap;
-        gap: 19px;
       }
 
       .hero-image-wrap {
-        min-height: 420px;
+        position: relative;
+
+        width: 100%;
+        height: 470px;
       }
 
       .hero-image {
-        object-position: center center;
+        object-position: 50% 31%;
+        transform: scale(1.08);
+        transform-origin: center 31%;
+      }
+
+      .hero-image-wrap::after {
+        display: none;
+      }
+
+
+      /* INTRO */
+
+      .farmhouse-intro,
+      .from-farmhouse,
+      .daycare-preview,
+      .contact-section {
+        padding: 80px 0;
+      }
+
+      .intro-heading-row,
+      .story-band-inner,
+      .daycare-preview-inner,
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+      }
+
+      .intro-points {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+        margin-top: 52px;
+      }
+
+
+      /* STORY */
+
+      .story-band {
+        padding: 75px 0;
+      }
+
+
+      /* FACEBOOK */
+
+      .from-farmhouse-heading {
+        display: block;
+      }
+
+      .facebook-link {
+        margin-top: 23px;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-card-image {
+        aspect-ratio: 1 / 0.7;
+      }
+
+
+      /* DAYCARE */
+
+      .daycare-details {
+        grid-template-columns: 1fr;
+      }
+
+
+      /* CONTACT */
+
+      .contact-details {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+
+      /* FOOTER */
+
+      .footer-top {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
     }
+
 
     /* =========================================================
        SMALL MOBILE
     ========================================================= */
 
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
 
-      .hero-copy {
-        padding:
-          46px
-          24px
-          42px;
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img {
+        width: 158px;
       }
 
-      .hero-actions {
-        align-items: flex-start;
+      .hero-copy {
+        padding: 48px 0 42px;
+      }
+
+      .hero-actions,
+      .daycare-actions,
+      .cta-actions {
+        align-items: stretch;
         flex-direction: column;
       }
 
-      .hero-primary {
+      .button-primary,
+      .cta-light,
+      .cta-outline {
         width: 100%;
       }
 
       .hero-image-wrap {
-        min-height: 340px;
+        height: 355px;
+      }
+
+      .from-farmhouse,
+      .farmhouse-intro,
+      .daycare-preview,
+      .contact-section {
+        padding: 68px 0;
+      }
+
+      .footer-nav {
+        grid-template-columns: 1fr;
       }
 
     }
+
 
     /* =========================================================
        ACCESSIBILITY
@@ -678,7 +1460,7 @@
 
     a:focus-visible,
     button:focus-visible {
-      outline: 3px solid rgba(56, 93, 107, 0.35);
+      outline: 3px solid rgba(56, 93, 107, 0.38);
       outline-offset: 4px;
     }
 
@@ -696,20 +1478,18 @@
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =======================================================
        HEADER
   ======================================================== -->
 
-  <header
-    class="site-header"
-    id="siteHeader"
-  >
+  <header class="site-header" id="siteHeader">
 
     <div class="nav-wrap">
 
-      <!-- LOGO -->
       <a
         href="index.html"
         class="brand-logo"
@@ -721,11 +1501,7 @@
         >
       </a>
 
-      <!-- DESKTOP NAV -->
-      <nav
-        class="main-nav"
-        aria-label="Main navigation"
-      >
+      <nav class="main-nav" aria-label="Main navigation">
 
         <a
           href="index.html"
@@ -735,37 +1511,24 @@
           Home
         </a>
 
-        <a
-          href="the-farmhouse.html"
-          class="nav-link"
-        >
+        <a href="the-farmhouse.html" class="nav-link">
           The Farmhouse
         </a>
 
-        <a
-          href="daycare.html"
-          class="nav-link"
-        >
+        <a href="daycare.html" class="nav-link">
           Daycare
         </a>
 
-        <a
-          href="gallery.html"
-          class="nav-link"
-        >
+        <a href="gallery.html" class="nav-link">
           Gallery
         </a>
 
-        <a
-          href="faqs.html"
-          class="nav-link"
-        >
+        <a href="faqs.html" class="nav-link">
           FAQs
         </a>
 
       </nav>
 
-      <!-- DESKTOP ACTIONS -->
       <div class="nav-actions">
 
         <a
@@ -784,7 +1547,6 @@
 
       </div>
 
-      <!-- MOBILE MENU BUTTON -->
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -800,19 +1562,18 @@
 
     </div>
 
-    <!-- MOBILE MENU -->
+
     <div
       class="mobile-menu"
       id="mobileMenu"
     >
+
       <nav
         class="mobile-menu-inner"
         aria-label="Mobile navigation"
       >
 
-        <a href="index.html">
-          Home
-        </a>
+        <a href="index.html">Home</a>
 
         <a href="the-farmhouse.html">
           The Farmhouse
@@ -845,20 +1606,31 @@
         </a>
 
       </nav>
+
     </div>
 
   </header>
 
-  <!-- =======================================================
-       MAIN
-  ======================================================== -->
 
   <main>
 
-    <!-- HERO -->
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
     <section class="home-hero">
 
-      <!-- COPY -->
+      <div class="hero-image-wrap">
+
+        <img
+          src="assets/dogsondeck.jpg"
+          alt="Dogs gathered together outside at Farmhouse & Fields Dog Daycare"
+          class="hero-image"
+        >
+
+      </div>
+
       <div class="hero-copy">
 
         <div class="hero-copy-inner">
@@ -868,7 +1640,8 @@
           </p>
 
           <h1 class="hero-title">
-            Welcome to the Farmhouse.
+            <span>Welcome to the</span>
+            <span>Farmhouse.</span>
           </h1>
 
           <p class="hero-tagline">
@@ -884,23 +1657,17 @@
 
             <a
               href="daycare.html"
-              class="hero-primary"
+              class="button-primary"
             >
               See how daycare works
             </a>
 
             <a
               href="waitlist.html"
-              class="hero-secondary"
+              class="text-link"
             >
               Join the wait-list
-
-              <span
-                class="hero-secondary-arrow"
-                aria-hidden="true"
-              >
-                →
-              </span>
+              <span aria-hidden="true">→</span>
             </a>
 
           </div>
@@ -909,20 +1676,625 @@
 
       </div>
 
-      <!-- PHOTO -->
-      <div class="hero-image-wrap">
+    </section>
 
-        <img
-          src="assets/dogsondeck.jpg"
-          alt="Dogs gathered outside at Farmhouse & Fields Dog Daycare"
-          class="hero-image"
-        >
+
+    <!-- =====================================================
+         A GOOD DAY AT THE FARMHOUSE
+    ====================================================== -->
+
+    <section class="farmhouse-intro">
+
+      <div class="container">
+
+        <div class="intro-heading-row">
+
+          <div>
+
+            <p class="eyebrow">
+              Small numbers. Big days.
+            </p>
+
+            <h2 class="section-title">
+              A good day at the Farmhouse.
+            </h2>
+
+          </div>
+
+          <p class="section-copy">
+            Some dogs come in ready to wrestle. Some make a
+            beeline for their favourite friend. Some would happily
+            spend half the day outside, while others know exactly
+            where they want to settle when they need a break.
+            Keeping the group small means we get to know all of that.
+          </p>
+
+        </div>
+
+
+        <div class="intro-points">
+
+          <article class="intro-point">
+
+            <h3>
+              A small, familiar group
+            </h3>
+
+            <p>
+              We keep numbers low and consistent, so the dogs get
+              to know the place, the people, and one another.
+            </p>
+
+          </article>
+
+
+          <article class="intro-point">
+
+            <h3>
+              Plenty of Farmhouse time
+            </h3>
+
+            <p>
+              Inside, outside, running, resting, playing, sniffing,
+              or hanging out with a favourite buddy. Not every dog
+              spends the day the same way.
+            </p>
+
+          </article>
+
+
+          <article class="intro-point">
+
+            <h3>
+              We know our dogs
+            </h3>
+
+            <p>
+              Their friends, their routines, their funny little
+              habits, and what makes them happiest here. That is a
+              big part of what makes the Farmhouse feel like home.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STORY BAND
+    ====================================================== -->
+
+    <section class="story-band">
+
+      <div class="container story-band-inner">
+
+        <div>
+
+          <p class="eyebrow">
+            Home away from home
+          </p>
+
+          <h2 class="story-band-title">
+            A little country. A lot of dog.
+          </h2>
+
+        </div>
+
+        <div class="story-copy">
+
+          <p>
+            Farmhouse & Fields really is a farmhouse. The dogs spend
+            their days here with us, with the yard, the fields, and
+            plenty happening around them.
+          </p>
+
+          <p>
+            It is comfortable, familiar, a little muddy sometimes,
+            and full of personalities. Exactly the way we like it.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FACEBOOK / FROM THE FARMHOUSE
+    ====================================================== -->
+
+    <section class="from-farmhouse">
+
+      <div class="container">
+
+        <div class="from-farmhouse-heading">
+
+          <div class="from-farmhouse-heading-copy">
+
+            <p class="eyebrow">
+              From the Farmhouse
+            </p>
+
+            <h2 class="section-title">
+              See what we’ve been up to.
+            </h2>
+
+            <p class="section-copy">
+              Most days come with a story. New friends, old buddies,
+              pool days, zoomies, muddy paws, and the occasional dog
+              with very strong opinions.
+            </p>
+
+          </div>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61568074120165"
+            class="text-link facebook-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow us on Facebook
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+          <!-- STATIC FACEBOOK CARD 1 -->
+
+          <article class="social-card">
+
+            <div class="social-card-image">
+
+              <img
+                src="assets/1.jpg"
+                alt="Dogs enjoying a day at Farmhouse & Fields"
+              >
+
+            </div>
+
+            <div class="social-card-body">
+
+              <p class="social-card-source">
+                From Facebook
+              </p>
+
+              <p>
+                Zoomy mode activated first thing this morning.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- STATIC FACEBOOK CARD 2 -->
+
+          <article class="social-card">
+
+            <div class="social-card-image">
+
+              <img
+                src="assets/2.jpg"
+                alt="Dogs spending time together at the Farmhouse"
+              >
+
+            </div>
+
+            <div class="social-card-body">
+
+              <p class="social-card-source">
+                From Facebook
+              </p>
+
+              <p>
+                Willy and Walter love their Fridays together.
+                Two big goofy wrestling buddies.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- STATIC FACEBOOK CARD 3 -->
+
+          <article class="social-card">
+
+            <div class="social-card-image">
+
+              <img
+                src="assets/3.jpg"
+                alt="A dog enjoying Farmhouse & Fields Dog Daycare"
+              >
+
+            </div>
+
+            <div class="social-card-body">
+
+              <p class="social-card-source">
+                From Facebook
+              </p>
+
+              <p>
+                Another day at the Farmhouse, with lots of friends
+                and plenty going on.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DAYCARE PREVIEW
+    ====================================================== -->
+
+    <section class="daycare-preview">
+
+      <div class="container daycare-preview-inner">
+
+
+        <div class="daycare-intro">
+
+          <p class="eyebrow">
+            Daycare at the Farmhouse
+          </p>
+
+          <h2 class="section-title">
+            What to know before your dog joins us.
+          </h2>
+
+          <p class="section-copy">
+            We keep daycare intentionally small, and new dogs join
+            through our wait-list and onboarding process. That helps
+            us make sure the group continues to work well together.
+          </p>
+
+          <div class="daycare-actions">
+
+            <a
+              href="daycare.html"
+              class="button-primary"
+            >
+              Daycare details
+            </a>
+
+            <a
+              href="faqs.html"
+              class="text-link"
+            >
+              Read the FAQs
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="daycare-details">
+
+          <article class="detail-card">
+
+            <h3>
+              Low, consistent numbers
+            </h3>
+
+            <p>
+              The group stays small enough that we can actually
+              know the dogs in it and keep the day comfortable.
+            </p>
+
+          </article>
+
+
+          <article class="detail-card">
+
+            <h3>
+              The Farmhouse
+            </h3>
+
+            <p>
+              A securely fenced yard, lots of outdoor time, the
+              house itself, and the fields around us are all part
+              of the day.
+            </p>
+
+          </article>
+
+
+          <article class="detail-card">
+
+            <h3>
+              Start with the wait-list
+            </h3>
+
+            <p>
+              Tell us a little about your dog first. From there,
+              we can talk about fit, availability, and next steps.
+            </p>
+
+          </article>
+
+
+          <article class="detail-card">
+
+            <h3>
+              Already part of the Farmhouse?
+            </h3>
+
+            <p>
+              Current clients can head straight to Time To Pet for
+              the day-to-day details.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WAIT-LIST CTA
+    ====================================================== -->
+
+    <section class="home-cta">
+
+      <div class="container">
+
+        <div class="home-cta-inner">
+
+          <p class="eyebrow">
+            Come join us
+          </p>
+
+          <h2>
+            Think your dog would love it here?
+          </h2>
+
+          <p>
+            Tell us a little about them and we’ll take it from there.
+          </p>
+
+          <div class="cta-actions">
+
+            <a
+              href="waitlist.html"
+              class="cta-light"
+            >
+              Join the wait-list
+            </a>
+
+            <a
+              href="daycare.html"
+              class="cta-outline"
+            >
+              Learn about daycare
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact-section">
+
+      <div class="container contact-grid">
+
+
+        <div class="contact-heading">
+
+          <p class="eyebrow">
+            Get in touch
+          </p>
+
+          <h2 class="section-title">
+            Find us at the Farmhouse.
+          </h2>
+
+          <p class="section-copy">
+            We’re in Canning, Nova Scotia, nestled at the base of
+            the North Mountain.
+          </p>
+
+        </div>
+
+
+        <div class="contact-details">
+
+
+          <div class="contact-item">
+
+            <p class="contact-label">
+              Address
+            </p>
+
+            <p class="contact-value">
+              571 Woodside Rd.<br>
+              Canning, NS B0P 1H0
+            </p>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <p class="contact-label">
+              Phone
+            </p>
+
+            <p class="contact-value">
+              <a href="tel:+19028241979">
+                (902) 824-1979
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <p class="contact-label">
+              Email
+            </p>
+
+            <p class="contact-value">
+              <a href="mailto:farmhousefieldsdaycare@gmail.com">
+                farmhousefieldsdaycare@gmail.com
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <p class="contact-label">
+              Follow along
+            </p>
+
+            <p class="contact-value">
+
+              <a
+                href="https://www.instagram.com/farmhousefieldsdogdaycare/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+
+              &nbsp;&nbsp;·&nbsp;&nbsp;
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61568074120165"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+
+            </p>
+
+          </div>
+
+
+        </div>
 
       </div>
 
     </section>
 
   </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+          <img
+            src="assets/farmhouseandfieldslogo.png"
+            alt="Farmhouse & Fields Dog Daycare"
+          >
+
+          <p class="footer-tagline">
+            A good day to be a dog.
+          </p>
+
+        </div>
+
+
+        <nav
+          class="footer-nav"
+          aria-label="Footer navigation"
+        >
+
+          <a href="index.html">Home</a>
+
+          <a href="the-farmhouse.html">
+            The Farmhouse
+          </a>
+
+          <a href="daycare.html">
+            Daycare
+          </a>
+
+          <a href="gallery.html">
+            Gallery
+          </a>
+
+          <a href="faqs.html">
+            FAQs
+          </a>
+
+          <a href="waitlist.html">
+            Join the Wait-list
+          </a>
+
+          <a href="current-clients.html">
+            Current Clients
+          </a>
+
+          <a href="mailto:farmhousefieldsdaycare@gmail.com">
+            Contact
+          </a>
+
+        </nav>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="currentYear"></span>
+          Farmhouse & Fields Dog Daycare
+        </span>
+
+        <span>
+          Canning, Nova Scotia
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
 
   <!-- =======================================================
        JAVASCRIPT
@@ -938,6 +2310,9 @@
 
     const siteHeader =
       document.getElementById("siteHeader");
+
+    const currentYear =
+      document.getElementById("currentYear");
 
 
     /* MOBILE MENU */
@@ -967,7 +2342,7 @@
     });
 
 
-    /* CLOSE MENU AFTER MOBILE LINK CLICK */
+    /* CLOSE MOBILE MENU AFTER CLICK */
 
     const mobileLinks =
       mobileMenu.querySelectorAll("a");
@@ -994,13 +2369,13 @@
     });
 
 
-    /* HEADER SCROLL STATE */
+    /* SCROLLED HEADER */
 
     function updateHeader() {
 
       siteHeader.classList.toggle(
         "scrolled",
-        window.scrollY > 10
+        window.scrollY > 15
       );
 
     }
@@ -1012,6 +2387,12 @@
       updateHeader,
       { passive: true }
     );
+
+
+    /* COPYRIGHT */
+
+    currentYear.textContent =
+      new Date().getFullYear();
 
   </script>
 
