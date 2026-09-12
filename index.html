@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Farmhouse & Fields Dog Daycare in Canning, Nova Scotia. A familiar, home-away-from-home daycare with room to run, regular friends, and plenty of time to just be dogs."
+    content="Farmhouse & Fields Dog Daycare in Canning, Nova Scotia. Your dog's home away from home, with familiar faces, room to run, and plenty of time to just be dogs."
   >
 
   <!-- DM SANS -->
@@ -49,8 +49,7 @@
       --oat-soft: #F5F1EA;
 
       --warm-white: #FCFBF8;
-      --paper: #FFFFFF;
-      --cream: #F8F4EE;
+      --white: #FFFFFF;
 
       --ink: #2A2926;
       --body: #5B5751;
@@ -122,6 +121,39 @@
       text-transform: uppercase;
     }
 
+    .button-wine {
+      min-height: 47px;
+      padding: 0 22px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 9px;
+
+      background: var(--wine);
+      color: #fff;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .button-wine:hover,
+    .button-wine:focus-visible {
+      background: var(--wine-dark);
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 10px 26px rgba(110, 20, 19, 0.12);
+    }
+
     .text-link {
       display: inline-flex;
       align-items: center;
@@ -151,39 +183,6 @@
       transform: translateX(4px);
     }
 
-    .button-wine {
-      min-height: 47px;
-      padding: 0 22px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 9px;
-
-      background: var(--wine);
-      color: #fff;
-
-      font-size: 13px;
-      font-weight: 700;
-
-      text-decoration: none;
-
-      transition:
-        transform 0.18s ease,
-        background 0.18s ease,
-        box-shadow 0.18s ease;
-    }
-
-    .button-wine:hover,
-    .button-wine:focus-visible {
-      background: var(--wine-dark);
-      transform: translateY(-1px);
-
-      box-shadow:
-        0 10px 26px rgba(110, 20, 19, 0.12);
-    }
-
 
     /* =========================================================
        HEADER
@@ -199,7 +198,6 @@
       border-bottom: 1px solid transparent;
 
       transition:
-        min-height 0.2s ease,
         border-color 0.2s ease,
         box-shadow 0.2s ease;
     }
@@ -219,7 +217,6 @@
 
       display: flex;
       align-items: center;
-
       gap: 28px;
 
       transition: min-height 0.2s ease;
@@ -254,7 +251,6 @@
 
       display: flex;
       align-items: center;
-
       gap: 4px;
     }
 
@@ -283,7 +279,6 @@
     .nav-actions {
       display: flex;
       align-items: center;
-
       gap: 18px;
     }
 
@@ -454,28 +449,22 @@
     .home-hero {
       position: relative;
 
-      min-height: 525px;
+      min-height: 520px;
 
       overflow: hidden;
 
-      background: var(--cream);
+      background: var(--oat-soft);
     }
 
 
     /*
-      IMPORTANT HERO CROP
-
-      The photograph begins at only 22% of the page,
-      which gives it almost 80% of the desktop width.
-
-      There is intentionally NO transform/scale.
-      This preserves the full horizontal dog lineup.
+      doghero.png is already a wide image.
+      Let it remain wide — no zooming.
     */
 
     .hero-image-wrap {
       position: absolute;
-
-      inset: 0 0 0 22%;
+      inset: 0;
 
       overflow: hidden;
     }
@@ -484,20 +473,14 @@
       width: 100%;
       height: 100%;
 
-      object-fit: cover;
-
-      /*
-        Slightly upward bias:
-        keeps standing dogs and paws,
-        while trimming unnecessary foreground.
-      */
-      object-position: 50% 39%;
+      object-fit: contain;
+      object-position: right center;
     }
 
 
     /*
-      The fade is deliberately short.
-      The cream copy panel does not eat the photograph.
+      This is what blends the white/open left edge
+      of the actual photograph into our Oat.
     */
 
     .hero-image-wrap::after {
@@ -511,12 +494,13 @@
       background:
         linear-gradient(
           90deg,
-          var(--cream) 0%,
-          rgba(248, 244, 238, 0.99) 5%,
-          rgba(248, 244, 238, 0.90) 11%,
-          rgba(248, 244, 238, 0.58) 18%,
-          rgba(248, 244, 238, 0.18) 26%,
-          rgba(248, 244, 238, 0) 34%
+          var(--oat-soft) 0%,
+          var(--oat-soft) 12%,
+          rgba(245, 241, 234, 0.99) 18%,
+          rgba(245, 241, 234, 0.90) 24%,
+          rgba(245, 241, 234, 0.63) 30%,
+          rgba(245, 241, 234, 0.26) 37%,
+          rgba(245, 241, 234, 0) 45%
         );
     }
 
@@ -528,7 +512,7 @@
       z-index: 2;
 
       width: min(88%, var(--max));
-      min-height: 525px;
+      min-height: 520px;
 
       margin: 0 auto;
 
@@ -537,10 +521,10 @@
     }
 
     .hero-copy-inner {
-      width: 27%;
-      max-width: 340px;
+      width: 25%;
+      max-width: 320px;
 
-      padding: 50px 0;
+      padding: 48px 0;
     }
 
     .hero-title {
@@ -549,12 +533,14 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(49px, 3.6vw, 62px);
+      font-size: clamp(48px, 3.45vw, 59px);
       font-weight: 400;
       line-height: 0.94;
     }
 
-    .hero-title span {
+    .hero-title span,
+    .hero-tagline span,
+    .hero-description span {
       display: block;
     }
 
@@ -564,12 +550,8 @@
       color: var(--ink);
 
       font-size: 17px;
-      line-height: 1.38;
+      line-height: 1.36;
       font-weight: 700;
-    }
-
-    .hero-tagline span {
-      display: block;
     }
 
     .hero-description {
@@ -579,10 +561,6 @@
 
       font-size: 14px;
       line-height: 1.62;
-    }
-
-    .hero-description span {
-      display: block;
     }
 
     .hero-action {
@@ -595,13 +573,13 @@
     ========================================================= */
 
     .regulars-section {
-      padding: 100px 0 105px;
+      padding: 102px 0 108px;
 
-      background: var(--paper);
+      background: #fff;
     }
 
     .regulars-inner {
-      max-width: 760px;
+      max-width: 770px;
 
       margin: 0 auto;
 
@@ -609,25 +587,25 @@
     }
 
     .regulars-title {
-      margin: 0 auto;
+      margin: 0;
 
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(42px, 3.5vw, 55px);
+      font-size: clamp(43px, 3.5vw, 55px);
       font-weight: 400;
       line-height: 1;
     }
 
     .regulars-copy {
-      max-width: 690px;
+      max-width: 700px;
 
       margin: 24px auto 0;
 
       color: var(--body);
 
       font-size: 15px;
-      line-height: 1.75;
+      line-height: 1.78;
     }
 
     .regulars-copy p {
@@ -651,22 +629,19 @@
     ========================================================= */
 
     .social-section {
-      padding: 82px 0 88px;
+      padding: 85px 0 90px;
 
       background: var(--oat-soft);
     }
 
     .social-layout {
       display: grid;
-      grid-template-columns: 0.55fr 1.45fr;
+      grid-template-columns: 0.52fr 1.48fr;
 
-      gap: 70px;
+      gap: 72px;
 
       align-items: center;
     }
-
-
-    /* SOCIAL INTRO */
 
     .social-intro {
       max-width: 355px;
@@ -678,7 +653,7 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(42px, 3.6vw, 56px);
+      font-size: clamp(42px, 3.5vw, 55px);
       font-weight: 400;
       line-height: 0.98;
     }
@@ -697,7 +672,7 @@
     }
 
 
-    /* POSTS */
+    /* SOCIAL CARDS */
 
     .social-grid {
       display: grid;
@@ -742,7 +717,7 @@
       border: 1px solid var(--border);
       border-radius: 50%;
 
-      background: var(--cream);
+      background: var(--warm-white);
     }
 
     .social-avatar img {
@@ -811,7 +786,7 @@
 
 
     /* =========================================================
-       FULL-WIDTH CTA
+       FULL WIDTH CTA
     ========================================================= */
 
     .final-cta {
@@ -825,10 +800,10 @@
 
     .final-cta-inner {
       position: relative;
-      z-index: 2;
+      z-index: 3;
 
       width: min(88%, var(--max));
-      min-height: 205px;
+      min-height: 215px;
 
       margin: 0 auto;
 
@@ -837,9 +812,9 @@
 
       align-items: center;
 
-      gap: 80px;
+      gap: 75px;
 
-      padding: 45px 0;
+      padding: 48px 0;
     }
 
     .final-cta-copy {
@@ -868,9 +843,6 @@
       line-height: 1.65;
     }
 
-
-    /* CTA ACTIONS */
-
     .final-cta-actions {
       display: flex;
       align-items: center;
@@ -897,20 +869,20 @@
       text-decoration: none;
 
       transition:
-        transform 0.18s ease,
-        background 0.18s ease;
+        background 0.18s ease,
+        transform 0.18s ease;
     }
 
     .cta-button:hover,
     .cta-button:focus-visible {
       background: #fff;
+
       transform: translateY(-1px);
     }
 
     .cta-link {
       display: inline-flex;
       align-items: center;
-
       gap: 8px;
 
       color: #fff;
@@ -925,29 +897,52 @@
       transition: transform 0.18s ease;
     }
 
-    .cta-link:hover span {
+    .cta-link:hover span,
+    .cta-link:focus-visible span {
       transform: translateX(4px);
     }
 
 
     /* =========================================================
-       FIELD WATERMARK
+       GRASS BOOKENDS
     ========================================================= */
 
-    .field-mark {
+    .cta-grass {
       position: absolute;
+      z-index: 1;
 
-      right: -20px;
-      bottom: -22px;
+      bottom: -47px;
 
-      width: 335px;
-      height: auto;
+      width: 320px;
+      height: 245px;
 
-      color: #fff;
+      background: rgba(255, 255, 255, 0.105);
 
-      opacity: 0.11;
+      -webkit-mask:
+        url("assets/grass.png")
+        center bottom / contain
+        no-repeat;
+
+      mask:
+        url("assets/grass.png")
+        center bottom / contain
+        no-repeat;
 
       pointer-events: none;
+    }
+
+    .cta-grass-left {
+      left: -65px;
+
+      transform: scaleX(-1);
+    }
+
+    .cta-grass-right {
+      right: -65px;
+    }
+
+    .cta-grass-mobile {
+      display: none;
     }
 
 
@@ -956,14 +951,14 @@
     ========================================================= */
 
     .site-footer {
-      padding: 48px 0 25px;
+      padding: 52px 0 27px;
 
       background: #fff;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 0.85fr 1.25fr 0.9fr;
+      grid-template-columns: 0.9fr 1.3fr 0.8fr;
 
       gap: 65px;
 
@@ -971,7 +966,7 @@
     }
 
 
-    /* FOOTER BRAND */
+    /* BRAND */
 
     .footer-logo {
       width: 145px;
@@ -979,7 +974,7 @@
     }
 
     .footer-tagline {
-      margin: 15px 0 0;
+      margin: 17px 0 0;
 
       color: var(--wine);
 
@@ -990,13 +985,13 @@
     }
 
 
-    /* FOOTER CONTACT */
+    /* CONTACT */
 
     .footer-contact {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 20px 38px;
+      gap: 21px 38px;
     }
 
     .footer-detail-label {
@@ -1047,7 +1042,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 10px 25px;
+      gap: 10px 24px;
     }
 
     .footer-nav a {
@@ -1067,7 +1062,7 @@
     /* FOOTER BOTTOM */
 
     .footer-bottom {
-      margin-top: 38px;
+      margin-top: 39px;
       padding-top: 20px;
 
       display: flex;
@@ -1090,7 +1085,7 @@
 
 
     /* =========================================================
-       SMALL DESKTOP / LAPTOP
+       LAPTOP
     ========================================================= */
 
     @media (max-width: 1120px) {
@@ -1115,24 +1110,17 @@
       }
 
       .hero-copy-inner {
-        width: 33%;
-      }
-
-      .hero-image-wrap {
-        inset-left: 27%;
+        width: 31%;
       }
 
       .social-layout {
         grid-template-columns: 0.65fr 1.35fr;
+
         gap: 45px;
       }
 
       .final-cta-inner {
         gap: 45px;
-      }
-
-      .final-cta-actions {
-        gap: 16px;
       }
 
       .footer-grid {
@@ -1148,7 +1136,7 @@
 
     @media (max-width: 830px) {
 
-      /* HERO STACKS */
+      /* HERO */
 
       .home-hero {
         min-height: auto;
@@ -1157,18 +1145,18 @@
       .hero-copy {
         min-height: auto;
 
-        padding: 50px 0 43px;
+        padding: 50px 0 42px;
       }
 
       .hero-copy-inner {
         width: 100%;
-        max-width: 540px;
+        max-width: 520px;
 
         padding: 0;
       }
 
       .hero-title {
-        font-size: 58px;
+        font-size: 57px;
       }
 
       .hero-image-wrap {
@@ -1177,11 +1165,15 @@
         inset: auto;
 
         width: 100%;
-        height: 440px;
+        height: auto;
       }
 
       .hero-image {
-        object-position: 50% 38%;
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+        object-position: center;
       }
 
       .hero-image-wrap::after {
@@ -1199,7 +1191,7 @@
       /* SOCIAL */
 
       .social-section {
-        padding: 76px 0 80px;
+        padding: 76px 0 82px;
       }
 
       .social-layout {
@@ -1218,9 +1210,9 @@
       .final-cta-inner {
         grid-template-columns: 1fr;
 
-        gap: 26px;
+        gap: 28px;
 
-        padding: 48px 0;
+        padding: 50px 0 58px;
       }
 
       .final-cta-actions {
@@ -1233,7 +1225,7 @@
       .footer-grid {
         grid-template-columns: 1fr;
 
-        gap: 36px;
+        gap: 37px;
       }
 
       .footer-contact {
@@ -1260,16 +1252,28 @@
         width: 89%;
       }
 
+
+      /* HERO */
+
       .hero-copy {
-        padding-top: 44px;
+        padding: 44px 0 37px;
       }
 
       .hero-title {
-        font-size: 52px;
+        font-size: 51px;
+      }
+
+      .hero-tagline {
+        font-size: 17px;
       }
 
       .hero-image-wrap {
-        height: 350px;
+        width: 100%;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
       }
 
       .hero-action .button-wine {
@@ -1280,7 +1284,7 @@
       /* REGULARS */
 
       .regulars-section {
-        padding: 74px 0 78px;
+        padding: 74px 0 80px;
       }
 
       .regulars-title {
@@ -1291,7 +1295,7 @@
       /* SOCIAL */
 
       .social-section {
-        padding: 68px 0 72px;
+        padding: 69px 0 74px;
       }
 
       .social-title {
@@ -1316,7 +1320,10 @@
       .final-cta-inner {
         min-height: 0;
 
-        padding: 44px 0 51px;
+        padding:
+          48px
+          0
+          160px;
       }
 
       .final-cta h2 {
@@ -1324,26 +1331,71 @@
       }
 
       .final-cta-actions {
+        width: 100%;
+
         align-items: stretch;
         flex-direction: column;
+
+        gap: 17px;
       }
 
       .cta-button {
         width: 100%;
       }
 
-      .field-mark {
-        width: 245px;
+      .cta-link {
+        justify-content: center;
+      }
 
-        right: -75px;
-        bottom: -30px;
+
+      /*
+        Desktop bookends disappear.
+      */
+
+      .cta-grass {
+        display: none;
+      }
+
+
+      /*
+        Mobile gets one larger field shape
+        growing from the bottom.
+      */
+
+      .cta-grass-mobile {
+        position: absolute;
+        z-index: 1;
+
+        display: block;
+
+        left: 50%;
+        bottom: -32px;
+
+        width: 110%;
+        height: 190px;
+
+        transform: translateX(-50%);
+
+        background: rgba(255, 255, 255, 0.10);
+
+        -webkit-mask:
+          url("assets/grass.png")
+          center bottom / contain
+          no-repeat;
+
+        mask:
+          url("assets/grass.png")
+          center bottom / contain
+          no-repeat;
+
+        pointer-events: none;
       }
 
 
       /* FOOTER */
 
       .site-footer {
-        padding-top: 40px;
+        padding-top: 43px;
       }
 
       .footer-contact {
@@ -1401,15 +1453,18 @@
 
     <div class="nav-wrap">
 
+
       <a
         href="index.html"
         class="brand-logo"
         aria-label="Farmhouse & Fields Dog Daycare home"
       >
+
         <img
           src="assets/farmhouseandfieldslogo.png"
           alt="Farmhouse & Fields Dog Daycare"
         >
+
       </a>
 
 
@@ -1489,6 +1544,7 @@
         <span></span>
       </button>
 
+
     </div>
 
 
@@ -1540,6 +1596,7 @@
 
     </div>
 
+
   </header>
 
 
@@ -1556,7 +1613,7 @@
       <div class="hero-image-wrap">
 
         <img
-          src="assets/dogsondeck.jpg"
+          src="assets/doghero.png"
           alt="Dogs gathered together outside at Farmhouse & Fields Dog Daycare"
           class="hero-image"
         >
@@ -1677,23 +1734,25 @@
       <div class="container social-layout">
 
 
-        <!-- INTRO -->
-
         <div class="social-intro">
+
 
           <p class="eyebrow">
             From the Farmhouse
           </p>
 
+
           <h2 class="social-title">
             What’s been happening lately.
           </h2>
+
 
           <p class="social-description">
             A glimpse into real days at the Farmhouse:
             muddy paws, happy faces, old friends, and whatever
             everyone has decided to get up to that day.
           </p>
+
 
           <div class="social-intro-link">
 
@@ -1709,20 +1768,20 @@
 
           </div>
 
+
         </div>
 
-
-        <!-- POSTS -->
 
         <div class="social-grid">
 
 
-          <!-- POST ONE -->
+          <!-- POST 1 -->
 
           <article class="social-post">
 
 
             <div class="social-head">
+
 
               <div class="social-avatar">
 
@@ -1733,6 +1792,7 @@
                 >
 
               </div>
+
 
               <div>
 
@@ -1745,6 +1805,7 @@
                 </p>
 
               </div>
+
 
             </div>
 
@@ -1782,12 +1843,13 @@
           </article>
 
 
-          <!-- POST TWO -->
+          <!-- POST 2 -->
 
           <article class="social-post">
 
 
             <div class="social-head">
+
 
               <div class="social-avatar">
 
@@ -1798,6 +1860,7 @@
                 >
 
               </div>
+
 
               <div>
 
@@ -1810,6 +1873,7 @@
                 </p>
 
               </div>
+
 
             </div>
 
@@ -1863,74 +1927,25 @@
     <section class="final-cta">
 
 
-      <!-- SUBTLE FIELD DETAIL -->
+      <!-- DESKTOP BOOKENDS -->
 
-      <svg
-        class="field-mark"
-        viewBox="0 0 360 190"
+      <div
+        class="cta-grass cta-grass-left"
         aria-hidden="true"
-        fill="none"
-      >
+      ></div>
 
-        <!-- field furrows -->
+      <div
+        class="cta-grass cta-grass-right"
+        aria-hidden="true"
+      ></div>
 
-        <path
-          d="M365 184 C285 154 214 148 120 155 C77 158 37 168 -10 187"
-          stroke="currentColor"
-          stroke-width="2"
-        />
 
-        <path
-          d="M365 164 C290 141 216 137 136 143 C77 147 33 159 -8 177"
-          stroke="currentColor"
-          stroke-width="2"
-        />
+      <!-- MOBILE FIELD DETAIL -->
 
-        <path
-          d="M365 145 C295 126 231 121 158 125 C99 129 50 139 2 157"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <path
-          d="M365 126 C300 111 246 106 186 108 C129 111 78 119 25 136"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <!-- simple grass stems -->
-
-        <path
-          d="M278 132 C278 101 283 72 297 39"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <path
-          d="M296 79 C308 70 318 62 329 49"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <path
-          d="M292 91 C281 81 272 72 266 60"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <path
-          d="M291 107 C306 98 319 88 330 76"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-        <path
-          d="M289 119 C276 109 267 99 260 87"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-
-      </svg>
+      <div
+        class="cta-grass-mobile"
+        aria-hidden="true"
+      ></div>
 
 
       <div class="final-cta-inner">
@@ -1957,8 +1972,7 @@
             href="waitlist.html"
             class="cta-button"
           >
-            Tell us about your dog
-            &nbsp;→
+            Tell us about your dog&nbsp; →
           </a>
 
           <a
@@ -1973,6 +1987,7 @@
 
 
       </div>
+
 
     </section>
 
@@ -2000,12 +2015,15 @@
             href="index.html"
             aria-label="Farmhouse & Fields Dog Daycare home"
           >
+
             <img
               src="assets/farmhouseandfieldslogo.png"
               alt="Farmhouse & Fields Dog Daycare"
               class="footer-logo"
             >
+
           </a>
+
 
           <p class="footer-tagline">
             A good day to be a dog.
@@ -2188,7 +2206,7 @@
       document.getElementById("currentYear");
 
 
-    /* MOBILE NAV */
+    /* MOBILE MENU */
 
     menuToggle.addEventListener("click", function () {
 
