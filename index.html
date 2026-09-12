@@ -484,25 +484,25 @@
     */
 
     .hero-image-wrap::after {
-      content: "";
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 
-      position: absolute;
-      inset: 0;
-
-      pointer-events: none;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--oat-soft) 0%,
-          var(--oat-soft) 12%,
-          rgba(245, 241, 234, 0.99) 18%,
-          rgba(245, 241, 234, 0.90) 24%,
-          rgba(245, 241, 234, 0.63) 30%,
-          rgba(245, 241, 234, 0.26) 37%,
-          rgba(245, 241, 234, 0) 45%
-        );
-    }
+  background: linear-gradient(
+    90deg,
+    var(--oat-soft) 0%,
+    var(--oat-soft) 20%,
+    rgba(245, 241, 234, 0.98) 28%,
+    rgba(245, 241, 234, 0.92) 36%,
+    rgba(245, 241, 234, 0.78) 44%,
+    rgba(245, 241, 234, 0.58) 52%,
+    rgba(245, 241, 234, 0.36) 60%,
+    rgba(245, 241, 234, 0.16) 68%,
+    rgba(245, 241, 234, 0.05) 74%,
+    rgba(245, 241, 234, 0) 79%
+  );
+}
 
 
     /* HERO COPY */
