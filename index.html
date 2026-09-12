@@ -40,24 +40,25 @@
 
     :root {
       --wine: #6E1413;
-      --wine-dark: #57100F;
+      --wine-dark: #55100F;
 
       --river: #385D6B;
-      --river-dark: #2C4E5A;
+      --river-dark: #2D4F5A;
 
       --oat: #E7DDCD;
       --oat-soft: #F5F1EA;
 
       --warm-white: #FCFBF8;
       --cream: #F8F4EE;
+      --paper: #FFFDFC;
 
       --ink: #2A2926;
       --body: #5B5751;
-      --muted: #79736C;
+      --muted: #7B746D;
 
-      --border: #E8E1D8;
+      --border: #E9E3DB;
 
-      --max: 1280px;
+      --max: 1320px;
     }
 
 
@@ -75,10 +76,11 @@
 
     body {
       margin: 0;
+
       background: var(--warm-white);
+      color: var(--ink);
 
       font-family: "DM Sans", sans-serif;
-      color: var(--ink);
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -98,13 +100,13 @@
     }
 
     .container {
-      width: min(90%, var(--max));
+      width: min(88%, var(--max));
       margin: 0 auto;
     }
 
 
     /* =========================================================
-       SHARED TYPE
+       SHARED
     ========================================================= */
 
     .eyebrow {
@@ -112,38 +114,28 @@
 
       color: var(--river);
 
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.2;
       font-weight: 700;
 
-      letter-spacing: 0.17em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
-    .display {
-      margin: 0;
-
-      font-family: "Aubrey", serif;
-      font-weight: 400;
-      line-height: 0.98;
-
-      color: var(--wine);
-    }
-
     .button {
-      min-height: 49px;
-      padding: 0 23px;
+      min-height: 47px;
+      padding: 0 22px;
 
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
-      border-radius: 10px;
+      border-radius: 9px;
 
       background: var(--wine);
       color: #fff;
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
@@ -157,20 +149,22 @@
     .button:hover,
     .button:focus-visible {
       background: var(--wine-dark);
+
       transform: translateY(-1px);
 
       box-shadow:
-        0 9px 25px rgba(110, 20, 19, 0.13);
+        0 10px 24px rgba(110, 20, 19, 0.11);
     }
 
     .text-link {
       display: inline-flex;
       align-items: center;
+
       gap: 8px;
 
       color: var(--river);
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
@@ -202,37 +196,38 @@
       top: 0;
       z-index: 1000;
 
-      background: rgba(252, 251, 248, 0.97);
+      background: rgba(252, 251, 248, 0.975);
 
       border-bottom: 1px solid transparent;
 
       transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .site-header.scrolled {
-      border-color: rgba(232, 225, 216, 0.9);
+      border-color: rgba(233, 227, 219, 0.9);
 
       box-shadow:
-        0 7px 26px rgba(42, 41, 38, 0.055);
+        0 7px 25px rgba(42, 41, 38, 0.045);
     }
 
     .nav-wrap {
-      width: min(90%, var(--max));
-      min-height: 105px;
+      width: min(88%, var(--max));
+      min-height: 98px;
 
       margin: 0 auto;
 
       display: flex;
       align-items: center;
+
       gap: 28px;
 
       transition: min-height 0.2s ease;
     }
 
     .site-header.scrolled .nav-wrap {
-      min-height: 84px;
+      min-height: 80px;
     }
 
     .brand-logo {
@@ -245,30 +240,34 @@
     }
 
     .brand-logo img {
-      width: 205px;
+      width: 190px;
       height: auto;
 
       transition: width 0.2s ease;
     }
 
     .site-header.scrolled .brand-logo img {
-      width: 178px;
+      width: 170px;
     }
+
+
+    /* NAV */
 
     .main-nav {
       margin-left: auto;
 
       display: flex;
       align-items: center;
-      gap: 4px;
+
+      gap: 3px;
     }
 
     .nav-link {
-      padding: 12px 10px;
+      padding: 11px 10px;
 
       color: var(--ink);
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
 
       text-decoration: none;
@@ -288,19 +287,18 @@
     .nav-actions {
       display: flex;
       align-items: center;
+
       gap: 18px;
     }
 
     .client-link {
       color: var(--river);
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
 
       text-decoration: none;
       white-space: nowrap;
-
-      transition: color 0.16s ease;
     }
 
     .client-link:hover,
@@ -309,19 +307,19 @@
     }
 
     .waitlist-button {
-      min-height: 46px;
-      padding: 0 20px;
+      min-height: 44px;
+      padding: 0 19px;
 
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
-      border-radius: 10px;
+      border-radius: 9px;
 
       background: var(--wine);
       color: #fff;
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
 
       text-decoration: none;
@@ -340,7 +338,7 @@
 
 
     /* =========================================================
-       MOBILE MENU
+       MOBILE NAV
     ========================================================= */
 
     .menu-toggle {
@@ -407,11 +405,11 @@
     }
 
     .mobile-menu-inner {
-      width: min(90%, 620px);
+      width: min(89%, 620px);
 
       margin: 0 auto;
 
-      padding: 4px 0 29px;
+      padding: 4px 0 28px;
     }
 
     .mobile-menu a {
@@ -427,12 +425,6 @@
       font-weight: 500;
 
       text-decoration: none;
-    }
-
-    .mobile-menu a:hover,
-    .mobile-menu a:focus-visible {
-      color: var(--wine);
-      font-weight: 700;
     }
 
     .mobile-menu .mobile-client {
@@ -457,8 +449,6 @@
       color: #fff;
 
       text-align: center;
-
-      font-size: 15px;
       font-weight: 700;
     }
 
@@ -470,7 +460,7 @@
     .home-hero {
       position: relative;
 
-      min-height: 670px;
+      min-height: 565px;
 
       overflow: hidden;
 
@@ -478,17 +468,14 @@
     }
 
     /*
-      The photo starts farther left than before,
-      but there is NO zoom now.
-
-      This is deliberate so we retain as much of the
-      actual dog lineup as possible.
+      Photo begins relatively far left so the image has room
+      to breathe and the full lineup stays visible.
     */
 
     .hero-image-wrap {
       position: absolute;
 
-      inset: 0 0 0 31%;
+      inset: 0 0 0 28%;
 
       overflow: hidden;
     }
@@ -500,11 +487,17 @@
       object-fit: cover;
 
       /*
-        Keeping this close to centre prevents us from
-        chopping dogs off either edge.
+        No scaling here.
+        We want image, not crop, doing the work.
       */
-      object-position: 54% 47%;
+      object-position: 53% 45%;
     }
+
+    /*
+      Soft fade only.
+      Keep this narrow enough that the left dogs
+      are still visible through it.
+    */
 
     .hero-image-wrap::after {
       content: "";
@@ -518,11 +511,11 @@
         linear-gradient(
           90deg,
           var(--cream) 0%,
-          rgba(248, 244, 238, 0.99) 6%,
-          rgba(248, 244, 238, 0.91) 13%,
-          rgba(248, 244, 238, 0.64) 23%,
-          rgba(248, 244, 238, 0.25) 33%,
-          rgba(248, 244, 238, 0) 43%
+          rgba(248, 244, 238, 0.99) 5%,
+          rgba(248, 244, 238, 0.88) 12%,
+          rgba(248, 244, 238, 0.52) 21%,
+          rgba(248, 244, 238, 0.15) 30%,
+          rgba(248, 244, 238, 0) 38%
         );
     }
 
@@ -530,8 +523,8 @@
       position: relative;
       z-index: 2;
 
-      width: min(90%, var(--max));
-      min-height: 670px;
+      width: min(88%, var(--max));
+      min-height: 565px;
 
       margin: 0 auto;
 
@@ -540,150 +533,158 @@
     }
 
     /*
-      Narrower than the previous version.
-      This gives the dogs more room.
+      Narrow copy column:
+      headline stays elegant and leaves the dogs alone.
     */
 
     .hero-copy-inner {
-      width: 38%;
-      max-width: 475px;
+      width: 34%;
+      max-width: 430px;
 
-      padding: 72px 0 76px;
+      padding: 55px 0;
     }
 
     .hero-title {
       margin: 0;
 
-      font-family: "Aubrey", serif;
-      font-weight: 400;
-
-      font-size: clamp(58px, 4.8vw, 80px);
-      line-height: 0.94;
-
       color: var(--wine);
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(54px, 4.2vw, 72px);
+      font-weight: 400;
+      line-height: 0.95;
     }
 
     .hero-tagline {
-      margin: 25px 0 0;
+      margin: 23px 0 0;
 
       color: var(--ink);
 
-      font-size: clamp(19px, 1.45vw, 23px);
-      line-height: 1.4;
+      font-size: 19px;
+      line-height: 1.45;
       font-weight: 700;
     }
 
     .hero-description {
-      max-width: 430px;
+      max-width: 410px;
 
-      margin: 14px 0 0;
+      margin: 12px 0 0;
 
       color: var(--body);
 
-      font-size: 16px;
-      line-height: 1.68;
+      font-size: 15px;
+      line-height: 1.72;
     }
 
     .hero-action {
-      margin-top: 30px;
+      margin-top: 27px;
     }
 
 
     /* =========================================================
-       QUIET STORY
+       EDITORIAL HOME SECTION
+       regulars + social together
     ========================================================= */
 
-    .home-story {
-      padding: 132px 0 138px;
+    .home-editorial {
+      padding: 112px 0 118px;
 
       background: var(--warm-white);
     }
 
-    .home-story-inner {
-      max-width: 760px;
+    .editorial-grid {
+      display: grid;
+      grid-template-columns:
+        minmax(270px, 0.72fr)
+        1px
+        minmax(0, 1.28fr);
 
-      margin: 0 auto;
+      gap: 64px;
 
-      text-align: center;
+      align-items: start;
     }
 
-    .home-story .eyebrow {
-      margin-bottom: 18px;
+
+    /* LEFT STORY */
+
+    .regulars-story {
+      padding-top: 9px;
     }
 
-    .home-story-title {
-      max-width: 650px;
+    .regulars-title {
+      max-width: 430px;
 
-      margin: 0 auto;
-
-      font-family: "Aubrey", serif;
+      margin: 0;
 
       color: var(--wine);
 
-      font-size: clamp(48px, 4.8vw, 70px);
+      font-family: "Aubrey", serif;
+      font-size: clamp(42px, 3.5vw, 56px);
       font-weight: 400;
-      line-height: 0.98;
+      line-height: 1;
     }
 
-    .home-story-copy {
-      max-width: 650px;
+    .regulars-copy {
+      max-width: 435px;
 
-      margin: 28px auto 0;
+      margin-top: 25px;
 
       color: var(--body);
 
-      font-size: 17px;
-      line-height: 1.82;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
-    .home-story-copy p {
+    .regulars-copy p {
       margin: 0 0 16px;
     }
 
-    .home-story-copy p:last-child {
+    .regulars-copy p:last-child {
       margin-bottom: 0;
     }
 
-    .home-story-link {
-      margin-top: 28px;
-
-      display: flex;
-      justify-content: center;
+    .regulars-link {
+      margin-top: 25px;
     }
 
 
-    /* =========================================================
-       SOCIAL / FACEBOOK EXTENSION
-    ========================================================= */
+    /* SUBTLE DIVIDER */
 
-    .social-section {
-      padding: 100px 0 118px;
+    .editorial-divider {
+      width: 1px;
+      min-height: 315px;
 
-      background: var(--oat-soft);
+      background: var(--border);
+    }
+
+
+    /* SOCIAL SIDE */
+
+    .social-side {
+      min-width: 0;
     }
 
     .social-heading {
-      margin-bottom: 38px;
+      margin-bottom: 27px;
 
       display: flex;
       align-items: end;
       justify-content: space-between;
 
-      gap: 40px;
+      gap: 30px;
     }
 
-    .social-heading-copy {
-      max-width: 720px;
+    .social-heading-main {
+      min-width: 0;
     }
 
     .social-title {
       margin: 0;
 
-      font-family: "Aubrey", serif;
-
       color: var(--wine);
 
-      font-size: clamp(44px, 4.2vw, 64px);
+      font-family: "Aubrey", serif;
+      font-size: clamp(38px, 3.4vw, 52px);
       font-weight: 400;
       line-height: 1;
     }
@@ -694,44 +695,42 @@
       margin-bottom: 4px;
     }
 
+
+    /* SOCIAL POSTS */
+
     .social-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 26px;
+      gap: 19px;
     }
-
-    /*
-      Each post gets its own card,
-      but the SECTION itself is not boxed.
-    */
 
     .social-post {
       overflow: hidden;
 
-      border: 1px solid rgba(110, 20, 19, 0.07);
-      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
 
-      background: #fff;
+      background: var(--paper);
 
       box-shadow:
-        0 12px 34px rgba(42, 41, 38, 0.035);
+        0 8px 25px rgba(42, 41, 38, 0.025);
     }
 
     .social-post-head {
-      padding: 23px 24px 16px;
+      padding: 16px 17px 10px;
 
       display: flex;
       align-items: center;
 
-      gap: 12px;
+      gap: 10px;
     }
 
     .social-avatar {
-      width: 42px;
-      height: 42px;
+      width: 34px;
+      height: 34px;
 
-      flex: 0 0 42px;
+      flex: 0 0 34px;
 
       display: flex;
       align-items: center;
@@ -739,14 +738,14 @@
 
       overflow: hidden;
 
+      border: 1px solid var(--border);
       border-radius: 50%;
 
       background: var(--cream);
-      border: 1px solid var(--border);
     }
 
     .social-avatar img {
-      width: 34px;
+      width: 28px;
       height: auto;
     }
 
@@ -755,9 +754,9 @@
 
       color: var(--ink);
 
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
     .social-source {
@@ -765,33 +764,33 @@
 
       color: var(--muted);
 
-      font-size: 11px;
-      line-height: 1.35;
+      font-size: 10px;
+      line-height: 1.3;
     }
 
     .social-caption {
-      min-height: 67px;
+      min-height: 49px;
 
       margin: 0;
 
-      padding: 0 24px 18px;
+      padding: 0 17px 12px;
 
       color: var(--ink);
 
-      font-size: 15px;
-      line-height: 1.6;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     .social-image {
-      width: calc(100% - 32px);
+      width: calc(100% - 22px);
 
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 8.4;
 
-      margin: 0 16px;
+      margin: 0 11px;
 
       overflow: hidden;
 
-      border-radius: 11px;
+      border-radius: 9px;
 
       background: var(--cream);
     }
@@ -803,78 +802,92 @@
       object-fit: cover;
     }
 
-    .social-post-footer {
-      padding: 17px 24px 21px;
+    .social-footer {
+      padding: 12px 17px 15px;
+    }
+
+    .social-footer .text-link {
+      font-size: 11px;
     }
 
 
     /* =========================================================
-       FINAL CTA
+       WHITE SPACE BEFORE CTA
     ========================================================= */
 
-    .final-cta-wrap {
-      padding: 100px 0 96px;
+    .cta-area {
+      padding: 0 0 108px;
 
       background: var(--warm-white);
     }
 
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
     .final-cta {
-      width: min(90%, var(--max));
+      width: min(88%, var(--max));
+
+      min-height: 190px;
 
       margin: 0 auto;
-      padding: 63px 70px;
+      padding: 46px 58px;
 
       display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
-
-      gap: 70px;
+      grid-template-columns: 1fr auto;
 
       align-items: center;
 
-      border-radius: 22px;
+      gap: 65px;
+
+      border-radius: 19px;
 
       background: var(--river);
       color: #fff;
 
       box-shadow:
-        0 20px 50px rgba(56, 93, 107, 0.08);
+        0 22px 52px rgba(56, 93, 107, 0.075);
+    }
+
+    .final-cta-copy {
+      max-width: 760px;
     }
 
     .final-cta h2 {
-      max-width: 690px;
-
       margin: 0;
-
-      font-family: "Aubrey", serif;
 
       color: #fff;
 
-      font-size: clamp(44px, 4vw, 62px);
+      font-family: "Aubrey", serif;
+      font-size: clamp(42px, 3.7vw, 58px);
       font-weight: 400;
       line-height: 1;
     }
 
     .final-cta p {
-      max-width: 640px;
+      max-width: 720px;
 
-      margin: 17px 0 0;
+      margin: 14px 0 0;
 
-      color: rgba(255, 255, 255, 0.87);
+      color: rgba(255, 255, 255, 0.86);
 
-      font-size: 16px;
-      line-height: 1.72;
+      font-size: 14px;
+      line-height: 1.65;
     }
 
     .final-cta-actions {
+      min-width: 205px;
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
-      gap: 18px;
+      gap: 15px;
     }
 
     .final-cta .button {
-      min-width: 200px;
+      width: 100%;
     }
 
     .final-cta .text-link {
@@ -892,7 +905,7 @@
     ========================================================= */
 
     .site-footer {
-      padding: 36px 0 29px;
+      padding: 33px 0 25px;
 
       background: var(--warm-white);
 
@@ -903,26 +916,27 @@
       display: grid;
       grid-template-columns: auto 1fr auto;
 
-      gap: 45px;
-
       align-items: center;
+
+      gap: 40px;
     }
 
     .footer-logo img {
-      width: 155px;
+      width: 125px;
       height: auto;
     }
 
     .footer-contact {
       display: flex;
       align-items: center;
-
-      gap: 22px;
       flex-wrap: wrap;
+
+      gap: 9px 18px;
 
       color: var(--body);
 
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
     .footer-contact a {
@@ -939,13 +953,13 @@
       justify-content: flex-end;
       flex-wrap: wrap;
 
-      gap: 10px 19px;
+      gap: 8px 16px;
     }
 
     .footer-nav a {
       color: var(--body);
 
-      font-size: 12px;
+      font-size: 10px;
 
       text-decoration: none;
     }
@@ -956,33 +970,32 @@
     }
 
     .footer-bottom {
-      margin-top: 27px;
-      padding-top: 21px;
+      margin-top: 24px;
+      padding-top: 18px;
 
       display: flex;
       justify-content: space-between;
 
-      gap: 20px;
+      gap: 18px;
 
       border-top: 1px solid var(--border);
 
       color: var(--muted);
 
-      font-size: 11px;
+      font-size: 10px;
     }
 
     .footer-phrase {
       color: var(--river);
-
       font-weight: 600;
     }
 
 
     /* =========================================================
-       RESPONSIVE
+       LAPTOP / SMALL DESKTOP
     ========================================================= */
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1150px) {
 
       .main-nav,
       .nav-actions {
@@ -995,42 +1008,51 @@
 
       .nav-wrap,
       .site-header.scrolled .nav-wrap {
-        min-height: 84px;
+        min-height: 82px;
       }
 
       .brand-logo img,
       .site-header.scrolled .brand-logo img {
-        width: 174px;
+        width: 170px;
       }
 
       .hero-copy-inner {
-        width: 43%;
+        width: 40%;
       }
 
       .hero-image-wrap {
-        inset: 0 0 0 32%;
+        inset: 0 0 0 31%;
+      }
+
+      .editorial-grid {
+        grid-template-columns:
+          minmax(260px, 0.8fr)
+          1px
+          minmax(0, 1.2fr);
+
+        gap: 42px;
+      }
+
+      .social-heading {
+        display: block;
+      }
+
+      .social-follow {
+        margin-top: 13px;
       }
 
       .final-cta {
-        grid-template-columns: 1.15fr 0.85fr;
-
-        padding: 55px;
-        gap: 50px;
-      }
-
-      .footer-main {
-        grid-template-columns: auto 1fr;
-      }
-
-      .footer-nav {
-        grid-column: 1 / -1;
-        justify-content: flex-start;
+        padding: 43px 46px;
       }
 
     }
 
 
-    @media (max-width: 780px) {
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 850px) {
 
       .home-hero {
         min-height: auto;
@@ -1039,18 +1061,14 @@
       .hero-copy {
         min-height: auto;
 
-        padding: 54px 0 48px;
+        padding: 52px 0 45px;
       }
 
       .hero-copy-inner {
         width: 100%;
-        max-width: 600px;
+        max-width: 590px;
 
         padding: 0;
-      }
-
-      .hero-title {
-        font-size: clamp(55px, 15vw, 74px);
       }
 
       .hero-image-wrap {
@@ -1058,12 +1076,12 @@
 
         inset: auto;
 
+        height: 440px;
         width: 100%;
-        height: 455px;
       }
 
       .hero-image {
-        object-position: 50% 41%;
+        object-position: 50% 40%;
       }
 
       .hero-image-wrap::after {
@@ -1071,20 +1089,104 @@
       }
 
 
-      .home-story {
-        padding: 95px 0 102px;
+      /* editorial stacks */
+
+      .home-editorial {
+        padding: 90px 0 94px;
       }
 
-      .social-section {
-        padding: 83px 0 95px;
+      .editorial-grid {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
       }
 
-      .social-heading {
-        display: block;
+      .editorial-divider {
+        display: none;
       }
 
-      .social-follow {
-        margin-top: 22px;
+      .regulars-story {
+        max-width: 680px;
+      }
+
+      .social-grid {
+        gap: 18px;
+      }
+
+
+      /* CTA */
+
+      .cta-area {
+        padding-bottom: 86px;
+      }
+
+      .final-cta {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 44px 40px;
+      }
+
+      .final-cta-actions {
+        min-width: 0;
+      }
+
+
+      /* footer */
+
+      .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+      }
+
+      .footer-nav {
+        justify-content: flex-start;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 570px) {
+
+      .container,
+      .nav-wrap,
+      .hero-copy {
+        width: 89%;
+      }
+
+      .hero-title {
+        font-size: 55px;
+      }
+
+      .hero-tagline {
+        font-size: 18px;
+      }
+
+      .hero-image-wrap {
+        height: 345px;
+      }
+
+      .hero-action .button {
+        width: 100%;
+      }
+
+
+      .home-editorial {
+        padding: 78px 0 84px;
+      }
+
+      .regulars-title {
+        font-size: 44px;
+      }
+
+      .social-title {
+        font-size: 40px;
       }
 
       .social-grid {
@@ -1095,101 +1197,49 @@
         min-height: auto;
       }
 
-
-      .final-cta-wrap {
-        padding: 82px 0;
-      }
-
-      .final-cta {
-        grid-template-columns: 1fr;
-
-        padding: 45px 40px;
-
-        gap: 31px;
-      }
-
-
-      .footer-main {
-        grid-template-columns: 1fr;
-
-        gap: 27px;
-      }
-
-      .footer-nav {
-        grid-column: auto;
-
-        justify-content: flex-start;
-      }
-
-    }
-
-
-    @media (max-width: 520px) {
-
-      .container,
-      .nav-wrap,
-      .hero-copy {
-        width: min(89%, var(--max));
-      }
-
-      .hero-copy {
-        padding-top: 46px;
-      }
-
-      .hero-image-wrap {
-        height: 350px;
-      }
-
-      .hero-action .button {
-        width: 100%;
-      }
-
-      .home-story {
-        padding: 82px 0 88px;
-      }
-
-      .home-story-title {
-        font-size: 48px;
-      }
-
-      .social-section {
-        padding: 72px 0 82px;
-      }
-
-      .social-title {
-        font-size: 44px;
-      }
-
       .social-image {
         aspect-ratio: 4 / 3;
       }
 
-      .final-cta-wrap {
-        padding: 70px 0;
+
+      .cta-area {
+        padding-bottom: 70px;
       }
 
       .final-cta {
         width: 89%;
 
-        padding: 38px 28px;
+        min-height: auto;
 
-        border-radius: 18px;
+        padding: 37px 27px;
+
+        border-radius: 16px;
       }
 
-      .final-cta-actions,
-      .final-cta .button {
+      .final-cta h2 {
+        font-size: 43px;
+      }
+
+      .final-cta-actions {
         width: 100%;
       }
 
-      .footer-contact {
-        align-items: flex-start;
-        flex-direction: column;
 
-        gap: 8px;
+      .footer-contact {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 7px;
+      }
+
+      .footer-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px 20px;
       }
 
       .footer-bottom {
-        align-items: flex-start;
         flex-direction: column;
       }
 
@@ -1386,6 +1436,7 @@
 
     <section class="home-hero">
 
+
       <div class="hero-image-wrap">
 
         <img
@@ -1434,28 +1485,32 @@
 
       </div>
 
+
     </section>
 
 
     <!-- =====================================================
-         QUIET STORY MOMENT
+         EDITORIAL SECTION
     ====================================================== -->
 
-    <section class="home-story">
+    <section class="home-editorial">
 
-      <div class="container">
+      <div class="container editorial-grid">
 
-        <div class="home-story-inner">
+
+        <!-- REGULARS STORY -->
+
+        <div class="regulars-story">
 
           <p class="eyebrow">
             Real dogs. Real days.
           </p>
 
-          <h2 class="home-story-title">
+          <h2 class="regulars-title">
             Most of the dogs here are regulars.
           </h2>
 
-          <div class="home-story-copy">
+          <div class="regulars-copy">
 
             <p>
               They come back week after week, see many of the same
@@ -1472,7 +1527,7 @@
 
           </div>
 
-          <div class="home-story-link">
+          <div class="regulars-link">
 
             <a
               href="daycare.html"
@@ -1486,183 +1541,187 @@
 
         </div>
 
-      </div>
 
-    </section>
+        <!-- DIVIDER -->
 
-
-    <!-- =====================================================
-         FROM THE FARMHOUSE
-    ====================================================== -->
-
-    <section class="social-section">
-
-      <div class="container">
+        <div
+          class="editorial-divider"
+          aria-hidden="true"
+        ></div>
 
 
-        <div class="social-heading">
+        <!-- SOCIAL -->
 
-          <div class="social-heading-copy">
+        <div class="social-side">
 
-            <p class="eyebrow">
-              From the Farmhouse
-            </p>
 
-            <h2 class="social-title">
-              What’s been happening lately.
-            </h2>
+          <div class="social-heading">
+
+            <div class="social-heading-main">
+
+              <p class="eyebrow">
+                From the Farmhouse
+              </p>
+
+              <h2 class="social-title">
+                What’s been happening lately.
+              </h2>
+
+            </div>
+
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61568074120165"
+              class="text-link social-follow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow along on Facebook
+              <span aria-hidden="true">→</span>
+            </a>
 
           </div>
 
 
-          <a
-            href="https://www.facebook.com/profile.php?id=61568074120165"
-            class="text-link social-follow"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Follow along on Facebook
-            <span aria-hidden="true">→</span>
-          </a>
-
-        </div>
+          <div class="social-grid">
 
 
-        <div class="social-grid">
+            <!-- POST 1 -->
+
+            <article class="social-post">
 
 
-          <!-- FACEBOOK POST 1 -->
+              <div class="social-post-head">
 
-          <article class="social-post">
+                <div class="social-avatar">
+
+                  <img
+                    src="assets/farmhouseandfieldslogo.png"
+                    alt=""
+                    aria-hidden="true"
+                  >
+
+                </div>
+
+                <div>
+
+                  <p class="social-name">
+                    Farmhouse & Fields Dog Daycare
+                  </p>
+
+                  <p class="social-source">
+                    From Facebook
+                  </p>
+
+                </div>
+
+              </div>
 
 
-            <div class="social-post-head">
+              <p class="social-caption">
+                Zoomy mode activated first thing this morning!
+              </p>
 
-              <div class="social-avatar">
+
+              <div class="social-image">
 
                 <img
-                  src="assets/farmhouseandfieldslogo.png"
-                  alt=""
-                  aria-hidden="true"
+                  src="assets/1.jpg"
+                  alt="Dogs playing together at Farmhouse & Fields Dog Daycare"
                 >
 
               </div>
 
-              <div>
 
-                <p class="social-name">
-                  Farmhouse & Fields Dog Daycare
-                </p>
+              <div class="social-footer">
 
-                <p class="social-source">
-                  From Facebook
-                </p>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61568074120165"
+                  class="text-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Facebook
+                  <span aria-hidden="true">→</span>
+                </a>
 
               </div>
 
-            </div>
+
+            </article>
 
 
-            <p class="social-caption">
-              Zoomy mode activated first thing this morning!
-            </p>
+            <!-- POST 2 -->
+
+            <article class="social-post">
 
 
-            <div class="social-image">
+              <div class="social-post-head">
 
-              <img
-                src="assets/1.jpg"
-                alt="Dogs playing together at Farmhouse & Fields Dog Daycare"
-              >
+                <div class="social-avatar">
 
-            </div>
+                  <img
+                    src="assets/farmhouseandfieldslogo.png"
+                    alt=""
+                    aria-hidden="true"
+                  >
 
+                </div>
 
-            <div class="social-post-footer">
+                <div>
 
-              <a
-                href="https://www.facebook.com/profile.php?id=61568074120165"
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on Facebook
-                <span aria-hidden="true">→</span>
-              </a>
+                  <p class="social-name">
+                    Farmhouse & Fields Dog Daycare
+                  </p>
 
-            </div>
+                  <p class="social-source">
+                    From Facebook
+                  </p>
 
+                </div>
 
-          </article>
-
-
-          <!-- FACEBOOK POST 2 -->
-
-          <article class="social-post">
+              </div>
 
 
-            <div class="social-post-head">
+              <p class="social-caption">
+                Willy and Walter LOVE their Fridays together!
+                Two big goofy wrestling lovers!
+              </p>
 
-              <div class="social-avatar">
+
+              <div class="social-image">
 
                 <img
-                  src="assets/farmhouseandfieldslogo.png"
-                  alt=""
-                  aria-hidden="true"
+                  src="assets/2.jpg"
+                  alt="Dogs spending time together at Farmhouse & Fields Dog Daycare"
                 >
 
               </div>
 
-              <div>
 
-                <p class="social-name">
-                  Farmhouse & Fields Dog Daycare
-                </p>
+              <div class="social-footer">
 
-                <p class="social-source">
-                  From Facebook
-                </p>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61568074120165"
+                  class="text-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on Facebook
+                  <span aria-hidden="true">→</span>
+                </a>
 
               </div>
 
-            </div>
+
+            </article>
 
 
-            <p class="social-caption">
-              Willy and Walter LOVE their Fridays together!
-              Two big goofy wrestling lovers!
-            </p>
-
-
-            <div class="social-image">
-
-              <img
-                src="assets/2.jpg"
-                alt="Dogs spending time together at Farmhouse & Fields Dog Daycare"
-              >
-
-            </div>
-
-
-            <div class="social-post-footer">
-
-              <a
-                href="https://www.facebook.com/profile.php?id=61568074120165"
-                class="text-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on Facebook
-                <span aria-hidden="true">→</span>
-              </a>
-
-            </div>
-
-
-          </article>
+          </div>
 
 
         </div>
+
 
       </div>
 
@@ -1673,12 +1732,12 @@
          FINAL CTA
     ====================================================== -->
 
-    <section class="final-cta-wrap">
+    <section class="cta-area">
 
       <div class="final-cta">
 
 
-        <div>
+        <div class="final-cta-copy">
 
           <h2>
             Think your dog would like it here?
@@ -1855,7 +1914,7 @@
       document.getElementById("currentYear");
 
 
-    /* MOBILE NAV */
+    /* MOBILE MENU */
 
     menuToggle.addEventListener("click", function () {
 
@@ -1882,8 +1941,6 @@
     });
 
 
-    /* CLOSE MOBILE NAV AFTER A LINK */
-
     mobileMenu
       .querySelectorAll("a")
       .forEach(function (link) {
@@ -1908,7 +1965,7 @@
       });
 
 
-    /* HEADER ON SCROLL */
+    /* HEADER */
 
     function updateHeader() {
 
