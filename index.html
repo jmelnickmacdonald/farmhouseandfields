@@ -15,7 +15,6 @@
     content="Farmhouse & Fields Dog Daycare in Canning, Nova Scotia. Your dog's home away from home, with familiar faces, room to run, and plenty of time to just be dogs."
   >
 
-  <!-- DM SANS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -80,6 +79,7 @@
       color: var(--ink);
 
       font-family: "DM Sans", sans-serif;
+      font-size: 16px;
 
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -109,21 +109,21 @@
     ========================================================= */
 
     .eyebrow {
-      margin: 0 0 15px;
+      margin: 0 0 16px;
 
       color: var(--river);
 
-      font-size: 10px;
+      font-size: 11px;
       line-height: 1.2;
       font-weight: 700;
 
-      letter-spacing: 0.18em;
+      letter-spacing: 0.17em;
       text-transform: uppercase;
     }
 
     .button-wine {
-      min-height: 47px;
-      padding: 0 22px;
+      min-height: 48px;
+      padding: 0 23px;
 
       display: inline-flex;
       align-items: center;
@@ -134,7 +134,7 @@
       background: var(--wine);
       color: #fff;
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
 
       text-decoration: none;
@@ -148,7 +148,6 @@
     .button-wine:hover,
     .button-wine:focus-visible {
       background: var(--wine-dark);
-
       transform: translateY(-1px);
 
       box-shadow:
@@ -162,7 +161,7 @@
 
       color: var(--river);
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
 
       text-decoration: none;
@@ -247,9 +246,6 @@
       width: 170px;
     }
 
-
-    /* NAV */
-
     .main-nav {
       margin-left: auto;
 
@@ -263,14 +259,10 @@
 
       color: var(--ink);
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
 
       text-decoration: none;
-
-      transition:
-        color 0.16s ease,
-        font-weight 0.16s ease;
     }
 
     .nav-link:hover,
@@ -289,7 +281,7 @@
     .client-link {
       color: var(--river);
 
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
@@ -302,8 +294,8 @@
     }
 
     .waitlist-button {
-      min-height: 44px;
-      padding: 0 19px;
+      min-height: 45px;
+      padding: 0 20px;
 
       display: inline-flex;
       align-items: center;
@@ -314,21 +306,11 @@
       background: var(--wine);
       color: #fff;
 
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
       white-space: nowrap;
-
-      transition:
-        background 0.18s ease,
-        transform 0.18s ease;
-    }
-
-    .waitlist-button:hover,
-    .waitlist-button:focus-visible {
-      background: var(--wine-dark);
-      transform: translateY(-1px);
     }
 
 
@@ -362,7 +344,6 @@
       height: 2px;
 
       border-radius: 10px;
-
       background: var(--ink);
 
       transition:
@@ -401,9 +382,7 @@
 
     .mobile-menu-inner {
       width: 89%;
-
       margin: 0 auto;
-
       padding: 5px 0 28px;
     }
 
@@ -447,7 +426,7 @@
 
 
     /* =========================================================
-       HERO — DESKTOP
+       HERO
     ========================================================= */
 
     .home-hero {
@@ -459,14 +438,6 @@
 
       background: var(--oat-soft);
     }
-
-
-    /*
-      NO GRADIENT.
-
-      The actual image already has the pale/open area on the
-      left, so the photo itself creates the composition.
-    */
 
     .hero-image-wrap {
       position: absolute;
@@ -482,17 +453,8 @@
       height: 100%;
 
       object-fit: cover;
-
-      /*
-        Horizontal composition is preserved.
-        This mostly trims top/bottom, not the dog lineup.
-      */
-
       object-position: center 48%;
     }
-
-
-    /* HERO COPY */
 
     .hero-copy {
       position: relative;
@@ -536,22 +498,22 @@
 
       color: var(--ink);
 
-      font-size: 17px;
-      line-height: 1.36;
+      font-size: 18px;
+      line-height: 1.38;
       font-weight: 700;
     }
 
     .hero-description {
-      margin: 11px 0 0;
+      margin: 12px 0 0;
 
       color: var(--body);
 
-      font-size: 14px;
-      line-height: 1.62;
+      font-size: 16px;
+      line-height: 1.65;
     }
 
     .hero-action {
-      margin-top: 24px;
+      margin-top: 25px;
     }
 
 
@@ -560,43 +522,49 @@
     ========================================================= */
 
     .regulars-section {
-      padding: 105px 0 108px;
+      padding: 104px 0 110px;
 
       background: #fff;
     }
 
     .regulars-inner {
-      max-width: 770px;
+      max-width: 920px;
 
       margin: 0 auto;
 
       text-align: center;
     }
 
+    .regulars-section .eyebrow {
+      margin-bottom: 17px;
+    }
+
     .regulars-title {
-      margin: 0;
+      max-width: 880px;
+
+      margin: 0 auto;
 
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(43px, 3.5vw, 55px);
+      font-size: clamp(43px, 3.1vw, 51px);
       font-weight: 400;
-      line-height: 1;
+      line-height: 1.02;
     }
 
     .regulars-copy {
-      max-width: 700px;
+      max-width: 790px;
 
-      margin: 24px auto 0;
+      margin: 28px auto 0;
 
       color: var(--body);
 
-      font-size: 15px;
-      line-height: 1.78;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     .regulars-copy p {
-      margin: 0 0 13px;
+      margin: 0 0 17px;
     }
 
     .regulars-copy p:last-child {
@@ -604,7 +572,7 @@
     }
 
     .regulars-link {
-      margin-top: 25px;
+      margin-top: 29px;
 
       display: flex;
       justify-content: center;
@@ -616,7 +584,7 @@
     ========================================================= */
 
     .social-section {
-      padding: 85px 0 90px;
+      padding: 86px 0 92px;
 
       background: var(--oat-soft);
     }
@@ -631,7 +599,7 @@
     }
 
     .social-intro {
-      max-width: 355px;
+      max-width: 360px;
     }
 
     .social-title {
@@ -646,20 +614,20 @@
     }
 
     .social-description {
-      margin: 18px 0 0;
+      margin: 19px 0 0;
 
       color: var(--body);
 
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.7;
     }
 
     .social-intro-link {
-      margin-top: 22px;
+      margin-top: 23px;
     }
 
 
-    /* SOCIAL CARDS */
+    /* SOCIAL POSTS */
 
     .social-grid {
       display: grid;
@@ -681,7 +649,7 @@
     }
 
     .social-head {
-      padding: 16px 17px 10px;
+      padding: 17px 18px 10px;
 
       display: flex;
       align-items: center;
@@ -690,10 +658,10 @@
     }
 
     .social-avatar {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
 
-      flex: 0 0 34px;
+      flex: 0 0 36px;
 
       display: flex;
       align-items: center;
@@ -708,7 +676,7 @@
     }
 
     .social-avatar img {
-      width: 27px;
+      width: 28px;
       height: auto;
     }
 
@@ -717,7 +685,7 @@
 
       color: var(--ink);
 
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       line-height: 1.3;
     }
@@ -727,29 +695,29 @@
 
       color: var(--muted);
 
-      font-size: 10px;
+      font-size: 11px;
       line-height: 1.3;
     }
 
     .social-caption {
-      min-height: 48px;
+      min-height: 54px;
 
       margin: 0;
 
-      padding: 0 17px 12px;
+      padding: 0 18px 13px;
 
       color: var(--ink);
 
-      font-size: 12px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.55;
     }
 
     .social-image {
-      width: calc(100% - 22px);
+      width: calc(100% - 24px);
 
       aspect-ratio: 16 / 8.5;
 
-      margin: 0 11px;
+      margin: 0 12px;
 
       overflow: hidden;
 
@@ -764,16 +732,16 @@
     }
 
     .social-footer {
-      padding: 12px 17px 15px;
+      padding: 13px 18px 16px;
     }
 
     .social-footer .text-link {
-      font-size: 11px;
+      font-size: 13px;
     }
 
 
     /* =========================================================
-       FULL-WIDTH CTA
+       CTA
     ========================================================= */
 
     .final-cta {
@@ -789,23 +757,22 @@
       position: relative;
       z-index: 3;
 
-      width: min(88%, var(--max));
-      min-height: 215px;
+      width: min(86%, 1380px);
+      min-height: 285px;
 
       margin: 0 auto;
+      padding: 55px 0;
 
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 1.2fr) auto;
 
       align-items: center;
 
-      gap: 75px;
-
-      padding: 48px 0;
+      gap: 80px;
     }
 
     .final-cta-copy {
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .final-cta h2 {
@@ -814,32 +781,38 @@
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(43px, 3.8vw, 59px);
+      font-size: clamp(48px, 3.5vw, 62px);
       font-weight: 400;
-      line-height: 1;
+      line-height: 0.96;
+    }
+
+    .final-cta h2 span {
+      display: block;
     }
 
     .final-cta p {
-      max-width: 690px;
+      max-width: 650px;
 
-      margin: 14px 0 0;
+      margin: 20px 0 0;
 
-      color: rgba(255, 255, 255, 0.86);
+      color: rgba(255, 255, 255, 0.88);
 
-      font-size: 14px;
-      line-height: 1.65;
+      font-size: 16px;
+      line-height: 1.72;
     }
 
     .final-cta-actions {
       display: flex;
       align-items: center;
 
-      gap: 25px;
+      gap: 28px;
+
+      padding-right: 24px;
     }
 
     .cta-button {
-      min-height: 48px;
-      padding: 0 23px;
+      min-height: 50px;
+      padding: 0 25px;
 
       display: inline-flex;
       align-items: center;
@@ -850,42 +823,29 @@
       background: var(--warm-white);
       color: var(--river-dark);
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
 
       text-decoration: none;
-
-      transition:
-        background 0.18s ease,
-        transform 0.18s ease;
     }
 
     .cta-button:hover,
     .cta-button:focus-visible {
       background: #fff;
-      transform: translateY(-1px);
     }
 
     .cta-link {
       display: inline-flex;
       align-items: center;
+
       gap: 8px;
 
       color: #fff;
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
 
       text-decoration: none;
-    }
-
-    .cta-link span {
-      transition: transform 0.18s ease;
-    }
-
-    .cta-link:hover span,
-    .cta-link:focus-visible span {
-      transform: translateX(4px);
     }
 
 
@@ -897,12 +857,12 @@
       position: absolute;
       z-index: 1;
 
-      bottom: -47px;
+      bottom: -25px;
 
-      width: 320px;
-      height: 245px;
+      width: 390px;
+      height: 315px;
 
-      background: rgba(255, 255, 255, 0.105);
+      background: rgba(255, 255, 255, 0.18);
 
       -webkit-mask:
         url("assets/grass.png")
@@ -918,13 +878,13 @@
     }
 
     .cta-grass-left {
-      left: -65px;
+      left: -75px;
 
       transform: scaleX(-1);
     }
 
     .cta-grass-right {
-      right: -65px;
+      right: -75px;
     }
 
     .cta-grass-mobile {
@@ -951,9 +911,6 @@
       align-items: start;
     }
 
-
-    /* FOOTER BRAND */
-
     .footer-logo {
       width: 145px;
       height: auto;
@@ -970,9 +927,6 @@
       line-height: 1;
     }
 
-
-    /* FOOTER CONTACT */
-
     .footer-contact {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -987,7 +941,7 @@
 
       color: var(--river);
 
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 700;
 
       letter-spacing: 0.14em;
@@ -998,26 +952,18 @@
     .footer-detail-value a {
       color: var(--body);
 
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.55;
 
       text-decoration: none;
     }
-
-    .footer-detail-value a:hover,
-    .footer-detail-value a:focus-visible {
-      color: var(--wine);
-    }
-
-
-    /* FOOTER NAV */
 
     .footer-nav-title {
       margin: 0 0 12px;
 
       color: var(--river);
 
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 700;
 
       letter-spacing: 0.14em;
@@ -1034,18 +980,10 @@
     .footer-nav a {
       color: var(--body);
 
-      font-size: 11px;
+      font-size: 12px;
 
       text-decoration: none;
     }
-
-    .footer-nav a:hover,
-    .footer-nav a:focus-visible {
-      color: var(--wine);
-    }
-
-
-    /* FOOTER BOTTOM */
 
     .footer-bottom {
       margin-top: 39px;
@@ -1060,7 +998,7 @@
 
       color: var(--muted);
 
-      font-size: 10px;
+      font-size: 11px;
     }
 
     .footer-bottom-location {
@@ -1122,11 +1060,6 @@
 
     @media (max-width: 830px) {
 
-      /*
-        On tablet/mobile the hero becomes TWO pieces:
-        copy first, image second.
-      */
-
       .home-hero {
         min-height: auto;
 
@@ -1156,9 +1089,6 @@
         font-size: 57px;
       }
 
-
-      /* IMAGE BELOW COPY */
-
       .hero-image-wrap {
         order: 2;
 
@@ -1176,24 +1106,12 @@
         height: 100%;
 
         object-fit: cover;
-
-        /*
-          Crop away much of the empty pale left side
-          and concentrate on the dog lineup.
-        */
-
         object-position: 68% center;
       }
-
-
-      /* REGULARS */
 
       .regulars-section {
         padding: 85px 0 90px;
       }
-
-
-      /* SOCIAL */
 
       .social-section {
         padding: 76px 0 82px;
@@ -1209,23 +1127,18 @@
         max-width: 650px;
       }
 
-
-      /* CTA */
-
       .final-cta-inner {
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 30px;
 
-        padding: 50px 0 58px;
+        padding: 50px 0 62px;
       }
 
       .final-cta-actions {
         justify-content: flex-start;
+        padding-right: 0;
       }
-
-
-      /* FOOTER */
 
       .footer-grid {
         grid-template-columns: 1fr;
@@ -1256,9 +1169,6 @@
         width: 89%;
       }
 
-
-      /* HERO */
-
       .hero-copy {
         width: 89%;
 
@@ -1270,52 +1180,36 @@
       }
 
       .hero-tagline {
-        font-size: 17px;
+        font-size: 18px;
       }
 
       .hero-description {
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .hero-action .button-wine {
         width: 100%;
       }
 
-
-      /*
-        Same doghero.png.
-        CSS handles the mobile crop.
-      */
-
       .hero-image-wrap {
         height: 325px;
       }
 
       .hero-image {
-        object-fit: cover;
-
-        /*
-          Adjust this number if desired:
-          65% = slightly more left
-          72% = slightly more right
-        */
-
         object-position: 69% center;
       }
-
-
-      /* REGULARS */
 
       .regulars-section {
         padding: 74px 0 80px;
       }
 
       .regulars-title {
-        font-size: 43px;
+        font-size: 42px;
       }
 
-
-      /* SOCIAL */
+      .regulars-copy {
+        font-size: 16px;
+      }
 
       .social-section {
         padding: 69px 0 74px;
@@ -1336,9 +1230,6 @@
       .social-image {
         aspect-ratio: 4 / 3;
       }
-
-
-      /* CTA */
 
       .final-cta-inner {
         min-height: 0;
@@ -1370,19 +1261,9 @@
         justify-content: center;
       }
 
-
-      /* DESKTOP GRASS OFF */
-
       .cta-grass {
         display: none;
       }
-
-
-      /*
-        MOBILE:
-        one larger grass detail grows out of the
-        bottom of the teal panel.
-      */
 
       .cta-grass-mobile {
         position: absolute;
@@ -1398,7 +1279,7 @@
 
         transform: translateX(-50%);
 
-        background: rgba(255, 255, 255, 0.10);
+        background: rgba(255, 255, 255, 0.18);
 
         -webkit-mask:
           url("assets/grass.png")
@@ -1412,9 +1293,6 @@
 
         pointer-events: none;
       }
-
-
-      /* FOOTER */
 
       .site-footer {
         padding-top: 43px;
@@ -1474,7 +1352,6 @@
   >
 
     <div class="nav-wrap">
-
 
       <a
         href="index.html"
@@ -1564,7 +1441,6 @@
         <span></span>
       </button>
 
-
     </div>
 
 
@@ -1616,7 +1492,6 @@
 
     </div>
 
-
   </header>
 
 
@@ -1628,7 +1503,6 @@
     ====================================================== -->
 
     <section class="home-hero">
-
 
       <div class="hero-image-wrap">
 
@@ -1682,7 +1556,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1703,7 +1576,8 @@
 
 
           <h2 class="regulars-title">
-            Most of the dogs here are regulars.
+            Most of the dogs here<br>
+            are regulars.
           </h2>
 
 
@@ -1711,15 +1585,14 @@
 
             <p>
               They come back week after week, see many of the same
-              friends, and settle into the place pretty quickly.
-              We get to know who likes to wrestle, who prefers a
-              quieter buddy, who wants to be outside, and who will
-              be ready for a nap before lunch.
+              friends, and settle in pretty quickly. We get to know
+              who likes to wrestle, who prefers a quieter buddy,
+              who wants to be outside, and who will be ready for
+              a nap before lunch.
             </p>
 
             <p>
-              That familiarity is a big part of what makes the
-              Farmhouse work.
+              That familiarity is a big part of what makes it work so well.
             </p>
 
           </div>
@@ -1746,7 +1619,7 @@
 
 
     <!-- =====================================================
-         FROM THE FARMHOUSE
+         SOCIAL
     ====================================================== -->
 
     <section class="social-section">
@@ -1768,9 +1641,9 @@
 
 
           <p class="social-description">
-            A glimpse into real days at the Farmhouse:
-            muddy paws, happy faces, old friends, and whatever
-            everyone has decided to get up to that day.
+            A glimpse into real days here: muddy paws,
+            happy faces, old friends, and whatever everyone
+            has decided to get up to that day.
           </p>
 
 
@@ -1795,13 +1668,10 @@
         <div class="social-grid">
 
 
-          <!-- POST 1 -->
-
           <article class="social-post">
 
 
             <div class="social-head">
-
 
               <div class="social-avatar">
 
@@ -1825,7 +1695,6 @@
                 </p>
 
               </div>
-
 
             </div>
 
@@ -1863,13 +1732,10 @@
           </article>
 
 
-          <!-- POST 2 -->
-
           <article class="social-post">
 
 
             <div class="social-head">
-
 
               <div class="social-avatar">
 
@@ -1893,7 +1759,6 @@
                 </p>
 
               </div>
-
 
             </div>
 
@@ -1947,8 +1812,6 @@
     <section class="final-cta">
 
 
-      <!-- DESKTOP FIELD BOOKENDS -->
-
       <div
         class="cta-grass cta-grass-left"
         aria-hidden="true"
@@ -1958,9 +1821,6 @@
         class="cta-grass cta-grass-right"
         aria-hidden="true"
       ></div>
-
-
-      <!-- MOBILE FIELD DETAIL -->
 
       <div
         class="cta-grass-mobile"
@@ -1973,27 +1833,33 @@
 
         <div class="final-cta-copy">
 
+
           <h2>
-            Think your dog would like it here?
+            <span>Think your dog would</span>
+            <span>like it here?</span>
           </h2>
 
+
           <p>
-            Start by telling us a little about them. We’ll ask a few
-            questions, arrange a quiet visit if it sounds like a good fit,
+            A few quick questions help us get a sense of fit.
+            If it sounds promising, we’ll arrange a quiet visit
             and take it from there.
           </p>
+
 
         </div>
 
 
         <div class="final-cta-actions">
 
+
           <a
             href="waitlist.html"
             class="cta-button"
           >
-            Tell us about your dog&nbsp; →
+            Join the wait-list&nbsp; →
           </a>
+
 
           <a
             href="daycare.html"
@@ -2003,11 +1869,11 @@
             <span aria-hidden="true">→</span>
           </a>
 
+
         </div>
 
 
       </div>
-
 
     </section>
 
@@ -2026,8 +1892,6 @@
 
       <div class="footer-grid">
 
-
-        <!-- BRAND -->
 
         <div>
 
@@ -2051,8 +1915,6 @@
 
         </div>
 
-
-        <!-- CONTACT -->
 
         <div class="footer-contact">
 
@@ -2139,8 +2001,6 @@
         </div>
 
 
-        <!-- NAV -->
-
         <div>
 
           <p class="footer-nav-title">
@@ -2207,10 +2067,6 @@
   </footer>
 
 
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
-
   <script>
 
     const menuToggle =
@@ -2225,8 +2081,6 @@
     const currentYear =
       document.getElementById("currentYear");
 
-
-    /* MOBILE MENU */
 
     menuToggle.addEventListener("click", function () {
 
@@ -2267,17 +2121,10 @@
             "false"
           );
 
-          menuToggle.setAttribute(
-            "aria-label",
-            "Open menu"
-          );
-
         });
 
       });
 
-
-    /* HEADER */
 
     function updateHeader() {
 
@@ -2296,8 +2143,6 @@
       { passive: true }
     );
 
-
-    /* COPYRIGHT */
 
     currentYear.textContent =
       new Date().getFullYear();
