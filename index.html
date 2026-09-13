@@ -501,7 +501,7 @@
     ========================================================= */
 
     .regulars-section {
-      padding: 104px 0 110px;
+      padding: 94px 0 98px;
 
       background: #fff;
     }
@@ -534,9 +534,9 @@
     }
 
     .regulars-story {
-      max-width: 820px;
+      max-width: 720px;
 
-      margin: 31px auto 0;
+      margin: 30px auto 0;
     }
 
     .regulars-story p {
@@ -544,8 +544,8 @@
 
       color: var(--body);
 
-      font-size: 18px;
-      line-height: 1.72;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     .regulars-story p:last-of-type {
@@ -553,7 +553,7 @@
     }
 
     .regulars-link {
-      margin-top: 29px;
+      margin-top: 27px;
 
       display: flex;
       justify-content: center;
@@ -565,7 +565,7 @@
     ========================================================= */
 
     .social-section {
-      padding: 82px 0 96px;
+      padding: 78px 0 90px;
 
       background: var(--oat-soft);
     }
@@ -573,7 +573,7 @@
     .social-heading {
       width: min(84%, 1120px);
 
-      margin: 0 auto 34px;
+      margin: 0 auto 26px;
     }
 
     .social-heading-copy {
@@ -594,7 +594,7 @@
     .social-description {
       max-width: 760px;
 
-      margin: 20px 0 0;
+      margin: 19px 0 0;
 
       color: var(--body);
 
@@ -603,7 +603,7 @@
     }
 
     .social-follow {
-      margin-top: 23px;
+      margin-top: 20px;
     }
 
 
@@ -615,7 +615,7 @@
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 1.06fr 0.94fr;
+      grid-template-columns: 1fr 1fr;
 
       gap: 28px;
 
@@ -635,7 +635,7 @@
     }
 
     .social-post:nth-child(2) {
-      margin-top: 34px;
+      margin-top: 16px;
     }
 
     .social-head {
@@ -739,7 +739,7 @@
       position: relative;
       z-index: 3;
 
-      width: min(64%, 980px);
+      width: min(61%, 940px);
       min-height: 285px;
 
       margin: 0 auto;
@@ -750,11 +750,11 @@
 
       align-items: center;
 
-      gap: 24px;
+      gap: 18px;
     }
 
     .final-cta-copy {
-      max-width: 560px;
+      max-width: 540px;
     }
 
     .final-cta h2 {
@@ -773,7 +773,7 @@
     }
 
     .final-cta p {
-      max-width: 525px;
+      max-width: 515px;
 
       margin: 18px 0 0;
 
@@ -787,7 +787,7 @@
       display: flex;
       align-items: center;
 
-      gap: 17px;
+      gap: 15px;
     }
 
     .cta-button {
@@ -1177,7 +1177,7 @@
       }
 
       .social-post:nth-child(2) {
-        margin-top: 20px;
+        margin-top: 14px;
       }
 
 
@@ -1271,7 +1271,6 @@
 
       .regulars-inner {
         width: 89%;
-
         text-align: left;
       }
 
@@ -1466,10 +1465,12 @@
         class="brand-logo"
         aria-label="Farmhouse & Fields Dog Daycare home"
       >
+
         <img
           src="assets/farmhouseandfieldslogo.png"
           alt="Farmhouse & Fields Dog Daycare"
         >
+
       </a>
 
 
@@ -1693,8 +1694,8 @@
 
 
           <p>
-            Over time, we get to know those little routines,
-            and that’s a big part of what makes the days here work.
+            Over time, we get to know those little routines.
+            It’s a big part of what makes the days here work.
           </p>
 
 
@@ -2157,6 +2158,10 @@
   </footer>
 
 
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
   <script>
 
     const menuToggle =
@@ -2171,8 +2176,6 @@
     const currentYear =
       document.getElementById("currentYear");
 
-
-    /* MOBILE MENU */
 
     menuToggle.addEventListener("click", function () {
 
@@ -2223,8 +2226,6 @@
       });
 
 
-    /* HEADER */
-
     function updateHeader() {
 
       siteHeader.classList.toggle(
@@ -2242,8 +2243,6 @@
       { passive: true }
     );
 
-
-    /* YEAR */
 
     currentYear.textContent =
       new Date().getFullYear();
