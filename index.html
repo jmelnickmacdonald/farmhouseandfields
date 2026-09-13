@@ -361,9 +361,7 @@
 
     .mobile-menu-inner {
       width: 89%;
-
       margin: 0 auto;
-
       padding: 5px 0 28px;
     }
 
@@ -507,7 +505,7 @@
     }
 
     .regulars-inner {
-      width: min(84%, 940px);
+      width: min(88%, 1100px);
 
       margin: 0 auto;
 
@@ -519,18 +517,18 @@
     }
 
     .regulars-title {
+      max-width: 980px;
+
       margin: 0 auto;
 
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(46px, 3.4vw, 56px);
+      font-size: clamp(44px, 3.05vw, 52px);
       font-weight: 400;
-      line-height: 0.98;
-    }
+      line-height: 1;
 
-    .regulars-title span {
-      display: block;
+      white-space: nowrap;
     }
 
     .regulars-story {
@@ -607,7 +605,9 @@
     }
 
 
-    /* SOCIAL POSTS */
+    /* =========================================================
+       SOCIAL POSTS
+    ========================================================= */
 
     .social-grid {
       width: min(84%, 1120px);
@@ -615,14 +615,19 @@
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
 
       gap: 28px;
 
-      align-items: start;
+      align-items: stretch;
     }
 
     .social-post {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+
       overflow: hidden;
 
       border: 1px solid rgba(110, 20, 19, 0.07);
@@ -632,10 +637,6 @@
 
       box-shadow:
         0 14px 34px rgba(42, 41, 38, 0.035);
-    }
-
-    .social-post:nth-child(2) {
-      margin-top: 16px;
     }
 
     .social-head {
@@ -690,7 +691,7 @@
     }
 
     .social-caption {
-      min-height: 53px;
+      min-height: 66px;
 
       margin: 0;
 
@@ -707,7 +708,10 @@
 
       aspect-ratio: 16 / 9;
 
-      margin: 0 13px 13px;
+      margin:
+        auto
+        13px
+        13px;
 
       overflow: hidden;
 
@@ -1081,6 +1085,10 @@
         width: 88%;
       }
 
+      .regulars-title {
+        white-space: normal;
+      }
+
       .final-cta-inner {
         width: 80%;
         gap: 28px;
@@ -1163,6 +1171,10 @@
         width: 86%;
       }
 
+      .regulars-title {
+        white-space: normal;
+      }
+
 
       /* SOCIAL */
 
@@ -1174,10 +1186,6 @@
       .social-grid {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-      }
-
-      .social-post:nth-child(2) {
-        margin-top: 14px;
       }
 
 
@@ -1276,10 +1284,7 @@
 
       .regulars-title {
         font-size: 42px;
-      }
-
-      .regulars-title span {
-        display: inline;
+        white-space: normal;
       }
 
       .regulars-story {
@@ -1312,10 +1317,6 @@
 
       .social-grid {
         grid-template-columns: 1fr;
-      }
-
-      .social-post:nth-child(2) {
-        margin-top: 0;
       }
 
       .social-caption {
@@ -1676,8 +1677,7 @@
 
 
         <h2 class="regulars-title">
-          <span>Most of the dogs here</span>
-          <span>are regulars.</span>
+          Most of the dogs here are regulars.
         </h2>
 
 
@@ -2157,10 +2157,6 @@
 
   </footer>
 
-
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
 
   <script>
 
