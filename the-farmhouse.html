@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="The story behind Farmhouse & Fields Dog Daycare in Canning, Nova Scotia, and the old family farmhouse the dogs now call their home away from home."
+    content="The story behind Farmhouse & Fields Dog Daycare in Canning, Nova Scotia, located in an old family farmhouse on a working farm."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,62 +121,6 @@
       text-transform: uppercase;
     }
 
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-
-      color: var(--river);
-
-      font-size: 14px;
-      font-weight: 700;
-
-      text-decoration: none;
-    }
-
-    .text-link span {
-      transition: transform 0.18s ease;
-    }
-
-    .text-link:hover,
-    .text-link:focus-visible {
-      color: var(--wine);
-    }
-
-    .text-link:hover span,
-    .text-link:focus-visible span {
-      transform: translateX(4px);
-    }
-
-    .button-wine {
-      min-height: 49px;
-      padding: 0 24px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 9px;
-
-      background: var(--wine);
-      color: #fff;
-
-      font-size: 14px;
-      font-weight: 700;
-
-      text-decoration: none;
-
-      transition:
-        background 0.18s ease,
-        transform 0.18s ease;
-    }
-
-    .button-wine:hover,
-    .button-wine:focus-visible {
-      background: var(--wine-dark);
-      transform: translateY(-1px);
-    }
-
 
     /* =========================================================
        HEADER
@@ -241,7 +185,9 @@
     }
 
 
-    /* DESKTOP NAV */
+    /* =========================================================
+       DESKTOP NAV
+    ========================================================= */
 
     .main-nav {
       margin-left: auto;
@@ -308,10 +254,22 @@
 
       text-decoration: none;
       white-space: nowrap;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .waitlist-button:hover,
+    .waitlist-button:focus-visible {
+      background: var(--wine-dark);
+      transform: translateY(-1px);
     }
 
 
-    /* MOBILE NAV */
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
 
     .menu-toggle {
       display: none;
@@ -339,6 +297,7 @@
       height: 2px;
 
       border-radius: 10px;
+
       background: var(--ink);
 
       transition:
@@ -379,7 +338,6 @@
       width: 89%;
 
       margin: 0 auto;
-
       padding: 5px 0 28px;
     }
 
@@ -423,18 +381,18 @@
 
 
     /* =========================================================
-       FARMHOUSE HERO
+       HERO
     ========================================================= */
 
     .farmhouse-hero {
-      padding: 72px 0 78px;
+      padding: 70px 0 78px;
 
       background: var(--oat-soft);
     }
 
     .farmhouse-hero-grid {
       display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
+      grid-template-columns: 0.82fr 1.18fr;
 
       gap: 72px;
 
@@ -442,10 +400,10 @@
     }
 
     .farmhouse-hero-copy {
-      max-width: 555px;
+      max-width: 510px;
     }
 
-    .farmhouse-hero .eyebrow {
+    .farmhouse-hero-copy .eyebrow {
       color: var(--river);
     }
 
@@ -455,13 +413,13 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(52px, 4.6vw, 74px);
+      font-size: clamp(56px, 4.6vw, 76px);
       font-weight: 400;
-      line-height: 0.95;
+      line-height: 0.93;
     }
 
     .farmhouse-hero-lede {
-      max-width: 515px;
+      max-width: 490px;
 
       margin: 25px 0 0;
 
@@ -472,14 +430,14 @@
     }
 
     .farmhouse-hero-media {
-      min-height: 510px;
+      height: 520px;
 
       overflow: hidden;
 
       border-radius: 18px;
 
       box-shadow:
-        0 16px 42px rgba(42, 41, 38, 0.07);
+        0 18px 45px rgba(42, 41, 38, 0.07);
     }
 
     .farmhouse-hero-media img {
@@ -492,52 +450,51 @@
 
 
     /* =========================================================
-       HISTORY
+       FARM STORY
     ========================================================= */
 
-    .history-section {
-      padding: 105px 0 112px;
+    .farm-story {
+      padding: 102px 0 108px;
 
       background: #fff;
     }
 
-    .history-grid {
-      width: min(88%, 1140px);
+    .farm-story-inner {
+      width: min(88%, 1080px);
 
       margin: 0 auto;
-
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-
-      gap: 100px;
-
-      align-items: start;
     }
 
-    .history-heading {
-      position: sticky;
-      top: 135px;
-
-      max-width: 400px;
+    .farm-story-heading {
+      max-width: 770px;
     }
 
-    .history-heading h2 {
+    .farm-story-heading .eyebrow {
+      color: var(--wine);
+    }
+
+    .farm-story h2 {
       margin: 0;
 
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(45px, 3.5vw, 58px);
+      font-size: clamp(47px, 3.8vw, 61px);
       font-weight: 400;
       line-height: 0.98;
     }
 
-    .history-copy {
-      max-width: 650px;
+    .farm-story-copy {
+      margin-top: 42px;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 32px 70px;
     }
 
-    .history-copy p {
-      margin: 0 0 24px;
+    .farm-story-copy p {
+      margin: 0;
 
       color: var(--body);
 
@@ -545,87 +502,44 @@
       line-height: 1.78;
     }
 
-    .history-copy p:last-child {
-      margin-bottom: 0;
-    }
+    .story-line {
+      max-width: 875px;
 
-    .history-copy .story-turn {
-      margin: 42px 0 25px;
+      margin: 62px 0 0;
+      padding-top: 36px;
+
+      border-top: 1px solid var(--border);
 
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: 39px;
-      line-height: 1.02;
+      font-size: clamp(33px, 2.7vw, 43px);
+      font-weight: 400;
+      line-height: 1.08;
     }
 
 
     /* =========================================================
-       FARMHOUSE MOMENT
+       MELISSA
     ========================================================= */
 
-    .house-moment {
-      padding: 72px 0;
+    .melissa-section {
+      padding: 92px 0 98px;
 
       background: var(--oat-soft);
     }
 
-    .house-moment-inner {
-      width: min(86%, 950px);
-
-      margin: 0 auto;
-
-      text-align: center;
-    }
-
-    .house-moment h2 {
-      margin: 0;
-
-      color: var(--wine);
-
-      font-family: "Aubrey", serif;
-      font-size: clamp(45px, 3.6vw, 58px);
-      font-weight: 400;
-      line-height: 0.98;
-    }
-
-    .house-moment p {
-      max-width: 760px;
-
-      margin: 24px auto 0;
-
-      color: var(--body);
-
-      font-size: 17px;
-      line-height: 1.75;
-    }
-
-
-    /* =========================================================
-       MEET MELISSA
-    ========================================================= */
-
-    .melissa-section {
-      padding: 105px 0 110px;
-
-      background: #fff;
-    }
-
-    .melissa-grid {
-      width: min(88%, 1100px);
+    .melissa-inner {
+      width: min(88%, 1080px);
 
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
+      grid-template-columns: 0.68fr 1.32fr;
 
-      gap: 95px;
+      gap: 90px;
 
       align-items: start;
-    }
-
-    .melissa-heading {
-      max-width: 350px;
     }
 
     .melissa-heading .eyebrow {
@@ -638,22 +552,22 @@
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(47px, 3.5vw, 58px);
+      font-size: clamp(48px, 3.6vw, 59px);
       font-weight: 400;
       line-height: 0.98;
     }
 
     .melissa-copy {
-      max-width: 680px;
+      max-width: 690px;
     }
 
     .melissa-copy p {
-      margin: 0 0 22px;
+      margin: 0 0 23px;
 
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.76;
     }
 
     .melissa-copy p:last-of-type {
@@ -661,33 +575,33 @@
     }
 
 
-    /* EXPERIENCE LINE */
+    /* MELISSA EXPERIENCE */
 
-    .melissa-details {
+    .experience-row {
       margin-top: 38px;
-      padding-top: 27px;
+      padding-top: 28px;
 
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
       gap: 25px;
 
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(56, 93, 107, 0.18);
     }
 
-    .melissa-detail strong {
+    .experience-item strong {
       display: block;
 
-      margin-bottom: 7px;
+      margin-bottom: 6px;
 
       color: var(--wine);
 
       font-size: 12px;
-      line-height: 1.35;
+      line-height: 1.4;
       font-weight: 700;
     }
 
-    .melissa-detail span {
+    .experience-item span {
       display: block;
 
       color: var(--body);
@@ -698,23 +612,16 @@
 
 
     /* =========================================================
-       PAGE CTA
+       CTA
     ========================================================= */
 
     .page-cta {
-      position: relative;
-
-      overflow: hidden;
-
       background: var(--river);
       color: #fff;
     }
 
     .page-cta-inner {
-      position: relative;
-      z-index: 2;
-
-      width: min(76%, 1050px);
+      width: min(76%, 1040px);
       min-height: 260px;
 
       margin: 0 auto;
@@ -729,7 +636,7 @@
     }
 
     .page-cta-copy {
-      max-width: 680px;
+      max-width: 650px;
     }
 
     .page-cta h2 {
@@ -738,7 +645,7 @@
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(45px, 3.5vw, 57px);
+      font-size: clamp(45px, 3.4vw, 56px);
       font-weight: 400;
       line-height: 0.98;
     }
@@ -746,12 +653,12 @@
     .page-cta p {
       max-width: 600px;
 
-      margin: 18px 0 0;
+      margin: 17px 0 0;
 
       color: rgba(255,255,255,0.9);
 
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.67;
     }
 
     .page-cta-button {
@@ -772,6 +679,16 @@
 
       text-decoration: none;
       white-space: nowrap;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .page-cta-button:hover,
+    .page-cta-button:focus-visible {
+      background: #fff;
+      transform: translateY(-1px);
     }
 
 
@@ -875,8 +792,8 @@
     }
 
     .footer-detail-value a:hover,
-    .footer-links a:hover,
     .footer-detail-value a:focus-visible,
+    .footer-links a:hover,
     .footer-links a:focus-visible {
       color: var(--wine);
     }
@@ -929,12 +846,15 @@
       }
 
       .farmhouse-hero-grid {
-        gap: 45px;
+        gap: 48px;
       }
 
-      .history-grid,
-      .melissa-grid {
-        gap: 60px;
+      .farmhouse-hero-media {
+        height: 475px;
+      }
+
+      .melissa-inner {
+        gap: 58px;
       }
 
       .page-cta-inner {
@@ -958,8 +878,10 @@
 
     @media (max-width: 830px) {
 
+      /* HERO */
+
       .farmhouse-hero {
-        padding: 55px 0 0;
+        padding: 52px 0 0;
       }
 
       .farmhouse-hero-grid {
@@ -967,7 +889,7 @@
 
         grid-template-columns: 1fr;
 
-        gap: 42px;
+        gap: 40px;
       }
 
       .farmhouse-hero-copy {
@@ -977,60 +899,51 @@
       }
 
       .farmhouse-hero-media {
-        min-height: 430px;
+        height: 430px;
 
         border-radius: 0;
       }
 
 
-      .history-section {
-        padding: 82px 0 88px;
+      /* STORY */
+
+      .farm-story {
+        padding: 80px 0 86px;
       }
 
-      .history-grid {
+      .farm-story-inner {
         width: 86%;
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
       }
 
-      .history-heading {
-        position: static;
-
-        max-width: 600px;
+      .farm-story-copy {
+        gap: 28px 42px;
       }
 
-      .history-copy {
-        max-width: 680px;
+      .story-line {
+        margin-top: 50px;
       }
 
 
-      .house-moment {
-        padding: 64px 0;
-      }
-
+      /* MELISSA */
 
       .melissa-section {
-        padding: 82px 0 88px;
+        padding: 78px 0 84px;
       }
 
-      .melissa-grid {
+      .melissa-inner {
         width: 86%;
 
         grid-template-columns: 1fr;
 
-        gap: 34px;
+        gap: 30px;
       }
 
       .melissa-heading {
-        max-width: 560px;
+        max-width: 580px;
       }
 
-      .melissa-copy {
-        max-width: 700px;
-      }
 
+      /* CTA */
 
       .page-cta-inner {
         width: 78%;
@@ -1042,6 +955,8 @@
         padding: 50px 0 60px;
       }
 
+
+      /* FOOTER */
 
       .footer-main {
         grid-template-columns: 1fr;
@@ -1086,7 +1001,7 @@
       /* HERO */
 
       .farmhouse-hero {
-        padding-top: 44px;
+        padding-top: 43px;
       }
 
       .farmhouse-hero-copy {
@@ -1094,85 +1009,67 @@
       }
 
       .farmhouse-hero h1 {
-        font-size: 48px;
+        font-size: 49px;
       }
 
       .farmhouse-hero-lede {
         margin-top: 21px;
 
         font-size: 17px;
-        line-height: 1.68;
+        line-height: 1.66;
       }
 
       .farmhouse-hero-media {
-        min-height: 330px;
+        height: clamp(300px, 79vw, 355px);
       }
 
 
-      /* HISTORY */
+      /* STORY */
 
-      .history-section {
-        padding: 65px 0 70px;
+      .farm-story {
+        padding: 64px 0 69px;
       }
 
-      .history-grid {
+      .farm-story-inner {
         width: 89%;
-
-        gap: 28px;
       }
 
-      .history-heading h2 {
-        font-size: 42px;
-      }
-
-      .history-copy p {
-        margin-bottom: 20px;
-
-        font-size: 16px;
-        line-height: 1.7;
-      }
-
-      .history-copy .story-turn {
-        margin: 32px 0 21px;
-
-        font-size: 35px;
-      }
-
-
-      /* HOUSE MOMENT */
-
-      .house-moment {
-        padding: 56px 0 60px;
-      }
-
-      .house-moment-inner {
-        width: 89%;
-
-        text-align: left;
-      }
-
-      .house-moment h2 {
+      .farm-story h2 {
         font-size: 41px;
       }
 
-      .house-moment p {
-        margin-top: 20px;
+      .farm-story-copy {
+        margin-top: 29px;
 
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .farm-story-copy p {
         font-size: 16px;
         line-height: 1.7;
+      }
+
+      .story-line {
+        margin-top: 38px;
+        padding-top: 29px;
+
+        font-size: 34px;
+        line-height: 1.08;
       }
 
 
       /* MELISSA */
 
       .melissa-section {
-        padding: 65px 0 72px;
+        padding: 64px 0 70px;
       }
 
-      .melissa-grid {
+      .melissa-inner {
         width: 89%;
 
-        gap: 28px;
+        gap: 25px;
       }
 
       .melissa-heading h2 {
@@ -1180,21 +1077,19 @@
       }
 
       .melissa-copy p {
+        margin-bottom: 19px;
+
         font-size: 16px;
         line-height: 1.7;
       }
 
-      .melissa-details {
-        margin-top: 31px;
+      .experience-row {
+        margin-top: 29px;
         padding-top: 24px;
 
         grid-template-columns: 1fr;
 
-        gap: 19px;
-      }
-
-      .melissa-detail {
-        max-width: 360px;
+        gap: 18px;
       }
 
 
@@ -1251,6 +1146,10 @@
         grid-column: 1 / -1;
       }
 
+      .footer-links {
+        gap: 7px 14px;
+      }
+
       .footer-bottom {
         margin-top: 27px;
         padding-top: 16px;
@@ -1272,15 +1171,18 @@
     @media (max-width: 390px) {
 
       .farmhouse-hero h1 {
-        font-size: 44px;
+        font-size: 45px;
       }
 
-      .history-heading h2,
+      .farm-story h2,
       .melissa-heading h2 {
         font-size: 39px;
       }
 
-      .house-moment h2,
+      .story-line {
+        font-size: 32px;
+      }
+
       .page-cta h2 {
         font-size: 38px;
       }
@@ -1492,18 +1394,18 @@
         <div class="farmhouse-hero-copy">
 
           <p class="eyebrow">
-            A little country. A lot of dog.
+            The Farmhouse
           </p>
 
           <h1>
-            The Farmhouse has always been full of life.
+            A little country. A lot of dog.
           </h1>
 
           <p class="farmhouse-hero-lede">
-            It was Jamie’s grandparents’ home, on a property
-            with deep farming roots here in the Valley.
-            These days, the old house has a very different
-            crowd coming through the door.
+            Farmhouse & Fields runs from Jamie’s grandparents’
+            former home on the family farm in Canning. It’s an old
+            house with plenty of history, a securely fenced yard,
+            and a lot more dogs coming through the door these days.
           </p>
 
         </div>
@@ -1525,95 +1427,59 @@
 
 
     <!-- =====================================================
-         HISTORY
+         STORY
     ====================================================== -->
 
-    <section class="history-section">
+    <section class="farm-story">
 
-      <div class="history-grid">
+      <div class="farm-story-inner">
 
 
-        <div class="history-heading">
+        <div class="farm-story-heading">
 
           <p class="eyebrow">
-            The story of the place
+            A family farm
           </p>
 
           <h2>
-            Long before the dogs moved in.
+            This place has been part of the family for generations.
           </h2>
 
         </div>
 
 
-        <div class="history-copy">
+        <div class="farm-story-copy">
 
           <p>
             Jamie’s grandparents lived here, and the Ells family
-            farmed this property for years. A lot of local people
-            still know the family name from farming in the area.
+            farmed the property for many years. Over time, the farm
+            included cattle, apple orchards, turkeys, and chickens,
+            and the family name is still familiar to a lot of people
+            in the area.
           </p>
 
           <p>
-            Over the years, that meant cattle, apple orchards,
-            turkey quota, chicken quota, and plenty happening
-            around the property.
+            Melissa, Jamie, and Weston are still farming here today,
+            with a cow/calf operation of about 90 cows. The daycare
+            dogs have their own securely fenced space away from the
+            cattle, although they can see them from the yard. You
+            know you’re at a farm before you make it to the front door.
           </p>
 
           <p>
-            Melissa, Jamie, and Weston now have a cow/calf farm
-            here with about 90 cows. The daycare dogs stay on
-            their side of the fence, but the cows are still part
-            of the view. By the time you come up the driveway,
-            there is no mistaking where you are.
-          </p>
-
-
-          <p class="story-turn">
-            Now the old Farmhouse has a new job.
-          </p>
-
-
-          <p>
-            During the day, the house and fenced yard become the
-            dogs’ space. There is room to play, room to settle,
-            and enough time together for everyone’s little habits
-            and preferences to become pretty familiar.
-          </p>
-
-          <p>
-            It is a big old house, and it works beautifully for
-            a small group of dogs who want to play hard, find
-            their favourite spot, and make themselves at home.
+            The farmhouse itself is where daycare happens. The dogs
+            have room inside, plenty of time outdoors, and a place
+            they get to know well once they’ve been coming for a while.
           </p>
 
         </div>
 
 
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         HOUSE MOMENT
-    ====================================================== -->
-
-    <section class="house-moment">
-
-      <div class="house-moment-inner">
-
-        <h2>
-          A home away from home is more than a tagline here.
-        </h2>
-
-        <p>
-          The Farmhouse is part of the dogs’ actual day.
-          They come through the door, head for the yard,
-          find their friends, claim a spot when it is time
-          to rest, and come back often enough that it all
-          starts to feel pretty familiar.
+        <p class="story-line">
+          These walls have seen a lot over the years. These days,
+          there are a few more nose prints on the windows.
         </p>
+
 
       </div>
 
@@ -1626,7 +1492,7 @@
 
     <section class="melissa-section">
 
-      <div class="melissa-grid">
+      <div class="melissa-inner">
 
 
         <div class="melissa-heading">
@@ -1636,7 +1502,7 @@
           </p>
 
           <h2>
-            Back to dogs, right here at home.
+            Melissa Bailey-O’Hara
           </h2>
 
         </div>
@@ -1645,32 +1511,26 @@
         <div class="melissa-copy">
 
           <p>
-            Melissa worked in dog boarding before spending
-            about ten years working on a dairy farm. Even then,
-            dogs were never exactly missing from her life.
-            She and her family have five of their own now,
-            and have had as many as seven.
+            Melissa worked in dog boarding before spending about
+            ten years working on a dairy farm. She missed working
+            with dogs, even though dogs themselves were never
+            exactly in short supply. She and her family have five
+            of their own now, and have had as many as seven.
           </p>
 
           <p>
-            Coming back to dog care at the Farmhouse brought
-            a few things together: years of hands-on experience
-            with dogs, life on a working farm, and a setting small
-            enough to actually get to know the dogs who come
-            through the door.
-          </p>
-
-          <p>
-            The dogs are supervised throughout the day, and
-            Melissa holds a Canine Health Canada certificate
-            in Canine CPR & Emergency First Aid.
+            Farmhouse & Fields brought her back to dog care in a
+            way that fits naturally with life here. Keeping the
+            daycare group small means she can be with the dogs
+            throughout the day, get to know them well, and notice
+            the little things that matter.
           </p>
 
 
-          <div class="melissa-details">
+          <div class="experience-row">
 
 
-            <div class="melissa-detail">
+            <div class="experience-item">
 
               <strong>
                 Dog care experience
@@ -1683,7 +1543,7 @@
             </div>
 
 
-            <div class="melissa-detail">
+            <div class="experience-item">
 
               <strong>
                 CPR & First Aid
@@ -1697,15 +1557,14 @@
             </div>
 
 
-            <div class="melissa-detail">
+            <div class="experience-item">
 
               <strong>
                 Hands-on days
               </strong>
 
               <span>
-                A small group with supervision throughout
-                the daycare day.
+                Dogs are supervised throughout the daycare day.
               </span>
 
             </div>
@@ -1733,13 +1592,12 @@
         <div class="page-cta-copy">
 
           <h2>
-            See what a day at the Farmhouse looks like.
+            Want the practical details?
           </h2>
 
           <p>
-            Hours, rates, meals, drop-off and pick-up,
-            booking, and what usually happens between
-            arrival and home time.
+            Hours, rates, meals, booking, drop-off and pick-up,
+            and what a typical day at the Farmhouse looks like.
           </p>
 
         </div>
