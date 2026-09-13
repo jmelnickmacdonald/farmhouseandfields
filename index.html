@@ -322,6 +322,7 @@
       height: 2px;
 
       border-radius: 10px;
+
       background: var(--ink);
 
       transition:
@@ -360,7 +361,9 @@
 
     .mobile-menu-inner {
       width: 89%;
+
       margin: 0 auto;
+
       padding: 5px 0 28px;
     }
 
@@ -498,7 +501,7 @@
     ========================================================= */
 
     .regulars-section {
-      padding: 90px 0 94px;
+      padding: 88px 0 92px;
 
       background: #fff;
     }
@@ -516,14 +519,14 @@
     }
 
     .regulars-title {
-      max-width: 980px;
+      max-width: 1000px;
 
       margin: 0 auto;
 
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(44px, 3.05vw, 52px);
+      font-size: clamp(43px, 3vw, 51px);
       font-weight: 400;
       line-height: 1;
 
@@ -531,18 +534,18 @@
     }
 
     .regulars-story {
-      max-width: 720px;
+      max-width: 700px;
 
       margin: 28px auto 0;
     }
 
     .regulars-story p {
-      margin: 0 0 17px;
+      margin: 0 0 16px;
 
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.72;
     }
 
     .regulars-story p:last-of-type {
@@ -562,7 +565,7 @@
     ========================================================= */
 
     .social-section {
-      padding: 58px 0 62px;
+      padding: 56px 0 58px;
 
       background: var(--oat-soft);
     }
@@ -570,11 +573,11 @@
     .social-heading {
       width: min(84%, 1120px);
 
-      margin: 0 auto 25px;
+      margin: 0 auto 23px;
     }
 
     .social-heading .eyebrow {
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
 
     .social-title {
@@ -585,25 +588,25 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(43px, 3.25vw, 52px);
+      font-size: clamp(42px, 3.2vw, 51px);
       font-weight: 400;
       line-height: 0.97;
     }
 
     .social-description {
-      max-width: 710px;
+      max-width: 720px;
 
-      margin: 15px 0 0;
+      margin: 14px 0 0;
 
       color: var(--body);
 
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
 
     /* =========================================================
-       SOCIAL POSTS
+       SOCIAL CARDS
     ========================================================= */
 
     .social-grid {
@@ -620,10 +623,14 @@
     }
 
     .social-post {
-      height: 100%;
+      height: 390px;
 
-      display: flex;
-      flex-direction: column;
+      display: grid;
+
+      grid-template-rows:
+        auto
+        68px
+        minmax(0, 1fr);
 
       overflow: hidden;
 
@@ -634,6 +641,10 @@
 
       box-shadow:
         0 12px 28px rgba(42, 41, 38, 0.03);
+    }
+
+    .social-post:nth-child(2) {
+      margin-top: 0 !important;
     }
 
     .social-head {
@@ -688,10 +699,12 @@
     }
 
     .social-caption {
-      min-height: 54px;
-
       margin: 0;
+
       padding: 0 17px 10px;
+
+      display: flex;
+      align-items: flex-start;
 
       color: var(--ink);
 
@@ -701,12 +714,9 @@
 
     .social-image {
       width: calc(100% - 22px);
-      height: 230px;
+      height: calc(100% - 11px);
 
-      margin:
-        auto
-        11px
-        11px;
+      margin: 0 11px 11px;
 
       overflow: hidden;
 
@@ -723,7 +733,7 @@
     .social-bottom-link {
       width: min(84%, 1120px);
 
-      margin: 22px auto 0;
+      margin: 20px auto 0;
 
       display: flex;
       justify-content: flex-end;
@@ -748,17 +758,17 @@
       z-index: 3;
 
       width: min(61%, 940px);
-      min-height: 285px;
+      min-height: 275px;
 
       margin: 0 auto;
-      padding: 56px 0;
+      padding: 52px 0;
 
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
 
       align-items: center;
 
-      gap: 18px;
+      gap: 20px;
     }
 
     .final-cta-copy {
@@ -781,14 +791,14 @@
     }
 
     .final-cta p {
-      max-width: 515px;
+      max-width: 505px;
 
-      margin: 18px 0 0;
+      margin: 17px 0 0;
 
       color: rgba(255, 255, 255, 0.9);
 
       font-size: 16px;
-      line-height: 1.68;
+      line-height: 1.65;
     }
 
     .final-cta-actions {
@@ -825,6 +835,7 @@
     .cta-button:hover,
     .cta-button:focus-visible {
       background: #fff;
+
       transform: translateY(-1px);
     }
 
@@ -865,7 +876,7 @@
       width: 420px;
       height: 330px;
 
-      background: rgba(255, 255, 255, 0.20);
+      background: rgba(255, 255, 255, 0.2);
 
       -webkit-mask:
         url("assets/grass.png")
@@ -900,22 +911,22 @@
     ========================================================= */
 
     .site-footer {
-      padding: 55px 0 28px;
+      padding: 46px 0 25px;
 
       background: #fff;
     }
 
-    .footer-grid {
+    .footer-main {
       display: grid;
-      grid-template-columns: 0.82fr 1.4fr 0.78fr;
+      grid-template-columns: 0.85fr 1.65fr;
 
-      gap: 68px;
+      gap: 90px;
 
       align-items: start;
     }
 
 
-    /* BRAND SIGN-OFF */
+    /* BRAND */
 
     .footer-brand-name {
       margin: 0;
@@ -923,9 +934,9 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 400;
-      line-height: 0.98;
+      line-height: 1;
     }
 
     .footer-brand-type {
@@ -933,7 +944,7 @@
 
       color: var(--river);
 
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
 
       letter-spacing: 0.15em;
@@ -941,24 +952,24 @@
     }
 
     .footer-tagline {
-      margin: 23px 0 0;
+      margin: 20px 0 0;
 
       color: var(--ink);
 
       font-family: "Aubrey", serif;
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 400;
       line-height: 1.05;
     }
 
 
-    /* CONTACT */
+    /* DETAILS */
 
-    .footer-contact {
+    .footer-details {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.8fr 1.2fr;
 
-      gap: 22px 40px;
+      gap: 30px;
     }
 
     .footer-detail-label {
@@ -990,47 +1001,32 @@
       color: var(--wine);
     }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
 
-    /* FOOTER NAV */
-
-    .footer-nav-title {
-      margin: 0 0 12px;
-
-      color: var(--river);
-
-      font-size: 10px;
-      font-weight: 700;
-
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      gap: 7px 15px;
     }
 
-    .footer-nav {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-
-      gap: 10px 24px;
-    }
-
-    .footer-nav a {
+    .footer-links a {
       color: var(--body);
 
-      font-size: 12px;
+      font-size: 13px;
 
       text-decoration: none;
     }
 
-    .footer-nav a:hover,
-    .footer-nav a:focus-visible {
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
       color: var(--wine);
     }
 
 
-    /* FOOTER BOTTOM */
+    /* BOTTOM */
 
     .footer-bottom {
-      margin-top: 40px;
-      padding-top: 20px;
+      margin-top: 34px;
+      padding-top: 18px;
 
       display: flex;
       justify-content: space-between;
@@ -1079,6 +1075,10 @@
         width: 31%;
       }
 
+      .regulars-title {
+        white-space: normal;
+      }
+
       .regulars-inner,
       .social-heading,
       .social-grid,
@@ -1086,13 +1086,12 @@
         width: 88%;
       }
 
-      .regulars-title {
-        white-space: normal;
+      .social-post {
+        height: 370px;
       }
 
       .final-cta-inner {
-        width: 80%;
-        gap: 28px;
+        width: 78%;
       }
 
       .cta-grass {
@@ -1100,8 +1099,12 @@
         height: 290px;
       }
 
-      .footer-grid {
-        gap: 40px;
+      .footer-main {
+        gap: 55px;
+      }
+
+      .footer-details {
+        grid-template-columns: 1fr 1fr;
       }
 
     }
@@ -1165,7 +1168,7 @@
       /* REGULARS */
 
       .regulars-section {
-        padding: 84px 0 90px;
+        padding: 78px 0 82px;
       }
 
       .regulars-inner {
@@ -1186,25 +1189,29 @@
       }
 
       .social-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
       }
 
-      .social-image {
-        height: 210px;
+      .social-post {
+        height: 360px;
+      }
+
+      .social-post:nth-child(2) {
+        margin-top: 0 !important;
       }
 
 
       /* CTA */
 
       .final-cta-inner {
-        width: 78%;
+        width: 74%;
 
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 24px;
 
-        padding: 50px 0 70px;
+        padding: 48px 0 68px;
       }
 
       .final-cta-actions {
@@ -1219,18 +1226,16 @@
 
       /* FOOTER */
 
-      .footer-grid {
+      .footer-main {
         grid-template-columns: 1fr;
 
-        gap: 38px;
+        gap: 34px;
       }
 
-      .footer-contact {
-        max-width: 650px;
-      }
+      .footer-details {
+        max-width: 700px;
 
-      .footer-nav {
-        max-width: 400px;
+        grid-template-columns: 1fr 1fr;
       }
 
     }
@@ -1240,7 +1245,7 @@
        MOBILE
     ========================================================= */
 
-    @media (max-width: 560px) {
+    @media (max-width: 620px) {
 
       .container,
       .nav-wrap {
@@ -1257,7 +1262,7 @@
       }
 
       .hero-title {
-        font-size: 51px;
+        font-size: 50px;
       }
 
       .hero-tagline {
@@ -1269,7 +1274,7 @@
       }
 
       .hero-image-wrap {
-        height: 325px;
+        height: 320px;
       }
 
       .hero-image {
@@ -1280,21 +1285,22 @@
       /* REGULARS */
 
       .regulars-section {
-        padding: 72px 0 77px;
+        padding: 66px 0 70px;
       }
 
       .regulars-inner {
         width: 89%;
+
         text-align: left;
       }
 
       .regulars-title {
-        font-size: 42px;
+        font-size: 41px;
         white-space: normal;
       }
 
       .regulars-story {
-        margin-top: 24px;
+        margin-top: 23px;
       }
 
       .regulars-story p {
@@ -1309,7 +1315,7 @@
       /* SOCIAL */
 
       .social-section {
-        padding: 58px 0 62px;
+        padding: 54px 0 58px;
       }
 
       .social-heading,
@@ -1319,7 +1325,7 @@
       }
 
       .social-title {
-        font-size: 43px;
+        font-size: 42px;
       }
 
       .social-description {
@@ -1328,19 +1334,26 @@
 
       .social-grid {
         grid-template-columns: 1fr;
+
         gap: 18px;
       }
 
-      .social-caption {
-        min-height: auto;
+      .social-post {
+        height: auto;
+
+        grid-template-rows:
+          auto
+          auto
+          250px;
       }
 
-      .social-image {
-        height: 250px;
+      .social-caption {
+        padding-bottom: 13px;
       }
 
       .social-bottom-link {
-        margin-top: 20px;
+        margin-top: 19px;
+
         justify-content: flex-start;
       }
 
@@ -1353,13 +1366,15 @@
         min-height: 0;
 
         padding:
-          48px
+          46px
           0
-          165px;
+          160px;
+
+        gap: 25px;
       }
 
       .final-cta h2 {
-        font-size: 45px;
+        font-size: 44px;
       }
 
       .final-cta-actions {
@@ -1368,7 +1383,7 @@
         align-items: stretch;
         flex-direction: column;
 
-        gap: 16px;
+        gap: 14px;
       }
 
       .cta-button {
@@ -1400,7 +1415,7 @@
 
         transform: translateX(-50%);
 
-        background: rgba(255, 255, 255, 0.20);
+        background: rgba(255, 255, 255, 0.2);
 
         -webkit-mask:
           url("assets/grass.png")
@@ -1419,19 +1434,26 @@
       /* FOOTER */
 
       .site-footer {
-        padding-top: 43px;
+        padding: 40px 0 24px;
       }
 
-      .footer-contact {
+      .footer-main {
+        gap: 30px;
+      }
+
+      .footer-details {
         grid-template-columns: 1fr;
-      }
 
-      .footer-nav {
-        grid-template-columns: 1fr 1fr;
+        gap: 19px;
       }
 
       .footer-bottom {
+        margin-top: 30px;
+
         flex-direction: column;
+
+        gap: 7px;
+
         align-items: flex-start;
       }
 
@@ -1686,16 +1708,14 @@
         <div class="regulars-story">
 
           <p>
-            Some come through the door ready to wrestle.
-            Some head straight for the yard. Others have a
-            favourite toy, a favourite nap spot, or a very
-            specific opinion about where they’d like to spend
-            the afternoon.
+            Some arrive ready to wrestle. Others head straight
+            for the yard, their favourite toy, or the nap spot
+            they claimed weeks ago.
           </p>
 
           <p>
-            Over time, we get to know those little routines.
-            It’s a big part of what makes the days here work.
+            We get to know those little routines.
+            They’re part of what makes the Farmhouse work.
           </p>
 
           <div class="regulars-link">
@@ -1734,8 +1754,8 @@
         </h2>
 
         <p class="social-description">
-          Muddy paws, wagging tails, favourite toys, prime nap spots,
-          and whatever else the day brings.
+          Muddy paws, wagging tails, favourite toys,
+          prime nap spots, and whatever else the day brings.
         </p>
 
       </div>
@@ -1893,9 +1913,8 @@
           </h2>
 
           <p>
-            A few quick questions help us get a sense of fit.
-            If it sounds promising, we’ll arrange a quiet visit
-            and take it from there.
+            Tell us a little about them. If it sounds like a good fit,
+            we’ll arrange a visit and take it from there.
           </p>
 
         </div>
@@ -1936,10 +1955,9 @@
 
     <div class="container">
 
-      <div class="footer-grid">
 
+      <div class="footer-main">
 
-        <!-- BRAND -->
 
         <div class="footer-brand">
 
@@ -1958,15 +1976,13 @@
         </div>
 
 
-        <!-- CONTACT -->
-
-        <div class="footer-contact">
+        <div class="footer-details">
 
 
           <div>
 
             <span class="footer-detail-label">
-              Visit
+              Find us
             </span>
 
             <div class="footer-detail-value">
@@ -1997,27 +2013,14 @@
           <div>
 
             <span class="footer-detail-label">
-              Email
+              Keep in touch
             </span>
 
-            <div class="footer-detail-value">
+            <div class="footer-links">
 
               <a href="mailto:farmhousefieldsdaycare@gmail.com">
-                farmhousefieldsdaycare@gmail.com
+                Email
               </a>
-
-            </div>
-
-          </div>
-
-
-          <div>
-
-            <span class="footer-detail-label">
-              Follow
-            </span>
-
-            <div class="footer-detail-value">
 
               <a
                 href="https://www.facebook.com/profile.php?id=61568074120165"
@@ -2027,8 +2030,6 @@
                 Facebook
               </a>
 
-              &nbsp;·&nbsp;
-
               <a
                 href="https://www.instagram.com/farmhousefieldsdogdaycare/"
                 target="_blank"
@@ -2037,56 +2038,14 @@
                 Instagram
               </a>
 
+              <a href="current-clients.html">
+                Current Clients
+              </a>
+
             </div>
 
           </div>
 
-
-        </div>
-
-
-        <!-- NAV -->
-
-        <div>
-
-          <p class="footer-nav-title">
-            Explore
-          </p>
-
-          <nav
-            class="footer-nav"
-            aria-label="Footer navigation"
-          >
-
-            <a href="index.html">
-              Home
-            </a>
-
-            <a href="the-farmhouse.html">
-              The Farmhouse
-            </a>
-
-            <a href="daycare.html">
-              Daycare
-            </a>
-
-            <a href="gallery.html">
-              Gallery
-            </a>
-
-            <a href="faqs.html">
-              FAQs
-            </a>
-
-            <a href="current-clients.html">
-              Current Clients
-            </a>
-
-            <a href="waitlist.html">
-              Join the Wait-list
-            </a>
-
-          </nav>
 
         </div>
 
@@ -2106,6 +2065,7 @@
         </span>
 
       </div>
+
 
     </div>
 
