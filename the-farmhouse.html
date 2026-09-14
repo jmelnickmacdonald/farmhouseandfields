@@ -575,7 +575,6 @@
 
     .farm-banner-image {
       min-width: 0;
-
       overflow: hidden;
     }
 
@@ -670,11 +669,39 @@
     ========================================================= */
 
     .page-cta {
+      position: relative;
+
+      overflow: hidden;
+
       background: var(--river);
       color: #fff;
     }
 
+    .page-cta::after {
+      content: "";
+
+      position: absolute;
+
+      right: -22px;
+      bottom: -18px;
+
+      width: 225px;
+      height: 155px;
+
+      background:
+        url("assets/grass.png")
+        right bottom / contain
+        no-repeat;
+
+      opacity: 0.14;
+
+      pointer-events: none;
+    }
+
     .page-cta-inner {
+      position: relative;
+      z-index: 1;
+
       width: min(88%, var(--page));
 
       margin: 0 auto;
@@ -940,7 +967,7 @@
       }
 
 
-      /* STORY */
+      /* FAMILY */
 
       .family-section {
         padding: 60px 0;
@@ -978,7 +1005,7 @@
       /* MELISSA */
 
       .melissa-section {
-        padding: 56px 0 58px;
+        padding: 54px 0 56px;
       }
 
       .melissa-inner {
@@ -986,7 +1013,7 @@
 
         grid-template-columns: 1fr;
 
-        gap: 22px;
+        gap: 20px;
       }
 
       .melissa-heading,
@@ -1002,9 +1029,13 @@
 
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 22px;
 
         padding: 42px 0 48px;
+      }
+
+      .page-cta-button {
+        width: fit-content;
       }
 
 
@@ -1153,28 +1184,30 @@
       /* MELISSA */
 
       .melissa-section {
-        padding: 50px 0 52px;
+        padding: 46px 0 48px;
       }
 
       .melissa-inner {
         width: 89%;
 
-        gap: 18px;
+        gap: 14px;
       }
 
       .melissa-heading h2 {
+        margin: 0;
+
         font-size: 37px;
       }
 
       .melissa-copy p {
-        margin-bottom: 16px;
+        margin-bottom: 15px;
 
         font-size: 16px;
         line-height: 1.67;
       }
 
       .melissa-cert {
-        margin-top: 18px;
+        margin-top: 16px;
 
         font-size: 13px;
         line-height: 1.5;
@@ -1183,22 +1216,47 @@
 
       /* CTA */
 
+      .page-cta::after {
+        width: 155px;
+        height: 110px;
+
+        right: -22px;
+        bottom: -13px;
+
+        opacity: 0.12;
+      }
+
       .page-cta-inner {
         width: 89%;
 
-        padding: 39px 0 44px;
+        padding: 42px 0 48px;
+
+        gap: 22px;
+
+        text-align: center;
+      }
+
+      .page-cta-copy {
+        margin: 0 auto;
       }
 
       .page-cta h2 {
+        margin: 0;
+
         font-size: 37px;
       }
 
       .page-cta p {
+        margin: 12px auto 0;
+
         font-size: 16px;
       }
 
       .page-cta-button {
-        width: 100%;
+        width: auto;
+        min-width: 205px;
+
+        margin: 0 auto;
       }
 
 
@@ -1272,6 +1330,10 @@
 
       .farm-banner-grid {
         height: 205px;
+      }
+
+      .page-cta-button {
+        min-width: 190px;
       }
 
       .footer-details {
