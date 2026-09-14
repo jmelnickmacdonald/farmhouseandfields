@@ -274,8 +274,23 @@
     /* HERO */
 
     .waitlist-hero {
-      padding: 68px 0 64px;
-      background: var(--oat-soft);
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 68px;
+      background: var(--river);
+    }
+
+    .waitlist-hero::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      bottom: -24px;
+      width: 320px;
+      height: 230px;
+      background: rgba(255,255,255,0.12);
+      -webkit-mask: url("assets/grass.png") right bottom / contain no-repeat;
+      mask: url("assets/grass.png") right bottom / contain no-repeat;
+      pointer-events: none;
     }
 
     .waitlist-hero-inner {
@@ -283,10 +298,14 @@
       margin: 0 auto;
     }
 
+    .waitlist-hero .eyebrow {
+      color: rgba(255,255,255,0.76);
+    }
+
     .waitlist-hero h1 {
       max-width: 760px;
       margin: 0;
-      color: var(--wine);
+      color: #fff;
       font-family: "Aubrey", serif;
       font-size: clamp(53px, 4.2vw, 67px);
       font-weight: 400;
@@ -296,7 +315,7 @@
     .waitlist-hero p:last-child {
       max-width: 780px;
       margin: 21px 0 0;
-      color: var(--body);
+      color: rgba(255,255,255,0.88);
       font-size: 17px;
       line-height: 1.72;
     }
@@ -334,7 +353,7 @@
       width: 100%;
       margin: 0 0 25px;
       padding: 0;
-      color: var(--river);
+      color: var(--wine);
       font-family: "Aubrey", serif;
       font-size: 34px;
       line-height: 1;
@@ -433,6 +452,16 @@
       accent-color: var(--wine);
     }
 
+    .choice:hover {
+      border-color: rgba(56,93,107,0.38);
+      background: #fff;
+    }
+
+    .choice:has(input:checked) {
+      border-color: rgba(110,20,19,0.42);
+      background: rgba(110,20,19,0.035);
+    }
+
     .field-help {
       margin: 7px 0 0;
       color: var(--muted);
@@ -442,9 +471,9 @@
 
     .acknowledgement {
       margin-top: 3px;
-      padding: 18px 20px;
-      border-left: 3px solid rgba(110,20,19,0.35);
-      background: var(--oat-soft);
+      padding: 20px 22px;
+      border-left: 4px solid var(--wine);
+      background: linear-gradient(90deg, rgba(110,20,19,0.055), var(--oat-soft));
     }
 
     .acknowledgement .choice {
@@ -516,6 +545,8 @@
     .waitlist-aside {
       position: sticky;
       top: 116px;
+      padding-left: 24px;
+      border-left: 3px solid var(--oat);
     }
 
     .waitlist-aside h2 {
@@ -743,7 +774,18 @@
       }
 
       .waitlist-hero {
-        padding: 45px 0 47px;
+        padding: 48px 0 52px;
+      }
+
+      .waitlist-hero::after {
+        right: -36px;
+        bottom: -28px;
+        width: 220px;
+        height: 170px;
+      }
+
+      .waitlist-aside {
+        padding-left: 18px;
       }
 
       .waitlist-hero-inner {
@@ -951,8 +993,8 @@
 
         <p>
           We keep the daycare group small, so spaces are limited.
-          Spots do open up from time to time, and this gives Melissa
-          a way to get to know a little about your dog before one does.
+          Spots do open up from time to time, and this gives us a chance
+          to get to know a little about your dog before one does.
         </p>
 
       </div>
@@ -1276,7 +1318,7 @@
 
             <fieldset>
 
-              <legend>A little more about them.</legend>
+              <legend>Tell us about them.</legend>
 
               <div class="field-grid">
 
@@ -1337,7 +1379,7 @@
 
                 <div class="field full">
                   <label for="importantNotes">
-                    Anything Melissa should know about behaviour, health, or routine?
+                    Anything we should know about behaviour, health, or routine?
                     <span class="optional">Optional</span>
                   </label>
 
@@ -1431,8 +1473,8 @@
             </h2>
 
             <p>
-              Melissa can now take a look at what you shared. If an opening
-              comes up that looks like it could suit your dog, she’ll be in touch.
+              We can now take a look at what you shared. If an opening
+              comes up that looks like it could suit your dog, we’ll be in touch.
             </p>
 
             <a href="daycare.html">
@@ -1451,22 +1493,22 @@
           </h2>
 
           <p>
-            This is not a first-come, first-served line. The daycare group
-            stays small and familiar, so the right opening depends on things
-            like the days you need and how a new dog may fit with the group
-            already here.
+            We’d love to be able to say yes to every dog who would enjoy it here,
+            but keeping the group small and familiar is a big part of what makes
+            the Farmhouse work. So, when we’re full, we do keep a wait-list.
           </p>
 
           <p>
-            When a possible space comes up, Melissa can get in touch and,
-            if it still sounds promising, arrange a visit outside regular
-            daycare hours.
+            Most of our dogs are regulars and become part of a pretty tight-knit
+            little group. Every so often, though, schedules change, families move,
+            or a dog simply doesn’t need daycare anymore, and a space opens up.
           </p>
 
           <p>
-            You do not need to send vaccine records, complete agreements,
-            or set up Time To Pet yet. That comes later if there is a
-            suitable space.
+            When that happens, we look at who has been waiting, the days they need,
+            and which dog may be a good fit for the group. If an opening looks
+            promising for yours, we’ll get in touch and usually arrange a visit
+            outside regular daycare hours.
           </p>
 
           <a href="daycare.html">
