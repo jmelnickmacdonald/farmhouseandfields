@@ -109,15 +109,15 @@
     ========================================================= */
 
     .eyebrow {
-      margin: 0 0 15px;
+      margin: 0 0 14px;
 
       color: var(--river);
 
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.2;
       font-weight: 700;
 
-      letter-spacing: 0.17em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
@@ -254,16 +254,6 @@
 
       text-decoration: none;
       white-space: nowrap;
-
-      transition:
-        background 0.18s ease,
-        transform 0.18s ease;
-    }
-
-    .waitlist-button:hover,
-    .waitlist-button:focus-visible {
-      background: var(--wine-dark);
-      transform: translateY(-1px);
     }
 
 
@@ -389,7 +379,7 @@
     }
 
     .farmhouse-hero-grid {
-      min-height: 610px;
+      min-height: 520px;
 
       display: grid;
       grid-template-columns: minmax(390px, 42%) 1fr;
@@ -404,9 +394,9 @@
     }
 
     .farmhouse-hero-copy {
-      width: min(76%, 520px);
+      width: min(76%, 500px);
 
-      padding: 78px 0;
+      padding: 68px 0;
     }
 
     .farmhouse-hero h1 {
@@ -415,24 +405,24 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(58px, 5vw, 80px);
+      font-size: clamp(54px, 4vw, 66px);
       font-weight: 400;
-      line-height: 0.92;
+      line-height: 0.95;
     }
 
     .farmhouse-hero-lede {
-      max-width: 470px;
+      max-width: 455px;
 
-      margin: 27px 0 0;
+      margin: 24px 0 0;
 
       color: var(--body);
 
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.72;
     }
 
     .farmhouse-hero-media {
-      min-height: 610px;
+      min-height: 520px;
 
       overflow: hidden;
     }
@@ -451,26 +441,26 @@
     ========================================================= */
 
     .family-section {
-      padding: 102px 0 76px;
+      padding: 76px 0 68px;
 
       background: #fff;
     }
 
     .family-inner {
-      width: min(88%, 1120px);
+      width: min(88%, 1080px);
 
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.85fr 1.15fr;
 
-      gap: 90px;
+      gap: 72px;
 
       align-items: start;
     }
 
     .family-heading {
-      max-width: 475px;
+      max-width: 440px;
     }
 
     .family-heading .eyebrow {
@@ -483,24 +473,24 @@
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(46px, 3.5vw, 57px);
+      font-size: clamp(42px, 3vw, 48px);
       font-weight: 400;
-      line-height: 0.98;
+      line-height: 1;
     }
 
     .family-copy {
-      max-width: 650px;
+      max-width: 640px;
 
-      padding-top: 28px;
+      padding-top: 22px;
     }
 
     .family-copy p {
-      margin: 0 0 27px;
+      margin: 0 0 23px;
 
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.76;
     }
 
     .family-copy p:last-child {
@@ -509,56 +499,53 @@
 
 
     /* =========================================================
-       FARM PHOTO STORY
+       PHOTO BANNER
     ========================================================= */
 
-    .farm-photo-section {
-      padding: 0 0 105px;
+    .farm-banner {
+      padding: 0 0 72px;
 
       background: #fff;
     }
 
-    .farm-photo-grid {
-      width: min(88%, 1220px);
+    .farm-banner-grid {
+      width: min(92%, 1380px);
+      height: clamp(275px, 24vw, 355px);
 
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 1.42fr 0.78fr;
+      grid-template-columns: 1.18fr 1fr 1fr;
 
-      gap: 22px;
+      gap: 9px;
 
-      align-items: stretch;
-    }
-
-    .farm-photo-main,
-    .farm-photo-small {
       overflow: hidden;
 
-      border-radius: 16px;
+      border-radius: 13px;
     }
 
-    .farm-photo-main {
-      height: 540px;
+    .farm-banner-image {
+      min-width: 0;
+
+      overflow: hidden;
     }
 
-    .farm-photo-small {
-      height: 540px;
-    }
-
-    .farm-photo-main img,
-    .farm-photo-small img {
+    .farm-banner-image img {
       width: 100%;
       height: 100%;
 
       object-fit: cover;
     }
 
-    .farm-photo-main img {
-      object-position: center 52%;
+    .farm-banner-image:nth-child(1) img {
+      object-position: center 55%;
     }
 
-    .farm-photo-small img {
+    .farm-banner-image:nth-child(2) img {
+      object-position: center;
+    }
+
+    .farm-banner-image:nth-child(3) img {
       object-position: center;
     }
 
@@ -568,116 +555,39 @@
     ========================================================= */
 
     .house-note {
-      position: relative;
-
-      overflow: hidden;
-
-      padding: 76px 0 80px;
-
       background: var(--wine);
+
+      padding: 58px 0 62px;
     }
 
     .house-note-inner {
-      position: relative;
-      z-index: 2;
-
-      width: min(82%, 980px);
+      width: min(82%, 900px);
 
       margin: 0 auto;
     }
 
     .house-note-main {
-      max-width: 900px;
+      max-width: 830px;
 
       margin: 0;
 
       color: var(--warm-white);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(52px, 5vw, 76px);
+      font-size: clamp(44px, 3.5vw, 52px);
       font-weight: 400;
-      line-height: 0.96;
+      line-height: 1;
     }
 
     .house-note-small {
-      max-width: 690px;
+      max-width: 650px;
 
-      margin: 24px 0 0;
+      margin: 19px 0 0;
 
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.83);
 
-      font-size: 17px;
-      line-height: 1.68;
-    }
-
-
-    /* =========================================================
-       INSIDE THE FARMHOUSE
-    ========================================================= */
-
-    .inside-section {
-      background: #fff;
-    }
-
-    .inside-grid {
-      min-height: 560px;
-
-      display: grid;
-      grid-template-columns: 1.17fr 0.83fr;
-
-      align-items: stretch;
-    }
-
-    .inside-media {
-      min-height: 560px;
-
-      overflow: hidden;
-    }
-
-    .inside-media img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .inside-copy-wrap {
-      display: flex;
-      align-items: center;
-    }
-
-    .inside-copy {
-      width: min(72%, 450px);
-
-      margin-left: 13%;
-      padding: 75px 0;
-    }
-
-    .inside-copy .eyebrow {
-      color: var(--wine);
-    }
-
-    .inside-copy h2 {
-      margin: 0;
-
-      color: var(--river);
-
-      font-family: "Aubrey", serif;
-      font-size: clamp(45px, 3.4vw, 57px);
-      font-weight: 400;
-      line-height: 0.98;
-    }
-
-    .inside-copy p {
-      max-width: 430px;
-
-      margin: 23px 0 0;
-
-      color: var(--body);
-
-      font-size: 17px;
-      line-height: 1.76;
+      font-size: 16px;
+      line-height: 1.65;
     }
 
 
@@ -686,20 +596,20 @@
     ========================================================= */
 
     .melissa-section {
-      padding: 92px 0 96px;
+      padding: 74px 0 78px;
 
       background: var(--oat-soft);
     }
 
     .melissa-inner {
-      width: min(88%, 1080px);
+      width: min(88%, 1040px);
 
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 0.56fr 1.44fr;
+      grid-template-columns: 0.55fr 1.45fr;
 
-      gap: 82px;
+      gap: 68px;
 
       align-items: start;
     }
@@ -708,19 +618,15 @@
       max-width: 300px;
     }
 
-    .melissa-heading .eyebrow {
-      color: var(--wine);
-    }
-
     .melissa-heading h2 {
       margin: 0;
 
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(43px, 3.3vw, 53px);
+      font-size: clamp(41px, 3vw, 47px);
       font-weight: 400;
-      line-height: 0.98;
+      line-height: 1;
     }
 
     .melissa-copy {
@@ -733,28 +639,28 @@
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.78;
+      line-height: 1.76;
     }
 
 
     /* EXPERIENCE */
 
     .experience-row {
-      margin-top: 34px;
-      padding-top: 28px;
+      margin-top: 31px;
+      padding-top: 25px;
 
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
 
-      gap: 27px;
+      gap: 26px;
 
-      border-top: 1px solid rgba(56,93,107,0.17);
+      border-top: 1px solid rgba(56, 93, 107, 0.17);
     }
 
     .experience-item strong {
       display: block;
 
-      margin-bottom: 7px;
+      margin-bottom: 6px;
 
       color: var(--wine);
 
@@ -783,22 +689,22 @@
     }
 
     .page-cta-inner {
-      width: min(76%, 1040px);
-      min-height: 240px;
+      width: min(76%, 1000px);
+      min-height: 220px;
 
       margin: 0 auto;
-      padding: 48px 0;
+      padding: 44px 0;
 
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
 
-      gap: 50px;
+      gap: 46px;
 
       align-items: center;
     }
 
     .page-cta-copy {
-      max-width: 620px;
+      max-width: 610px;
     }
 
     .page-cta h2 {
@@ -807,25 +713,25 @@
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(43px, 3.3vw, 54px);
+      font-size: clamp(41px, 3vw, 47px);
       font-weight: 400;
-      line-height: 0.98;
+      line-height: 1;
     }
 
     .page-cta p {
-      max-width: 580px;
+      max-width: 570px;
 
-      margin: 17px 0 0;
+      margin: 15px 0 0;
 
       color: rgba(255,255,255,0.9);
 
       font-size: 16px;
-      line-height: 1.67;
+      line-height: 1.65;
     }
 
     .page-cta-button {
-      min-height: 50px;
-      padding: 0 26px;
+      min-height: 49px;
+      padding: 0 25px;
 
       display: inline-flex;
       align-items: center;
@@ -841,6 +747,16 @@
 
       text-decoration: none;
       white-space: nowrap;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .page-cta-button:hover,
+    .page-cta-button:focus-visible {
+      background: #fff;
+      transform: translateY(-1px);
     }
 
 
@@ -998,16 +914,11 @@
       }
 
       .family-inner {
-        gap: 55px;
-      }
-
-      .farm-photo-main,
-      .farm-photo-small {
-        height: 480px;
+        gap: 50px;
       }
 
       .melissa-inner {
-        gap: 55px;
+        gap: 50px;
       }
 
       .page-cta-inner {
@@ -1031,6 +942,8 @@
 
     @media (max-width: 830px) {
 
+      /* HERO */
+
       .farmhouse-hero-grid {
         min-height: 0;
 
@@ -1045,16 +958,18 @@
         width: 86%;
 
         margin: 0 auto;
-        padding: 54px 0 48px;
+        padding: 50px 0 44px;
       }
 
       .farmhouse-hero-media {
-        min-height: 450px;
+        min-height: 420px;
       }
 
 
+      /* FAMILY */
+
       .family-section {
-        padding: 80px 0 64px;
+        padding: 68px 0 58px;
       }
 
       .family-inner {
@@ -1062,11 +977,11 @@
 
         grid-template-columns: 1fr;
 
-        gap: 30px;
+        gap: 27px;
       }
 
       .family-heading {
-        max-width: 650px;
+        max-width: 620px;
       }
 
       .family-copy {
@@ -1074,46 +989,21 @@
       }
 
 
-      .farm-photo-section {
-        padding-bottom: 82px;
+      /* BANNER */
+
+      .farm-banner {
+        padding-bottom: 62px;
       }
 
-      .farm-photo-grid {
+      .farm-banner-grid {
         width: 86%;
-
-        grid-template-columns: 1fr 0.8fr;
-
-        gap: 16px;
-      }
-
-      .farm-photo-main,
-      .farm-photo-small {
-        height: 400px;
       }
 
 
-      .inside-grid {
-        min-height: 0;
-
-        grid-template-columns: 1fr;
-      }
-
-      .inside-media {
-        min-height: 450px;
-      }
-
-      .inside-copy {
-        width: 86%;
-
-        max-width: 650px;
-
-        margin: 0 auto;
-        padding: 62px 0 68px;
-      }
-
+      /* MELISSA */
 
       .melissa-section {
-        padding: 78px 0 84px;
+        padding: 65px 0 70px;
       }
 
       .melissa-inner {
@@ -1121,7 +1011,7 @@
 
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 25px;
       }
 
       .melissa-heading {
@@ -1129,16 +1019,20 @@
       }
 
 
+      /* CTA */
+
       .page-cta-inner {
         width: 78%;
 
         grid-template-columns: 1fr;
 
-        gap: 27px;
+        gap: 25px;
 
-        padding: 48px 0 56px;
+        padding: 44px 0 52px;
       }
 
+
+      /* FOOTER */
 
       .footer-main {
         grid-template-columns: 1fr;
@@ -1167,6 +1061,8 @@
       }
 
 
+      /* HEADER */
+
       .nav-wrap,
       .site-header.scrolled .nav-wrap {
         min-height: 72px;
@@ -1183,77 +1079,79 @@
       .farmhouse-hero-copy {
         width: 89%;
 
-        padding: 42px 0 38px;
+        padding: 40px 0 35px;
       }
 
       .farmhouse-hero h1 {
-        font-size: 49px;
+        font-size: 45px;
       }
 
       .farmhouse-hero-lede {
-        margin-top: 20px;
+        margin-top: 19px;
 
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.66;
       }
 
       .farmhouse-hero-media {
         min-height: 0;
-        height: clamp(300px, 79vw, 360px);
+        height: clamp(295px, 77vw, 350px);
       }
 
 
       /* FAMILY */
 
       .family-section {
-        padding: 63px 0 46px;
+        padding: 56px 0 46px;
       }
 
       .family-inner {
         width: 89%;
 
-        gap: 26px;
+        gap: 24px;
       }
 
       .family-heading h2 {
-        font-size: 40px;
+        font-size: 38px;
       }
 
       .family-copy p {
-        margin-bottom: 20px;
+        margin-bottom: 19px;
 
         font-size: 16px;
-        line-height: 1.7;
+        line-height: 1.68;
       }
 
 
-      /* FARM PHOTOS */
+      /* PHOTO BANNER */
 
-      .farm-photo-section {
-        padding-bottom: 64px;
+      .farm-banner {
+        padding-bottom: 56px;
       }
 
-      .farm-photo-grid {
+      .farm-banner-grid {
         width: 89%;
+        height: auto;
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:
+          clamp(230px, 64vw, 275px)
+          clamp(155px, 44vw, 190px);
 
-        gap: 14px;
+        gap: 7px;
+
+        border-radius: 10px;
       }
 
-      .farm-photo-main {
-        height: clamp(340px, 100vw, 430px);
-      }
-
-      .farm-photo-small {
-        height: clamp(290px, 82vw, 350px);
+      .farm-banner-image:first-child {
+        grid-column: 1 / -1;
       }
 
 
-      /* WINE NOTE */
+      /* HOUSE NOTE */
 
       .house-note {
-        padding: 52px 0 56px;
+        padding: 48px 0 51px;
       }
 
       .house-note-inner {
@@ -1261,70 +1159,45 @@
       }
 
       .house-note-main {
-        font-size: 42px;
+        font-size: 38px;
       }
 
       .house-note-small {
-        margin-top: 18px;
+        margin-top: 16px;
 
         font-size: 16px;
-        line-height: 1.65;
-      }
-
-
-      /* INSIDE */
-
-      .inside-media {
-        min-height: 0;
-        height: clamp(300px, 82vw, 380px);
-      }
-
-      .inside-copy {
-        width: 89%;
-
-        padding: 54px 0 60px;
-      }
-
-      .inside-copy h2 {
-        font-size: 40px;
-      }
-
-      .inside-copy p {
-        margin-top: 19px;
-
-        font-size: 16px;
-        line-height: 1.7;
+        line-height: 1.63;
       }
 
 
       /* MELISSA */
 
       .melissa-section {
-        padding: 62px 0 68px;
+        padding: 56px 0 62px;
       }
 
       .melissa-inner {
         width: 89%;
 
-        gap: 23px;
+        gap: 21px;
       }
 
       .melissa-heading h2 {
-        font-size: 39px;
+        font-size: 38px;
       }
 
       .melissa-copy > p {
         font-size: 16px;
-        line-height: 1.7;
+        line-height: 1.68;
       }
 
       .experience-row {
-        margin-top: 27px;
-        padding-top: 23px;
+        margin-top: 26px;
+        padding-top: 22px;
 
         grid-template-columns: 1fr;
 
-        gap: 18px;
+        gap: 17px;
       }
 
 
@@ -1335,11 +1208,11 @@
 
         min-height: 0;
 
-        padding: 44px 0 50px;
+        padding: 41px 0 46px;
       }
 
       .page-cta h2 {
-        font-size: 40px;
+        font-size: 38px;
       }
 
       .page-cta p {
@@ -1406,27 +1279,14 @@
     @media (max-width: 390px) {
 
       .farmhouse-hero h1 {
-        font-size: 45px;
+        font-size: 42px;
       }
 
-      .family-heading h2 {
-        font-size: 38px;
-      }
-
-      .house-note-main {
-        font-size: 39px;
-      }
-
-      .inside-copy h2 {
-        font-size: 38px;
-      }
-
-      .melissa-heading h2 {
-        font-size: 37px;
-      }
-
+      .family-heading h2,
+      .house-note-main,
+      .melissa-heading h2,
       .page-cta h2 {
-        font-size: 37px;
+        font-size: 36px;
       }
 
       .footer-details {
@@ -1710,15 +1570,15 @@
 
 
     <!-- =====================================================
-         FARM PHOTOS
+         PHOTO BANNER
     ====================================================== -->
 
-    <section class="farm-photo-section">
+    <section class="farm-banner">
 
-      <div class="farm-photo-grid">
+      <div class="farm-banner-grid">
 
 
-        <div class="farm-photo-main">
+        <div class="farm-banner-image">
 
           <img
             src="assets/farmhouse3.jpg"
@@ -1728,11 +1588,21 @@
         </div>
 
 
-        <div class="farm-photo-small">
+        <div class="farm-banner-image">
 
           <img
             src="assets/farmhouse2.jpg"
             alt="Dogs looking out the farmhouse window toward the farm"
+          >
+
+        </div>
+
+
+        <div class="farm-banner-image">
+
+          <img
+            src="assets/farmhouse4.jpg"
+            alt="Two dogs relaxing together inside the farmhouse"
           >
 
         </div>
@@ -1744,7 +1614,7 @@
 
 
     <!-- =====================================================
-         HOUSE NOTE
+         LITTLE FARMHOUSE MOMENT
     ====================================================== -->
 
     <section class="house-note">
@@ -1766,53 +1636,6 @@
 
 
     <!-- =====================================================
-         INSIDE
-    ====================================================== -->
-
-    <section class="inside-section">
-
-      <div class="inside-grid">
-
-
-        <div class="inside-media">
-
-          <img
-            src="assets/farmhouse4.jpg"
-            alt="Two dogs relaxing together on the couch inside the farmhouse"
-          >
-
-        </div>
-
-
-        <div class="inside-copy-wrap">
-
-          <div class="inside-copy">
-
-            <p class="eyebrow">
-              Inside the Farmhouse
-            </p>
-
-            <h2>
-              There’s room to slow down, too.
-            </h2>
-
-            <p>
-              After a busy morning, the house gives everyone
-              somewhere to settle in, get comfortable, and take
-              a break before the next round outside.
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
          MELISSA
     ====================================================== -->
 
@@ -1823,12 +1646,8 @@
 
         <div class="melissa-heading">
 
-          <p class="eyebrow">
-            Meet Melissa
-          </p>
-
           <h2>
-            The person behind the Farmhouse.
+            Meet Melissa.
           </h2>
 
         </div>
@@ -1837,11 +1656,11 @@
         <div class="melissa-copy">
 
           <p>
-            Melissa worked in dog boarding before spending about
-            ten years on a dairy farm. Farmhouse & Fields brought
-            her back to working with dogs, this time from home.
-            She and her family have five dogs of their own, and
-            have had as many as seven, so a house full of dogs
+            Melissa spent about ten years working on a dairy farm
+            after earlier work in dog boarding. Farmhouse & Fields
+            brought her back to working with dogs, this time from
+            home. She and her family have five dogs of their own,
+            and have had as many as seven, so a house full of dogs
             is not exactly new territory.
           </p>
 
@@ -2062,6 +1881,10 @@
 
   </footer>
 
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
 
   <script>
 
