@@ -10,7 +10,7 @@ window.FARMHOUSE_FAQS = [
     id: "space-available",
     category: "before-starting",
     question: "What if there isn’t a space right away?",
-    answer: "The daycare group stays small, so there are only so many spaces at a time. Spots do open up as schedules change and dogs move on. If there is not a suitable opening right away, we can keep your dog on the wait-list and reach out when one comes up.",
+    answer: "The daycare group stays small, so there are only so many spaces at a time. Spots do open up as schedules change and dogs move on. If there is not a suitable opening right away, we can keep your dog on the waitlist and reach out when one comes up.",
     keywords: "space spaces full opening openings availability available wait list waitlist limited room spot spots"
   },
   {
