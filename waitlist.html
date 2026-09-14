@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Join the Wait-list | Farmhouse & Fields Dog Daycare</title>
+
+  <meta
+    name="description"
+    content="Tell us a little about your dog and join the Farmhouse & Fields Dog Daycare wait-list in Canning, Nova Scotia."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    @font-face {
+      font-family: "Aubrey";
+      src: url("fonts/AUBREY1__.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      --wine: #6E1413;
+      --wine-dark: #55100F;
+      --river: #385D6B;
+      --river-dark: #294A55;
+      --oat: #E7DDCD;
+      --oat-soft: #F5F1EA;
+      --warm-white: #FCFBF8;
+      --white: #FFFFFF;
+      --ink: #2A2926;
+      --body: #5B5751;
+      --muted: #7A746E;
+      --border: #E9E2D9;
+      --max: 1320px;
+      --page: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--warm-white);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, textarea, select { font: inherit; }
+
+    .container {
+      width: min(88%, var(--max));
+      margin: 0 auto;
+    }
+
+    .page-inner {
+      width: min(88%, var(--page));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--river);
+      font-size: 10px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(252, 251, 248, 0.98);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .site-header.scrolled {
+      border-color: rgba(233, 226, 217, 0.92);
+      box-shadow: 0 7px 25px rgba(42, 41, 38, 0.045);
+    }
+
+    .nav-wrap {
+      width: min(88%, var(--max));
+      min-height: 98px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      transition: min-height 0.2s ease;
+    }
+
+    .site-header.scrolled .nav-wrap { min-height: 80px; }
+
+    .brand-logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      width: 190px;
+      height: auto;
+      transition: width 0.2s ease;
+    }
+
+    .site-header.scrolled .brand-logo img { width: 170px; }
+
+    .main-nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      padding: 11px 10px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.active {
+      color: var(--wine);
+      font-weight: 700;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .client-link {
+      color: var(--river);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .waitlist-button {
+      min-height: 45px;
+      padding: 0 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: var(--wine);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* MOBILE NAV */
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      margin-left: auto;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+      border-radius: 10px;
+      background: var(--ink);
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      background: var(--warm-white);
+      transition: max-height 0.35s ease, opacity 0.22s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 700px;
+      opacity: 1;
+    }
+
+    .mobile-menu-inner {
+      width: 89%;
+      margin: 0 auto;
+      padding: 5px 0 28px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 2px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .mobile-menu .mobile-client {
+      margin-top: 8px;
+      border-bottom: 0;
+      color: var(--river);
+      font-weight: 700;
+    }
+
+    .mobile-menu .mobile-waitlist {
+      margin-top: 8px;
+      padding: 15px 20px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--wine);
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .waitlist-hero {
+      padding: 68px 0 64px;
+      background: var(--oat-soft);
+    }
+
+    .waitlist-hero-inner {
+      width: min(88%, 930px);
+      margin: 0 auto;
+    }
+
+    .waitlist-hero h1 {
+      max-width: 760px;
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: clamp(53px, 4.2vw, 67px);
+      font-weight: 400;
+      line-height: 0.96;
+    }
+
+    .waitlist-hero p:last-child {
+      max-width: 780px;
+      margin: 21px 0 0;
+      color: var(--body);
+      font-size: 17px;
+      line-height: 1.72;
+    }
+
+    /* FORM AREA */
+
+    .waitlist-section {
+      padding: 68px 0 76px;
+      background: #fff;
+    }
+
+    .waitlist-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.42fr) minmax(280px, 0.58fr);
+      gap: 82px;
+      align-items: start;
+    }
+
+    .waitlist-form {
+      min-width: 0;
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0 0 42px;
+      border: 0;
+    }
+
+    fieldset + fieldset {
+      padding-top: 42px;
+      border-top: 1px solid var(--border);
+    }
+
+    legend {
+      width: 100%;
+      margin: 0 0 25px;
+      padding: 0;
+      color: var(--river);
+      font-family: "Aubrey", serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 24px;
+    }
+
+    .field {
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label,
+    .field-label {
+      display: block;
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .optional {
+      margin-left: 4px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 12px 14px;
+      border: 1px solid #D7D0C7;
+      border-radius: 8px;
+      background: var(--warm-white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.5;
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    textarea {
+      min-height: 126px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--river);
+      box-shadow: 0 0 0 4px rgba(56,93,107,0.09);
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 16px;
+    }
+
+    .choice-grid.days {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .choice {
+      min-height: 46px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--warm-white);
+      color: var(--body);
+      font-size: 14px;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .choice input {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      accent-color: var(--wine);
+    }
+
+    .field-help {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .acknowledgement {
+      margin-top: 3px;
+      padding: 18px 20px;
+      border-left: 3px solid rgba(110,20,19,0.35);
+      background: var(--oat-soft);
+    }
+
+    .acknowledgement .choice {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      align-items: flex-start;
+    }
+
+    .form-actions {
+      margin-top: 28px;
+    }
+
+    .submit-button {
+      min-height: 52px;
+      padding: 0 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 9px;
+      background: var(--wine);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .submit-button:hover,
+    .submit-button:focus-visible {
+      background: var(--wine-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit-button[disabled] {
+      opacity: 0.65;
+      cursor: wait;
+      transform: none;
+    }
+
+    .form-status {
+      margin: 14px 0 0;
+      color: var(--body);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .form-status.success {
+      color: var(--river-dark);
+      font-weight: 600;
+    }
+
+    .form-status.error {
+      color: var(--wine);
+      font-weight: 600;
+    }
+
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
+
+    /* SIDE COPY */
+
+    .waitlist-aside {
+      position: sticky;
+      top: 116px;
+    }
+
+    .waitlist-aside h2 {
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .waitlist-aside p {
+      margin: 17px 0 0;
+      color: var(--body);
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .waitlist-aside a {
+      margin-top: 20px;
+      display: inline-flex;
+      color: var(--river);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .waitlist-aside a:hover,
+    .waitlist-aside a:focus-visible {
+      color: var(--wine);
+    }
+
+    /* SUCCESS PANEL */
+
+    .success-panel {
+      display: none;
+      padding: 34px 36px;
+      border-radius: 10px;
+      background: var(--oat-soft);
+    }
+
+    .success-panel.show {
+      display: block;
+    }
+
+    .success-panel h2 {
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: 39px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .success-panel p {
+      margin: 16px 0 0;
+      color: var(--body);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .success-panel a {
+      margin-top: 20px;
+      display: inline-flex;
+      color: var(--river);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding: 46px 0 25px;
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 0.85fr 1.65fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .footer-brand-name {
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .footer-brand-type {
+      margin: 6px 0 0;
+      color: var(--river);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      margin: 20px 0 0;
+      color: var(--ink);
+      font-family: "Aubrey", serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .footer-details {
+      display: grid;
+      grid-template-columns: 1.1fr 0.8fr 1.2fr;
+      gap: 30px;
+    }
+
+    .footer-detail-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--river);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .footer-detail-value,
+    .footer-detail-value a {
+      color: var(--body);
+      font-size: 13px;
+      line-height: 1.55;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 15px;
+    }
+
+    .footer-links a {
+      color: var(--body);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .footer-detail-value a:hover,
+    .footer-detail-value a:focus-visible,
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--wine);
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-bottom-location {
+      color: var(--river);
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1120px) {
+      .main-nav,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-toggle { display: flex; }
+
+      .nav-wrap,
+      .site-header.scrolled .nav-wrap {
+        min-height: 82px;
+      }
+
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img {
+        width: 170px;
+      }
+
+      .waitlist-grid {
+        gap: 56px;
+      }
+    }
+
+    @media (max-width: 830px) {
+      .waitlist-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .waitlist-aside {
+        position: static;
+        max-width: 680px;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container,
+      .nav-wrap,
+      .page-inner {
+        width: 89%;
+      }
+
+      .nav-wrap,
+      .site-header.scrolled .nav-wrap {
+        min-height: 72px;
+      }
+
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img {
+        width: 145px;
+      }
+
+      .waitlist-hero {
+        padding: 45px 0 47px;
+      }
+
+      .waitlist-hero-inner {
+        width: 89%;
+      }
+
+      .waitlist-hero h1 {
+        font-size: 45px;
+      }
+
+      .waitlist-hero p:last-child {
+        margin-top: 17px;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .waitlist-section {
+        padding: 50px 0 58px;
+      }
+
+      fieldset {
+        padding-bottom: 34px;
+      }
+
+      fieldset + fieldset {
+        padding-top: 34px;
+      }
+
+      legend {
+        margin-bottom: 21px;
+        font-size: 31px;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .choice-grid,
+      .choice-grid.days {
+        grid-template-columns: 1fr;
+      }
+
+      .submit-button {
+        width: 100%;
+      }
+
+      .site-footer {
+        padding: 38px 0 23px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-brand-name { font-size: 29px; }
+
+      .footer-tagline {
+        margin-top: 17px;
+        font-size: 22px;
+      }
+
+      .footer-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 18px;
+      }
+
+      .footer-details > div:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        margin-top: 27px;
+        padding-top: 16px;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .waitlist-hero h1 { font-size: 42px; }
+
+      .footer-details {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-details > div:last-child {
+        grid-column: auto;
+      }
+    }
+
+    /* ACCESSIBILITY */
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(56,93,107,0.42);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header" id="siteHeader">
+
+    <div class="nav-wrap">
+
+      <a
+        href="index.html"
+        class="brand-logo"
+        aria-label="Farmhouse & Fields Dog Daycare home"
+      >
+        <img
+          src="assets/farmhouseandfieldslogo.png"
+          alt="Farmhouse & Fields Dog Daycare"
+        >
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="the-farmhouse.html" class="nav-link">The Farmhouse</a>
+        <a href="daycare.html" class="nav-link">Daycare</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="faqs.html" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <a
+          href="current-clients.html"
+          class="client-link"
+        >
+          Current Clients
+        </a>
+
+        <a
+          href="waitlist.html"
+          class="waitlist-button"
+          aria-current="page"
+        >
+          Join the Wait-list
+        </a>
+
+      </div>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu-inner" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="the-farmhouse.html">The Farmhouse</a>
+        <a href="daycare.html">Daycare</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="current-clients.html" class="mobile-client">Current Clients</a>
+        <a href="waitlist.html" class="mobile-waitlist">Join the Wait-list</a>
+      </nav>
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="waitlist-hero">
+
+      <div class="waitlist-hero-inner">
+
+        <p class="eyebrow">Join the wait-list</p>
+
+        <h1>
+          Tell us about your dog.
+        </h1>
+
+        <p>
+          We keep the daycare group small, so spaces are limited.
+          Spots do open up from time to time, and this gives Melissa
+          a way to get to know a little about your dog before one does.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="waitlist-section">
+
+      <div class="page-inner waitlist-grid">
+
+        <div>
+
+          <form
+            class="waitlist-form"
+            id="waitlistForm"
+            novalidate
+          >
+
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </div>
+
+            <input
+              type="hidden"
+              name="submittedFrom"
+              value="Farmhouse & Fields website"
+            >
+
+
+            <fieldset>
+
+              <legend>You.</legend>
+
+              <div class="field-grid">
+
+                <div class="field">
+                  <label for="ownerName">Your name</label>
+                  <input
+                    id="ownerName"
+                    name="ownerName"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  >
+                </div>
+
+                <div class="field full">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+              <legend>Your dog.</legend>
+
+              <div class="field-grid">
+
+                <div class="field">
+                  <label for="dogName">Dog’s name</label>
+                  <input
+                    id="dogName"
+                    name="dogName"
+                    type="text"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="dogAge">Age</label>
+                  <input
+                    id="dogAge"
+                    name="dogAge"
+                    type="text"
+                    placeholder="e.g. 3 years"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="breed">Breed or mix</label>
+                  <input
+                    id="breed"
+                    name="breed"
+                    type="text"
+                    required
+                  >
+                </div>
+
+                <div class="field">
+                  <label for="sex">Sex</label>
+                  <select
+                    id="sex"
+                    name="sex"
+                    required
+                  >
+                    <option value="">Choose one</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                  </select>
+                </div>
+
+                <div class="field full">
+                  <span class="field-label">
+                    Spayed, neutered, or intact?
+                  </span>
+
+                  <div class="choice-grid">
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="reproductiveStatus"
+                        value="Spayed"
+                        required
+                      >
+                      Spayed
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="reproductiveStatus"
+                        value="Neutered"
+                      >
+                      Neutered
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="reproductiveStatus"
+                        value="Intact"
+                      >
+                      Intact
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="reproductiveStatus"
+                        value="Not sure / prefer to discuss"
+                      >
+                      Not sure / prefer to discuss
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+              <legend>What are you looking for?</legend>
+
+              <div class="field-grid">
+
+                <div class="field full">
+                  <span class="field-label">
+                    Which days are you generally hoping for?
+                  </span>
+
+                  <div class="choice-grid days">
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Monday">
+                      Monday
+                    </label>
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Tuesday">
+                      Tuesday
+                    </label>
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Wednesday">
+                      Wednesday
+                    </label>
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Thursday">
+                      Thursday
+                    </label>
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Friday">
+                      Friday
+                    </label>
+
+                    <label class="choice">
+                      <input type="checkbox" name="preferredDays" value="Flexible">
+                      Flexible
+                    </label>
+
+                  </div>
+
+                  <p class="field-help">
+                    Choose as many as apply.
+                  </p>
+                </div>
+
+
+                <div class="field full">
+                  <span class="field-label">
+                    Are you looking for full days or half days?
+                  </span>
+
+                  <div class="choice-grid">
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="dayLength"
+                        value="Full days"
+                        required
+                      >
+                      Full days
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="dayLength"
+                        value="Morning half-days"
+                      >
+                      Morning half-days
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="dayLength"
+                        value="Afternoon half-days"
+                      >
+                      Afternoon half-days
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="dayLength"
+                        value="Open to whatever works"
+                      >
+                      Open to whatever works
+                    </label>
+
+                  </div>
+                </div>
+
+
+                <div class="field">
+                  <label for="scheduleFlexibility">
+                    How flexible are your days?
+                  </label>
+
+                  <select
+                    id="scheduleFlexibility"
+                    name="scheduleFlexibility"
+                    required
+                  >
+                    <option value="">Choose one</option>
+                    <option>Those days are pretty specific</option>
+                    <option>I have a few options</option>
+                    <option>I’m very flexible</option>
+                  </select>
+                </div>
+
+
+                <div class="field">
+                  <label for="startTiming">
+                    When are you hoping to start?
+                  </label>
+
+                  <select
+                    id="startTiming"
+                    name="startTiming"
+                    required
+                  >
+                    <option value="">Choose one</option>
+                    <option>As soon as a suitable spot opens</option>
+                    <option>Within the next month or two</option>
+                    <option>No rush</option>
+                    <option>Just planning ahead</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+              <legend>A little more about them.</legend>
+
+              <div class="field-grid">
+
+                <div class="field full">
+                  <span class="field-label">
+                    Has your dog been to daycare before?
+                  </span>
+
+                  <div class="choice-grid">
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="daycareExperience"
+                        value="Yes"
+                        required
+                      >
+                      Yes
+                    </label>
+
+                    <label class="choice">
+                      <input
+                        type="radio"
+                        name="daycareExperience"
+                        value="No"
+                      >
+                      No
+                    </label>
+                  </div>
+                </div>
+
+
+                <div class="field full">
+                  <label for="withDogs">
+                    How are they generally with other dogs?
+                  </label>
+
+                  <textarea
+                    id="withDogs"
+                    name="withDogs"
+                    required
+                  ></textarea>
+                </div>
+
+
+                <div class="field full">
+                  <label for="dogDetails">
+                    Tell us a little about your dog.
+                  </label>
+
+                  <textarea
+                    id="dogDetails"
+                    name="dogDetails"
+                    placeholder="Personality, energy level, favourite things, routines, or anything else that helps Melissa get a sense of them."
+                    required
+                  ></textarea>
+                </div>
+
+
+                <div class="field full">
+                  <label for="importantNotes">
+                    Anything Melissa should know about behaviour, health, or routine?
+                    <span class="optional">Optional</span>
+                  </label>
+
+                  <textarea
+                    id="importantNotes"
+                    name="importantNotes"
+                  ></textarea>
+                </div>
+
+
+                <div class="field full">
+                  <label for="vaccinesCurrent">
+                    Are your dog’s required vaccinations current?
+                  </label>
+
+                  <select
+                    id="vaccinesCurrent"
+                    name="vaccinesCurrent"
+                    required
+                  >
+                    <option value="">Choose one</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>I’m not sure</option>
+                  </select>
+
+                  <p class="field-help">
+                    No records are needed here. We can sort that out later
+                    if a suitable space opens.
+                  </p>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+
+            <div class="acknowledgement">
+
+              <label class="choice">
+
+                <input
+                  type="checkbox"
+                  name="waitlistAcknowledgement"
+                  value="Yes"
+                  required
+                >
+
+                <span>
+                  I understand that joining the wait-list does not guarantee
+                  a daycare space. Farmhouse &amp; Fields keeps the group small,
+                  and any opening also needs to be a good fit for the dogs
+                  already attending.
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <div class="form-actions">
+
+              <button
+                class="submit-button"
+                id="submitButton"
+                type="submit"
+              >
+                Join the wait-list →
+              </button>
+
+              <p
+                class="form-status"
+                id="formStatus"
+                role="status"
+                aria-live="polite"
+              ></p>
+
+            </div>
+
+          </form>
+
+
+          <div
+            class="success-panel"
+            id="successPanel"
+            tabindex="-1"
+          >
+
+            <h2>
+              Thanks. We’ve got it.
+            </h2>
+
+            <p>
+              Melissa can now take a look at what you shared. If an opening
+              comes up that looks like it could suit your dog, she’ll be in touch.
+            </p>
+
+            <a href="daycare.html">
+              Back to daycare details →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <aside class="waitlist-aside">
+
+          <h2>
+            What happens from here?
+          </h2>
+
+          <p>
+            This is not a first-come, first-served line. The daycare group
+            stays small and familiar, so the right opening depends on things
+            like the days you need and how a new dog may fit with the group
+            already here.
+          </p>
+
+          <p>
+            When a possible space comes up, Melissa can get in touch and,
+            if it still sounds promising, arrange a visit outside regular
+            daycare hours.
+          </p>
+
+          <p>
+            You do not need to send vaccine records, complete agreements,
+            or set up Time To Pet yet. That comes later if there is a
+            suitable space.
+          </p>
+
+          <a href="daycare.html">
+            Looking for hours &amp; rates? →
+          </a>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <p class="footer-brand-name">
+            Farmhouse &amp; Fields
+          </p>
+
+          <p class="footer-brand-type">
+            Dog Daycare
+          </p>
+
+          <p class="footer-tagline">
+            A good day to be a dog.
+          </p>
+
+        </div>
+
+
+        <div class="footer-details">
+
+          <div>
+            <span class="footer-detail-label">Find us</span>
+            <div class="footer-detail-value">
+              571 Woodside Rd.<br>
+              Canning, Nova Scotia
+            </div>
+          </div>
+
+          <div>
+            <span class="footer-detail-label">Call</span>
+            <div class="footer-detail-value">
+              <a href="tel:+19028241979">
+                (902) 824-1979
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <span class="footer-detail-label">Keep in touch</span>
+
+            <div class="footer-links">
+              <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61568074120165"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+              </a>
+
+              <a
+                href="https://www.instagram.com/farmhousefieldsdogdaycare/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+
+              <a href="current-clients.html">
+                Current Clients
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="currentYear"></span>
+          Farmhouse &amp; Fields Dog Daycare
+        </span>
+
+        <span class="footer-bottom-location">
+          Canning, Nova Scotia
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+    /*
+      Paste the public Google Apps Script web-app URL here
+      after you deploy WaitlistIntake.gs.
+    */
+    const WAITLIST_ENDPOINT =
+      "https://script.google.com/macros/s/AKfycby9fOfoh9N1MAZJvu0W1H42MvHyPWltOA30hcumu6eRCp0jGFBdnHldUiSbmzanYyM/exec";
+
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const siteHeader =
+      document.getElementById("siteHeader");
+
+    const currentYear =
+      document.getElementById("currentYear");
+
+    const form =
+      document.getElementById("waitlistForm");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const successPanel =
+      document.getElementById("successPanel");
+
+
+    menuToggle.addEventListener("click", function () {
+
+      const isOpen =
+        mobileMenu.classList.toggle("open");
+
+      menuToggle.classList.toggle(
+        "open",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
+
+    });
+
+
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("open");
+          menuToggle.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open menu"
+          );
+        });
+
+      });
+
+
+    function updateHeader() {
+      siteHeader.classList.toggle(
+        "scrolled",
+        window.scrollY > 14
+      );
+    }
+
+
+    updateHeader();
+
+
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
+
+
+    currentYear.textContent =
+      new Date().getFullYear();
+
+
+    function serializeForm(formElement) {
+
+      const data =
+        new FormData(formElement);
+
+      const params =
+        new URLSearchParams();
+
+      const uniqueNames =
+        new Set();
+
+      for (const [name] of data.entries()) {
+        uniqueNames.add(name);
+      }
+
+      uniqueNames.forEach(function (name) {
+
+        const values =
+          data.getAll(name);
+
+        params.set(
+          name,
+          values.join(", ")
+        );
+
+      });
+
+      params.set(
+        "submittedAtClient",
+        new Date().toISOString()
+      );
+
+      return params;
+    }
+
+
+    form.addEventListener("submit", async function (event) {
+
+      event.preventDefault();
+
+      formStatus.textContent = "";
+      formStatus.className = "form-status";
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (
+        !WAITLIST_ENDPOINT ||
+        WAITLIST_ENDPOINT.includes("PASTE_PUBLIC")
+      ) {
+        formStatus.textContent =
+          "The wait-list form still needs its Google connection added.";
+        formStatus.classList.add("error");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+
+      try {
+
+        await fetch(
+          WAITLIST_ENDPOINT,
+          {
+            method: "POST",
+            mode: "no-cors",
+            body: serializeForm(form)
+          }
+        );
+
+        form.reset();
+
+        form.style.display = "none";
+
+        successPanel.classList.add("show");
+        successPanel.focus();
+
+      } catch (error) {
+
+        formStatus.textContent =
+          "Something went wrong while sending this. Please try again, or contact Farmhouse & Fields directly.";
+
+        formStatus.classList.add("error");
+
+        submitButton.disabled = false;
+        submitButton.textContent =
+          "Join the wait-list →";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
