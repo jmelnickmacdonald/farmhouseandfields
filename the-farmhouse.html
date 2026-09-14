@@ -104,11 +104,6 @@
       margin: 0 auto;
     }
 
-    .page-inner {
-      width: min(88%, var(--page));
-      margin: 0 auto;
-    }
-
 
     /* =========================================================
        SHARED
@@ -510,6 +505,52 @@
 
 
     /* =========================================================
+       FARMHOUSE MOMENT
+    ========================================================= */
+
+    .house-note {
+      padding: 38px 0 41px;
+
+      background: var(--wine);
+    }
+
+    .house-note-inner {
+      width: min(88%, var(--page));
+
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+
+      gap: 52px;
+
+      align-items: center;
+    }
+
+    .house-note-main {
+      margin: 0;
+
+      color: var(--warm-white);
+
+      font-family: "Aubrey", serif;
+      font-size: clamp(37px, 2.7vw, 44px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .house-note-small {
+      max-width: 650px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,0.84);
+
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
        EDGE-TO-EDGE PHOTOS
     ========================================================= */
 
@@ -555,45 +596,6 @@
 
     .farm-banner-image:nth-child(3) img {
       object-position: center;
-    }
-
-
-    /* =========================================================
-       HOUSE NOTE
-    ========================================================= */
-
-    .house-note {
-      padding: 38px 0 41px;
-
-      background: var(--wine);
-    }
-
-    .house-note-inner {
-      width: min(88%, var(--page));
-
-      margin: 0 auto;
-    }
-
-    .house-note-main {
-      margin: 0;
-
-      color: var(--warm-white);
-
-      font-family: "Aubrey", serif;
-      font-size: clamp(38px, 2.9vw, 45px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .house-note-small {
-      max-width: 720px;
-
-      margin: 12px 0 0;
-
-      color: rgba(255,255,255,0.84);
-
-      font-size: 16px;
-      line-height: 1.58;
     }
 
 
@@ -653,8 +655,8 @@
     }
 
     .melissa-cert {
-      margin-top: 28px;
-      padding-top: 20px;
+      margin-top: 27px;
+      padding-top: 19px;
 
       border-top: 1px solid rgba(56, 93, 107, 0.17);
 
@@ -901,6 +903,7 @@
 
       .farmhouse-hero-inner,
       .family-inner,
+      .house-note-inner,
       .melissa-inner {
         gap: 40px;
       }
@@ -914,8 +917,6 @@
 
     @media (max-width: 830px) {
 
-      /* HERO */
-
       .farmhouse-hero {
         padding: 48px 0 0;
       }
@@ -925,7 +926,7 @@
 
         grid-template-columns: 1fr;
 
-        gap: 39px;
+        gap: 38px;
       }
 
       .farmhouse-hero-copy {
@@ -940,47 +941,40 @@
       }
 
 
-      /* FAMILY */
-
-      .family-section {
-        padding: 62px 0;
-      }
-
-      .family-inner {
-        width: 86%;
-
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-      }
-
-      .family-heading,
-      .family-copy {
-        max-width: 680px;
-      }
-
-
-      /* MELISSA */
-
+      .family-section,
       .melissa-section {
         padding: 62px 0;
       }
 
+      .family-inner,
       .melissa-inner {
         width: 86%;
 
         grid-template-columns: 1fr;
 
-        gap: 23px;
+        gap: 24px;
       }
 
+      .family-heading,
+      .family-copy,
       .melissa-heading,
       .melissa-copy {
         max-width: 680px;
       }
 
 
-      /* CTA */
+      .house-note {
+        padding: 37px 0 40px;
+      }
+
+      .house-note-inner {
+        width: 86%;
+
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+      }
+
 
       .page-cta-inner {
         width: 78%;
@@ -992,8 +986,6 @@
         padding: 42px 0 48px;
       }
 
-
-      /* FOOTER */
 
       .footer-main {
         grid-template-columns: 1fr;
@@ -1022,8 +1014,6 @@
       }
 
 
-      /* HEADER */
-
       .nav-wrap,
       .site-header.scrolled .nav-wrap {
         min-height: 72px;
@@ -1042,7 +1032,7 @@
       }
 
       .farmhouse-hero-inner {
-        gap: 34px;
+        gap: 33px;
       }
 
       .farmhouse-hero-copy {
@@ -1089,7 +1079,29 @@
       }
 
 
-      /* PHOTO STRIP */
+      /* HOUSE NOTE */
+
+      .house-note {
+        padding: 35px 0 38px;
+      }
+
+      .house-note-inner {
+        width: 89%;
+
+        gap: 12px;
+      }
+
+      .house-note-main {
+        font-size: 35px;
+      }
+
+      .house-note-small {
+        font-size: 16px;
+        line-height: 1.58;
+      }
+
+
+      /* PHOTOS */
 
       .farm-banner-grid {
         height: 215px;
@@ -1107,28 +1119,6 @@
 
       .farm-banner-image:nth-child(3) img {
         object-position: 58% center;
-      }
-
-
-      /* HOUSE NOTE */
-
-      .house-note {
-        padding: 37px 0 40px;
-      }
-
-      .house-note-inner {
-        width: 89%;
-      }
-
-      .house-note-main {
-        font-size: 36px;
-      }
-
-      .house-note-small {
-        margin-top: 12px;
-
-        font-size: 16px;
-        line-height: 1.58;
       }
 
 
@@ -1156,8 +1146,8 @@
       }
 
       .melissa-cert {
-        margin-top: 23px;
-        padding-top: 18px;
+        margin-top: 22px;
+        padding-top: 17px;
       }
 
 
@@ -1241,10 +1231,13 @@
       }
 
       .family-heading h2,
-      .house-note-main,
       .melissa-heading h2,
       .page-cta h2 {
         font-size: 34px;
+      }
+
+      .house-note-main {
+        font-size: 33px;
       }
 
       .farm-banner-grid {
@@ -1528,6 +1521,28 @@
 
 
     <!-- =====================================================
+         FARMHOUSE MOMENT
+    ====================================================== -->
+
+    <section class="house-note">
+
+      <div class="house-note-inner">
+
+        <p class="house-note-main">
+          These walls have seen a lot over the years.
+        </p>
+
+        <p class="house-note-small">
+          These days, there are a few more nose prints on the
+          windows and muddy paws across the floor.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
          PHOTO STRIP
     ====================================================== -->
 
@@ -1572,28 +1587,6 @@
 
 
     <!-- =====================================================
-         FARMHOUSE MOMENT
-    ====================================================== -->
-
-    <section class="house-note">
-
-      <div class="house-note-inner">
-
-        <p class="house-note-main">
-          These walls have seen a lot over the years.
-        </p>
-
-        <p class="house-note-small">
-          These days, there are a few more nose prints on the
-          windows and muddy paws across the floor.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
          MELISSA
     ====================================================== -->
 
@@ -1615,18 +1608,20 @@
 
           <p>
             Melissa worked in dog boarding before spending about
-            ten years on a dairy farm. Farmhouse & Fields brought
-            her back to working with dogs, this time from home.
-            She and her family have five dogs of their own, and
-            have had as many as seven, so a house full of dogs
-            is not exactly new territory.
+            ten years working on a dairy farm. She loved farm life,
+            but she missed working with dogs. Farmhouse & Fields
+            gave her a way to come back to it, right here at the
+            farmhouse.
           </p>
 
           <p>
-            Keeping the daycare group small means she gets to know
-            the dogs who come through the door, how they fit into
-            the group, and when somebody might need a little more
-            space or downtime.
+            Dogs have always been a big part of life for Melissa
+            and her family. They have five of their own now and
+            have had as many as seven, so a house full of dogs is
+            nothing new. Keeping daycare small means she gets to
+            know the dogs who come through the door, how they fit
+            into the group, and when somebody might need a little
+            more space or downtime.
           </p>
 
           <div class="melissa-cert">
