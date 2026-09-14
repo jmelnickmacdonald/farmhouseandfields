@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQs | Farmhouse & Fields Dog Daycare</title>
+  <meta
+    name="description"
+    content="Answers to common questions about Farmhouse & Fields Dog Daycare, including the closed-pack group, supervision, hours, booking, payment, vaccinations, meals, and getting started."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    @font-face {
+      font-family: "Aubrey";
+      src: url("fonts/AUBREY1__.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      --wine: #6E1413;
+      --wine-dark: #55100F;
+      --river: #385D6B;
+      --river-dark: #294A55;
+      --oat: #E7DDCD;
+      --oat-soft: #F5F1EA;
+      --warm-white: #FCFBF8;
+      --white: #FFFFFF;
+      --ink: #2A2926;
+      --body: #5B5751;
+      --muted: #7A746E;
+      --border: #E9E2D9;
+      --max: 1320px;
+      --page: 1040px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--warm-white);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a { color: inherit; }
+    button, input { font: inherit; }
+
+    .container {
+      width: min(88%, var(--max));
+      margin: 0 auto;
+    }
+
+    .page-inner {
+      width: min(88%, var(--page));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 13px;
+      color: var(--river);
+      font-size: 10px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--river);
+      font-family: "Aubrey", serif;
+      font-size: clamp(40px, 2.9vw, 47px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(252, 251, 248, 0.98);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .site-header.scrolled {
+      border-color: rgba(233, 226, 217, 0.92);
+      box-shadow: 0 7px 25px rgba(42, 41, 38, 0.045);
+    }
+
+    .nav-wrap {
+      width: min(88%, var(--max));
+      min-height: 98px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      transition: min-height 0.2s ease;
+    }
+
+    .site-header.scrolled .nav-wrap { min-height: 80px; }
+
+    .brand-logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      width: 190px;
+      height: auto;
+      transition: width 0.2s ease;
+    }
+
+    .site-header.scrolled .brand-logo img { width: 170px; }
+
+    .main-nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      padding: 11px 10px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.active {
+      color: var(--wine);
+      font-weight: 700;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .client-link {
+      color: var(--river);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .waitlist-button {
+      min-height: 45px;
+      padding: 0 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: var(--wine);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      margin-left: auto;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+      border-radius: 10px;
+      background: var(--ink);
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      background: var(--warm-white);
+      transition: max-height 0.35s ease, opacity 0.22s ease;
+    }
+
+    .mobile-menu.open {
+      max-height: 700px;
+      opacity: 1;
+    }
+
+    .mobile-menu-inner {
+      width: 89%;
+      margin: 0 auto;
+      padding: 5px 0 28px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 2px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .mobile-menu .mobile-client {
+      margin-top: 8px;
+      border-bottom: 0;
+      color: var(--river);
+      font-weight: 700;
+    }
+
+    .mobile-menu .mobile-waitlist {
+      margin-top: 8px;
+      padding: 15px 20px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--wine);
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* HERO + SEARCH */
+
+    .faq-hero {
+      padding: 64px 0 62px;
+      background: var(--oat-soft);
+    }
+
+    .faq-hero-inner {
+      width: min(88%, 900px);
+      margin: 0 auto;
+    }
+
+    .faq-hero h1 {
+      max-width: 760px;
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: clamp(52px, 4.2vw, 66px);
+      font-weight: 400;
+      line-height: 0.96;
+    }
+
+    .faq-hero-lede {
+      max-width: 650px;
+      margin: 20px 0 0;
+      color: var(--body);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .faq-search-wrap {
+      margin-top: 30px;
+    }
+
+    .faq-search {
+      position: relative;
+    }
+
+    .faq-search input {
+      width: 100%;
+      min-height: 62px;
+      padding: 0 54px 0 20px;
+      border: 1px solid #D9D1C7;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .faq-search input:focus {
+      border-color: var(--river);
+      box-shadow: 0 0 0 4px rgba(56,93,107,0.09);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      right: 19px;
+      transform: translateY(-50%);
+      color: var(--river);
+      font-size: 20px;
+      pointer-events: none;
+    }
+
+    .search-help {
+      margin: 11px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* FILTER */
+
+    .faq-body {
+      padding: 58px 0 70px;
+      background: #fff;
+    }
+
+    .filter-row {
+      margin-bottom: 27px;
+      padding-bottom: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .filter-button {
+      padding: 0 0 5px;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .filter-button:hover,
+    .filter-button:focus-visible,
+    .filter-button.active {
+      color: var(--wine);
+      border-bottom-color: var(--wine);
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item[hidden] { display: none; }
+
+    .faq-item summary {
+      position: relative;
+      min-height: 72px;
+      padding: 22px 50px 22px 0;
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 700;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--river);
+      font-family: "DM Sans", sans-serif;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    .faq-item[open] summary::after { content: "−"; }
+
+    .faq-answer {
+      max-width: 810px;
+      padding: 0 48px 23px 0;
+      color: var(--body);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .faq-answer p { margin: 0; }
+
+    .empty-state {
+      display: none;
+      padding: 28px 0;
+      color: var(--body);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .empty-state.show { display: block; }
+
+    /* AGREEMENT NOTE */
+
+    .agreement-note {
+      padding: 45px 0 48px;
+      background: var(--river);
+      color: #fff;
+    }
+
+    .agreement-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .agreement-note h2 {
+      margin: 0;
+      color: #fff;
+      font-family: "Aubrey", serif;
+      font-size: clamp(37px, 2.7vw, 44px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .agreement-copy p {
+      margin: 0 0 16px;
+      color: rgba(255,255,255,0.86);
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+    .agreement-copy a {
+      display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
+    /* CTA */
+
+    .faq-cta {
+      position: relative;
+      overflow: hidden;
+      padding: 49px 0 53px;
+      background: var(--wine);
+      color: #fff;
+    }
+
+    .faq-cta::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      bottom: -20px;
+      width: 210px;
+      height: 140px;
+      background: url("assets/grass.png") right bottom / contain no-repeat;
+      opacity: 0.09;
+      pointer-events: none;
+    }
+
+    .faq-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .faq-cta h2 {
+      margin: 0;
+      color: #fff;
+      font-family: "Aubrey", serif;
+      font-size: clamp(40px,2.9vw,47px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .faq-cta p {
+      max-width: 620px;
+      margin: 13px 0 0;
+      color: rgba(255,255,255,0.84);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .faq-cta-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .faq-cta-button,
+    .faq-contact-button {
+      min-height: 48px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .faq-cta-button {
+      background: var(--warm-white);
+      color: var(--wine);
+    }
+
+    .faq-contact-button {
+      border: 1px solid rgba(255,255,255,0.55);
+      color: #fff;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding: 46px 0 25px;
+      background: #fff;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 0.85fr 1.65fr;
+      gap: 90px;
+      align-items: start;
+    }
+
+    .footer-brand-name {
+      margin: 0;
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .footer-brand-type {
+      margin: 6px 0 0;
+      color: var(--river);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .footer-tagline {
+      margin: 20px 0 0;
+      color: var(--ink);
+      font-family: "Aubrey", serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .footer-details {
+      display: grid;
+      grid-template-columns: 1.1fr 0.8fr 1.2fr;
+      gap: 30px;
+    }
+
+    .footer-detail-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--river);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .footer-detail-value,
+    .footer-detail-value a {
+      color: var(--body);
+      font-size: 13px;
+      line-height: 1.55;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 15px;
+    }
+
+    .footer-links a {
+      color: var(--body);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-bottom-location {
+      color: var(--river);
+      font-weight: 600;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1120px) {
+      .main-nav,
+      .nav-actions { display: none; }
+
+      .menu-toggle { display: flex; }
+
+      .nav-wrap,
+      .site-header.scrolled .nav-wrap { min-height: 82px; }
+
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img { width: 170px; }
+    }
+
+    @media (max-width: 830px) {
+      .agreement-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .faq-cta-inner {
+        grid-template-columns: 1fr;
+        gap: 23px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container,
+      .nav-wrap { width: 89%; }
+
+      .nav-wrap,
+      .site-header.scrolled .nav-wrap { min-height: 72px; }
+
+      .brand-logo img,
+      .site-header.scrolled .brand-logo img { width: 145px; }
+
+      .faq-hero {
+        padding: 43px 0 46px;
+      }
+
+      .faq-hero-inner {
+        width: 89%;
+      }
+
+      .faq-hero h1 {
+        font-size: 44px;
+      }
+
+      .faq-hero-lede {
+        font-size: 16px;
+        line-height: 1.64;
+      }
+
+      .faq-search-wrap { margin-top: 24px; }
+
+      .faq-search input { min-height: 58px; }
+
+      .faq-body {
+        padding: 43px 0 52px;
+      }
+
+      .page-inner { width: 89%; }
+
+      .filter-row {
+        margin-bottom: 20px;
+        gap: 8px 17px;
+      }
+
+      .filter-button {
+        font-size: 12px;
+      }
+
+      .faq-item summary {
+        min-height: 66px;
+        padding: 18px 43px 18px 0;
+        font-size: 15px;
+      }
+
+      .faq-answer {
+        padding: 0 34px 20px 0;
+        font-size: 15px;
+      }
+
+      .agreement-note {
+        padding: 40px 0 43px;
+      }
+
+      .agreement-note h2 { font-size: 35px; }
+
+      .faq-cta {
+        padding: 42px 0 46px;
+        text-align: center;
+      }
+
+      .faq-cta::after {
+        width: 150px;
+        height: 105px;
+        right: -22px;
+        bottom: -15px;
+        opacity: 0.08;
+      }
+
+      .faq-cta-inner {
+        width: 89%;
+        margin: 0 auto;
+        gap: 21px;
+      }
+
+      .faq-cta h2 { font-size: 37px; }
+
+      .faq-cta p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .faq-cta-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .site-footer { padding: 38px 0 23px; }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-brand-name { font-size: 29px; }
+
+      .footer-tagline {
+        margin-top: 17px;
+        font-size: 22px;
+      }
+
+      .footer-details {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 18px;
+      }
+
+      .footer-details > div:last-child { grid-column: 1 / -1; }
+
+      .footer-bottom {
+        margin-top: 27px;
+        padding-top: 16px;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .faq-hero h1 { font-size: 41px; }
+
+      .faq-cta h2 { font-size: 34px; }
+
+      .faq-cta-actions {
+        flex-direction: column;
+      }
+
+      .faq-cta-button,
+      .faq-contact-button {
+        width: 100%;
+      }
+
+      .footer-details { grid-template-columns: 1fr; }
+
+      .footer-details > div:last-child { grid-column: auto; }
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid rgba(56,93,107,0.42);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+
+    <a href="index.html" class="brand-logo" aria-label="Farmhouse & Fields Dog Daycare home">
+      <img src="assets/farmhouseandfieldslogo.png" alt="Farmhouse & Fields Dog Daycare">
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="the-farmhouse.html" class="nav-link">The Farmhouse</a>
+      <a href="daycare.html" class="nav-link">Daycare</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="faqs.html" class="nav-link active" aria-current="page">FAQs</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="current-clients.html" class="client-link">Current Clients</a>
+      <a href="waitlist.html" class="waitlist-button">Join the Wait-list</a>
+    </div>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+      aria-label="Open menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu-inner" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="the-farmhouse.html">The Farmhouse</a>
+      <a href="daycare.html">Daycare</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="current-clients.html" class="mobile-client">Current Clients</a>
+      <a href="waitlist.html" class="mobile-waitlist">Join the Wait-list</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="faq-hero">
+    <div class="faq-hero-inner">
+
+      <p class="eyebrow">FAQs</p>
+
+      <h1>
+        A few things people ask us.
+      </h1>
+
+      <p class="faq-hero-lede">
+        Search for what you need or browse the questions below.
+        If you cannot find it, just get in touch.
+      </p>
+
+      <div class="faq-search-wrap">
+
+        <div class="faq-search">
+          <label for="faqSearch" class="sr-only">
+            Search frequently asked questions
+          </label>
+
+          <input
+            id="faqSearch"
+            type="search"
+            autocomplete="off"
+            placeholder="Try “closed pack,” “vaccines,” “payment,” or “half days”"
+          >
+
+          <span class="search-icon" aria-hidden="true">⌕</span>
+        </div>
+
+        <p class="search-help">
+          Search by a word, phrase, or question. Results update as you type.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-body">
+    <div class="page-inner">
+
+      <div class="filter-row" aria-label="Filter FAQs by topic">
+        <button class="filter-button active" type="button" data-category="all">All</button>
+        <button class="filter-button" type="button" data-category="getting-started">Getting started</button>
+        <button class="filter-button" type="button" data-category="group">The group</button>
+        <button class="filter-button" type="button" data-category="daycare-day">Daycare day</button>
+        <button class="filter-button" type="button" data-category="booking-payment">Booking & payment</button>
+        <button class="filter-button" type="button" data-category="health-fit">Health & fit</button>
+        <button class="filter-button" type="button" data-category="policies">Policies</button>
+      </div>
+
+      <div class="faq-list" id="faqList"></div>
+
+      <div class="empty-state" id="emptyState">
+        We couldn’t find a matching answer. Try another word or send us a message.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="agreement-note">
+    <div class="page-inner agreement-grid">
+
+      <div>
+        <h2>
+          Want to reread what you signed?
+        </h2>
+      </div>
+
+      <div class="agreement-copy">
+        <p>
+          Clients review and sign the Farmhouse & Fields Client Agreement
+          through Time To Pet. We also keep a readable copy here so you can
+          come back to it whenever you need to.
+        </p>
+
+        <a
+          href="farmhouse-fields-client-agreement.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          View the Client Agreement →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="faq-cta">
+    <div class="page-inner faq-cta-inner">
+
+      <div>
+        <h2>
+          Still wondering about something?
+        </h2>
+
+        <p>
+          Send Melissa a message, or if you are ready to tell us
+          about your dog, start with the wait-list.
+        </p>
+      </div>
+
+      <div class="faq-cta-actions">
+        <a
+          href="mailto:farmhousefieldsdaycare@gmail.com"
+          class="faq-contact-button"
+        >
+          Send an email
+        </a>
+
+        <a
+          href="waitlist.html"
+          class="faq-cta-button"
+        >
+          Join the wait-list →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <p class="footer-brand-name">Farmhouse &amp; Fields</p>
+        <p class="footer-brand-type">Dog Daycare</p>
+        <p class="footer-tagline">A good day to be a dog.</p>
+      </div>
+
+      <div class="footer-details">
+
+        <div>
+          <span class="footer-detail-label">Find us</span>
+          <div class="footer-detail-value">
+            571 Woodside Rd.<br>
+            Canning, Nova Scotia
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-detail-label">Call</span>
+          <div class="footer-detail-value">
+            <a href="tel:+19028241979">(902) 824-1979</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-detail-label">Keep in touch</span>
+          <div class="footer-links">
+            <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
+            <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="current-clients.html">Current Clients</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © <span id="currentYear"></span>
+        Farmhouse &amp; Fields Dog Daycare
+      </span>
+
+      <span class="footer-bottom-location">
+        Canning, Nova Scotia
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+<script src="faq-data.js"></script>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const siteHeader = document.getElementById("siteHeader");
+  const currentYear = document.getElementById("currentYear");
+
+  const faqSearch = document.getElementById("faqSearch");
+  const faqList = document.getElementById("faqList");
+  const emptyState = document.getElementById("emptyState");
+  const filterButtons = document.querySelectorAll(".filter-button");
+
+  let activeCategory = "all";
+
+  menuToggle.addEventListener("click", function () {
+    const isOpen = mobileMenu.classList.toggle("open");
+
+    menuToggle.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close menu" : "Open menu"
+    );
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      mobileMenu.classList.remove("open");
+      menuToggle.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open menu");
+    });
+  });
+
+  function updateHeader() {
+    siteHeader.classList.toggle("scrolled", window.scrollY > 14);
+  }
+
+  updateHeader();
+
+  window.addEventListener("scroll", updateHeader, {
+    passive: true
+  });
+
+  currentYear.textContent = new Date().getFullYear();
+
+  function normalize(value) {
+    return value
+      .toLowerCase()
+      .trim()
+      .replace(/[?!.,'’"]/g, "");
+  }
+
+  function matchesSearch(item, query) {
+    const clean = normalize(query);
+
+    if (!clean) {
+      return true;
+    }
+
+    const words = clean
+      .split(/\s+/)
+      .filter(Boolean);
+
+    const searchable = normalize(
+      [
+        item.question,
+        item.answer,
+        item.keywords || ""
+      ].join(" ")
+    );
+
+    return words.every(function (word) {
+      return searchable.includes(word);
+    });
+  }
+
+  function renderFaqs() {
+    faqList.innerHTML = "";
+
+    const query = faqSearch.value;
+
+    const matches = window.FARMHOUSE_FAQS.filter(function (item) {
+      const categoryMatch =
+        activeCategory === "all" ||
+        item.category === activeCategory;
+
+      return categoryMatch && matchesSearch(item, query);
+    });
+
+    emptyState.classList.toggle("show", matches.length === 0);
+
+    matches.forEach(function (item) {
+      const details = document.createElement("details");
+      details.className = "faq-item";
+
+      if (normalize(query)) {
+        details.open = true;
+      }
+
+      const summary = document.createElement("summary");
+      summary.textContent = item.question;
+
+      const answer = document.createElement("div");
+      answer.className = "faq-answer";
+
+      const paragraph = document.createElement("p");
+      paragraph.textContent = item.answer;
+
+      answer.appendChild(paragraph);
+      details.appendChild(summary);
+      details.appendChild(answer);
+      faqList.appendChild(details);
+    });
+  }
+
+  faqSearch.addEventListener("input", renderFaqs);
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      activeCategory = button.dataset.category || "all";
+
+      filterButtons.forEach(function (other) {
+        other.classList.toggle("active", other === button);
+      });
+
+      renderFaqs();
+    });
+  });
+
+  renderFaqs();
+</script>
+
+</body>
+</html>
