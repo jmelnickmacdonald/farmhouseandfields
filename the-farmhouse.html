@@ -57,6 +57,7 @@
       --border: #E9E2D9;
 
       --max: 1320px;
+      --page: 1180px;
     }
 
 
@@ -103,13 +104,18 @@
       margin: 0 auto;
     }
 
+    .page-inner {
+      width: min(88%, var(--page));
+      margin: 0 auto;
+    }
+
 
     /* =========================================================
        SHARED
     ========================================================= */
 
     .eyebrow {
-      margin: 0 0 14px;
+      margin: 0 0 13px;
 
       color: var(--river);
 
@@ -297,7 +303,6 @@
       height: 2px;
 
       border-radius: 10px;
-
       background: var(--ink);
 
       transition:
@@ -385,28 +390,26 @@
     ========================================================= */
 
     .farmhouse-hero {
+      padding: 56px 0 60px;
+
       background: var(--oat-soft);
     }
 
-    .farmhouse-hero-grid {
-      min-height: 520px;
+    .farmhouse-hero-inner {
+      width: min(88%, var(--page));
+
+      margin: 0 auto;
 
       display: grid;
-      grid-template-columns: minmax(390px, 42%) 1fr;
+      grid-template-columns: 0.82fr 1.18fr;
 
-      align-items: stretch;
-    }
+      gap: 52px;
 
-    .farmhouse-hero-copy-wrap {
-      display: flex;
       align-items: center;
-      justify-content: flex-end;
     }
 
     .farmhouse-hero-copy {
-      width: min(76%, 500px);
-
-      padding: 64px 0;
+      max-width: 470px;
     }
 
     .farmhouse-hero h1 {
@@ -415,15 +418,15 @@
       color: var(--wine);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(54px, 4vw, 66px);
+      font-size: clamp(52px, 3.8vw, 63px);
       font-weight: 400;
-      line-height: 0.95;
+      line-height: 0.96;
     }
 
     .farmhouse-hero-lede {
-      max-width: 455px;
+      max-width: 445px;
 
-      margin: 23px 0 0;
+      margin: 22px 0 0;
 
       color: var(--body);
 
@@ -432,7 +435,7 @@
     }
 
     .farmhouse-hero-media {
-      min-height: 520px;
+      height: 440px;
 
       overflow: hidden;
     }
@@ -442,7 +445,7 @@
       height: 100%;
 
       object-fit: cover;
-      object-position: center;
+      object-position: center 53%;
     }
 
 
@@ -451,26 +454,26 @@
     ========================================================= */
 
     .family-section {
-      padding: 72px 0 68px;
+      padding: 68px 0;
 
       background: #fff;
     }
 
     .family-inner {
-      width: min(88%, 1060px);
+      width: min(88%, var(--page));
 
       margin: 0 auto;
 
       display: grid;
-      grid-template-columns: 0.84fr 1.16fr;
+      grid-template-columns: 0.82fr 1.18fr;
 
-      gap: 68px;
+      gap: 52px;
 
       align-items: start;
     }
 
     .family-heading {
-      max-width: 430px;
+      max-width: 470px;
     }
 
     .family-heading .eyebrow {
@@ -483,15 +486,13 @@
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(41px, 3vw, 47px);
+      font-size: clamp(40px, 2.9vw, 47px);
       font-weight: 400;
       line-height: 1;
     }
 
     .family-copy {
-      max-width: 640px;
-
-      padding-top: 21px;
+      max-width: 650px;
     }
 
     .family-copy p {
@@ -500,7 +501,7 @@
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.74;
     }
 
     .family-copy p:last-child {
@@ -509,11 +510,12 @@
 
 
     /* =========================================================
-       FULL-WIDTH PHOTO BANNER
+       EDGE-TO-EDGE PHOTOS
     ========================================================= */
 
     .farm-banner {
       width: 100%;
+
       margin: 0;
       padding: 0;
 
@@ -522,10 +524,10 @@
 
     .farm-banner-grid {
       width: 100%;
-      height: clamp(275px, 25vw, 385px);
+      height: clamp(285px, 23vw, 355px);
 
       display: grid;
-      grid-template-columns: 1.15fr 1fr 1fr;
+      grid-template-columns: 1.12fr 1fr 1fr;
 
       gap: 0;
     }
@@ -561,13 +563,13 @@
     ========================================================= */
 
     .house-note {
-      padding: 43px 0 46px;
+      padding: 38px 0 41px;
 
       background: var(--wine);
     }
 
     .house-note-inner {
-      width: min(88%, 1040px);
+      width: min(88%, var(--page));
 
       margin: 0 auto;
     }
@@ -578,20 +580,20 @@
       color: var(--warm-white);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(39px, 3vw, 46px);
+      font-size: clamp(38px, 2.9vw, 45px);
       font-weight: 400;
       line-height: 1;
     }
 
     .house-note-small {
-      max-width: 700px;
+      max-width: 720px;
 
-      margin: 13px 0 0;
+      margin: 12px 0 0;
 
       color: rgba(255,255,255,0.84);
 
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.58;
     }
 
 
@@ -600,26 +602,41 @@
     ========================================================= */
 
     .melissa-section {
-      padding: 68px 0 72px;
+      padding: 68px 0;
 
       background: var(--oat-soft);
     }
 
     .melissa-inner {
-      width: min(88%, 820px);
+      width: min(88%, var(--page));
 
       margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+
+      gap: 52px;
+
+      align-items: start;
+    }
+
+    .melissa-heading {
+      max-width: 470px;
     }
 
     .melissa-heading h2 {
-      margin: 0 0 24px;
+      margin: 0;
 
       color: var(--river);
 
       font-family: "Aubrey", serif;
-      font-size: clamp(41px, 3vw, 47px);
+      font-size: clamp(40px, 2.9vw, 47px);
       font-weight: 400;
       line-height: 1;
+    }
+
+    .melissa-copy {
+      max-width: 650px;
     }
 
     .melissa-copy p {
@@ -628,11 +645,24 @@
       color: var(--body);
 
       font-size: 17px;
-      line-height: 1.75;
+      line-height: 1.74;
     }
 
-    .melissa-copy p:last-child {
+    .melissa-copy p:last-of-type {
       margin-bottom: 0;
+    }
+
+    .melissa-cert {
+      margin-top: 28px;
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(56, 93, 107, 0.17);
+
+      color: var(--wine);
+
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 700;
     }
 
 
@@ -646,9 +676,7 @@
     }
 
     .page-cta-inner {
-      width: min(76%, 1000px);
-
-      min-height: 215px;
+      width: min(88%, var(--page));
 
       margin: 0 auto;
       padding: 43px 0;
@@ -656,13 +684,13 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
 
-      gap: 44px;
+      gap: 45px;
 
       align-items: center;
     }
 
     .page-cta-copy {
-      max-width: 610px;
+      max-width: 630px;
     }
 
     .page-cta h2 {
@@ -671,20 +699,20 @@
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(41px, 3vw, 47px);
+      font-size: clamp(40px, 2.9vw, 47px);
       font-weight: 400;
       line-height: 1;
     }
 
     .page-cta p {
-      max-width: 570px;
+      max-width: 590px;
 
-      margin: 15px 0 0;
+      margin: 14px 0 0;
 
       color: rgba(255,255,255,0.9);
 
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.63;
     }
 
     .page-cta-button {
@@ -871,20 +899,10 @@
         width: 170px;
       }
 
-      .family-inner {
-        gap: 48px;
-      }
-
-      .page-cta-inner {
-        width: 84%;
-      }
-
-      .footer-main {
-        gap: 55px;
-      }
-
-      .footer-details {
-        grid-template-columns: 1fr 1fr;
+      .farmhouse-hero-inner,
+      .family-inner,
+      .melissa-inner {
+        gap: 40px;
       }
 
     }
@@ -898,32 +916,34 @@
 
       /* HERO */
 
-      .farmhouse-hero-grid {
-        min-height: 0;
-
-        grid-template-columns: 1fr;
+      .farmhouse-hero {
+        padding: 48px 0 0;
       }
 
-      .farmhouse-hero-copy-wrap {
-        justify-content: flex-start;
+      .farmhouse-hero-inner {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 39px;
       }
 
       .farmhouse-hero-copy {
         width: 86%;
+        max-width: 620px;
 
         margin: 0 auto;
-        padding: 48px 0 43px;
       }
 
       .farmhouse-hero-media {
-        min-height: 410px;
+        height: 390px;
       }
 
 
       /* FAMILY */
 
       .family-section {
-        padding: 64px 0 59px;
+        padding: 62px 0;
       }
 
       .family-inner {
@@ -934,23 +954,29 @@
         gap: 25px;
       }
 
-      .family-heading {
-        max-width: 620px;
-      }
-
+      .family-heading,
       .family-copy {
-        padding-top: 0;
+        max-width: 680px;
       }
 
 
       /* MELISSA */
 
       .melissa-section {
-        padding: 62px 0 66px;
+        padding: 62px 0;
       }
 
       .melissa-inner {
         width: 86%;
+
+        grid-template-columns: 1fr;
+
+        gap: 23px;
+      }
+
+      .melissa-heading,
+      .melissa-copy {
+        max-width: 680px;
       }
 
 
@@ -963,7 +989,7 @@
 
         gap: 24px;
 
-        padding: 42px 0 49px;
+        padding: 42px 0 48px;
       }
 
 
@@ -1011,40 +1037,44 @@
 
       /* HERO */
 
+      .farmhouse-hero {
+        padding-top: 39px;
+      }
+
+      .farmhouse-hero-inner {
+        gap: 34px;
+      }
+
       .farmhouse-hero-copy {
         width: 89%;
-
-        padding: 39px 0 34px;
       }
 
       .farmhouse-hero h1 {
-        font-size: 45px;
+        font-size: 44px;
       }
 
       .farmhouse-hero-lede {
         margin-top: 18px;
 
         font-size: 16px;
-        line-height: 1.65;
+        line-height: 1.64;
       }
 
       .farmhouse-hero-media {
-        min-height: 0;
-
-        height: clamp(290px, 76vw, 345px);
+        height: clamp(275px, 72vw, 330px);
       }
 
 
       /* FAMILY */
 
       .family-section {
-        padding: 54px 0 45px;
+        padding: 53px 0;
       }
 
       .family-inner {
         width: 89%;
 
-        gap: 22px;
+        gap: 21px;
       }
 
       .family-heading h2 {
@@ -1055,20 +1085,20 @@
         margin-bottom: 18px;
 
         font-size: 16px;
-        line-height: 1.68;
+        line-height: 1.67;
       }
 
 
-      /* PHOTO BANNER */
+      /* PHOTO STRIP */
 
       .farm-banner-grid {
-        height: 230px;
+        height: 215px;
 
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .farm-banner-image:nth-child(1) img {
-        object-position: 58% center;
+        object-position: 57% center;
       }
 
       .farm-banner-image:nth-child(2) img {
@@ -1083,7 +1113,7 @@
       /* HOUSE NOTE */
 
       .house-note {
-        padding: 42px 0 45px;
+        padding: 37px 0 40px;
       }
 
       .house-note-inner {
@@ -1091,30 +1121,30 @@
       }
 
       .house-note-main {
-        font-size: 37px;
+        font-size: 36px;
       }
 
       .house-note-small {
-        margin-top: 14px;
+        margin-top: 12px;
 
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.58;
       }
 
 
       /* MELISSA */
 
       .melissa-section {
-        padding: 54px 0 59px;
+        padding: 53px 0;
       }
 
       .melissa-inner {
         width: 89%;
+
+        gap: 19px;
       }
 
       .melissa-heading h2 {
-        margin-bottom: 20px;
-
         font-size: 37px;
       }
 
@@ -1122,7 +1152,12 @@
         margin-bottom: 16px;
 
         font-size: 16px;
-        line-height: 1.68;
+        line-height: 1.67;
+      }
+
+      .melissa-cert {
+        margin-top: 23px;
+        padding-top: 18px;
       }
 
 
@@ -1131,9 +1166,7 @@
       .page-cta-inner {
         width: 89%;
 
-        min-height: 0;
-
-        padding: 40px 0 45px;
+        padding: 39px 0 44px;
       }
 
       .page-cta h2 {
@@ -1204,18 +1237,18 @@
     @media (max-width: 390px) {
 
       .farmhouse-hero h1 {
-        font-size: 42px;
+        font-size: 41px;
       }
 
       .family-heading h2,
       .house-note-main,
       .melissa-heading h2,
       .page-cta h2 {
-        font-size: 35px;
+        font-size: 34px;
       }
 
       .farm-banner-grid {
-        height: 205px;
+        height: 195px;
       }
 
       .footer-details {
@@ -1407,29 +1440,25 @@
 
     <section class="farmhouse-hero">
 
-      <div class="farmhouse-hero-grid">
+      <div class="farmhouse-hero-inner">
 
 
-        <div class="farmhouse-hero-copy-wrap">
+        <div class="farmhouse-hero-copy">
 
-          <div class="farmhouse-hero-copy">
+          <p class="eyebrow">
+            The Farmhouse
+          </p>
 
-            <p class="eyebrow">
-              The Farmhouse
-            </p>
+          <h1>
+            A little country. A lot of dog.
+          </h1>
 
-            <h1>
-              A little country. A lot of dog.
-            </h1>
-
-            <p class="farmhouse-hero-lede">
-              Farmhouse & Fields is tucked into a working family
-              farm in Canning, with an old farmhouse, a securely
-              fenced yard, and plenty of room for the dogs to
-              make themselves at home.
-            </p>
-
-          </div>
+          <p class="farmhouse-hero-lede">
+            Farmhouse & Fields is tucked into a working family
+            farm in Canning, with an old farmhouse, a securely
+            fenced yard, and plenty of room for the dogs to
+            make themselves at home.
+          </p>
 
         </div>
 
@@ -1499,7 +1528,7 @@
 
 
     <!-- =====================================================
-         EDGE-TO-EDGE PHOTO STRIP
+         PHOTO STRIP
     ====================================================== -->
 
     <section class="farm-banner">
@@ -1594,11 +1623,16 @@
           </p>
 
           <p>
-            She is certified through Canine Health Canada in
-            Canine CPR & Emergency First Aid, and keeps the daycare
-            group small enough to really know the dogs who come
-            through the door.
+            Keeping the daycare group small means she gets to know
+            the dogs who come through the door, how they fit into
+            the group, and when somebody might need a little more
+            space or downtime.
           </p>
+
+          <div class="melissa-cert">
+            Canine Health Canada certified in Canine CPR
+            &amp; Emergency First Aid.
+          </div>
 
         </div>
 
@@ -1662,7 +1696,7 @@
         <div class="footer-brand">
 
           <p class="footer-brand-name">
-            Farmhouse & Fields
+            Farmhouse &amp; Fields
           </p>
 
           <p class="footer-brand-type">
@@ -1757,7 +1791,7 @@
 
         <span>
           © <span id="currentYear"></span>
-          Farmhouse & Fields Dog Daycare
+          Farmhouse &amp; Fields Dog Daycare
         </span>
 
         <span class="footer-bottom-location">
