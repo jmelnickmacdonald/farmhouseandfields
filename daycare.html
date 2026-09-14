@@ -388,20 +388,36 @@
     /* HOURS + RATES */
 
     .basics-section {
-      padding: 65px 0 70px;
+      padding: 60px 0 65px;
       background: var(--oat-soft);
     }
 
     .basics-intro {
-      max-width: 680px;
-      margin-bottom: 31px;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
+      gap: 58px;
+      align-items: start;
     }
 
-    .basics-intro p:last-child {
-      margin: 17px 0 0;
+    .flexibility-note {
+      padding: 2px 0 2px 24px;
+      border-left: 3px solid rgba(110,20,19,0.35);
+    }
+
+    .flexibility-note strong {
+      display: block;
+      margin: 0 0 7px;
+      color: var(--wine);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .flexibility-note p {
+      margin: 0;
       color: var(--body);
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.68;
     }
 
     .basics-grid {
@@ -415,15 +431,6 @@
       border-left: 1px solid rgba(56,93,107,0.14);
     }
 
-    .basic-column h3 {
-      margin: 0 0 22px;
-      color: var(--wine);
-      font-family: "Aubrey", serif;
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 1;
-    }
-
     .info-row {
       padding: 15px 0;
       display: grid;
@@ -433,7 +440,9 @@
       border-bottom: 1px solid rgba(56,93,107,0.13);
     }
 
-    .info-row:first-of-type { border-top: 1px solid rgba(56,93,107,0.13); }
+    .info-row:first-of-type {
+      border-top: 1px solid rgba(56,93,107,0.13);
+    }
 
     .info-label {
       color: var(--body);
@@ -456,13 +465,6 @@
       font-weight: 700;
       text-align: right;
       white-space: nowrap;
-    }
-
-    .basic-note {
-      margin: 18px 0 0;
-      color: var(--body);
-      font-size: 14px;
-      line-height: 1.6;
     }
 
     /* TYPICAL DAY */
@@ -528,20 +530,20 @@
     /* GETTING STARTED */
 
     .start-section {
-      padding: 66px 0 70px;
+      padding: 60px 0 62px;
       background: var(--oat-soft);
     }
 
     .start-heading {
-      max-width: 680px;
-      margin-bottom: 36px;
+      max-width: 650px;
+      margin-bottom: 28px;
     }
 
     .start-heading p:last-child {
-      margin: 17px 0 0;
+      margin: 15px 0 0;
       color: var(--body);
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.68;
     }
 
     .start-list {
@@ -550,10 +552,10 @@
     }
 
     .start-step {
-      padding: 22px 0;
+      padding: 18px 0;
       display: grid;
-      grid-template-columns: 46px 220px 1fr;
-      gap: 22px;
+      grid-template-columns: 42px 205px 1fr;
+      gap: 20px;
       align-items: start;
       border-bottom: 1px solid rgba(56,93,107,0.14);
     }
@@ -561,12 +563,12 @@
     .step-number {
       color: var(--wine);
       font-family: "Aubrey", serif;
-      font-size: 29px;
+      font-size: 28px;
       line-height: 1;
     }
 
     .start-step h3 {
-      margin: 2px 0 0;
+      margin: 1px 0 0;
       color: var(--ink);
       font-size: 15px;
       line-height: 1.5;
@@ -577,85 +579,150 @@
       margin: 0;
       color: var(--body);
       font-size: 15px;
-      line-height: 1.63;
+      line-height: 1.6;
+    }
+
+    .start-action {
+      margin-top: 26px;
+    }
+
+    .start-button {
+      min-height: 47px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: var(--wine);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .start-button:hover,
+    .start-button:focus-visible {
+      background: var(--wine-dark);
     }
 
     /* GOOD TO KNOW */
 
     .know-section {
-      padding: 62px 0 66px;
+      padding: 56px 0 60px;
       background: var(--river);
       color: #fff;
     }
 
     .know-heading {
-      max-width: 620px;
-      margin-bottom: 32px;
+      max-width: 650px;
+      margin-bottom: 24px;
     }
 
-    .know-heading .eyebrow { color: rgba(255,255,255,0.72); }
-    .know-heading .section-title { color: #fff; }
-
-    .know-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 68px;
-    }
-
-    .know-item {
-      padding: 18px 0;
-      display: grid;
-      grid-template-columns: 145px 1fr;
-      gap: 23px;
-      border-top: 1px solid rgba(255,255,255,0.16);
-    }
-
-    .know-item strong {
+    .know-heading .section-title {
       color: #fff;
-      font-size: 14px;
-      line-height: 1.55;
     }
 
-    .know-item span,
-    .know-item a {
-      color: rgba(255,255,255,0.85);
-      font-size: 14px;
-      line-height: 1.6;
+    .know-heading p {
+      margin: 14px 0 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+      line-height: 1.65;
     }
 
-    .know-item a {
-      text-decoration-thickness: 1px;
+    .know-list {
+      max-width: 980px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .know-detail {
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .know-detail summary {
+      min-height: 58px;
+      padding: 15px 42px 15px 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .know-detail summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .know-detail summary::after {
+      content: "+";
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.82);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .know-detail[open] summary::after {
+      content: "−";
+    }
+
+    .know-detail-body {
+      max-width: 760px;
+      padding: 0 42px 18px 0;
+      color: rgba(255,255,255,0.86);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .know-detail-body a {
+      color: #fff;
       text-underline-offset: 3px;
     }
 
     /* SEARCH */
 
     .answer-section {
-      padding: 69px 0 73px;
+      padding: 44px 0 46px;
       background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
     }
 
     .answer-inner {
-      width: min(88%, 900px);
+      width: min(88%, var(--page));
       margin: 0 auto;
     }
 
-    .answer-heading { max-width: 700px; }
-
-    .answer-heading p:last-child {
-      margin: 17px 0 0;
-      color: var(--body);
-      font-size: 17px;
-      line-height: 1.7;
+    .answer-top {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+      gap: 54px;
+      align-items: center;
     }
 
-    .search-wrap { margin-top: 28px; }
+    .answer-heading p {
+      margin: 13px 0 0;
+      color: var(--body);
+      font-size: 15px;
+      line-height: 1.65;
+    }
 
-    .search-box { position: relative; }
+    .search-wrap {
+      margin: 0;
+    }
+
+    .search-box {
+      position: relative;
+    }
 
     .search-box input {
       width: 100%;
-      min-height: 60px;
+      min-height: 58px;
       padding: 0 52px 0 19px;
       border: 1px solid #D9D1C7;
       border-radius: 9px;
@@ -682,7 +749,7 @@
     }
 
     .search-help {
-      margin: 12px 0 0;
+      margin: 10px 0 0;
       color: var(--muted);
       font-size: 12px;
       line-height: 1.6;
@@ -700,12 +767,18 @@
     }
 
     .answer-results {
-      margin-top: 27px;
+      display: none;
+      max-width: 900px;
+      margin: 26px auto 0;
       border-top: 1px solid var(--border);
     }
 
+    .answer-results.has-results {
+      display: block;
+    }
+
     .answer-item {
-      padding: 20px 0;
+      padding: 18px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -725,7 +798,7 @@
     }
 
     .no-results {
-      padding: 23px 0;
+      padding: 20px 0;
       color: var(--body);
       font-size: 15px;
       line-height: 1.65;
@@ -733,78 +806,17 @@
     }
 
     .faq-link {
-      margin-top: 22px;
+      margin-top: 12px;
       display: inline-block;
       color: var(--river);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       text-decoration: none;
     }
 
     .faq-link:hover,
-    .faq-link:focus-visible { color: var(--wine); }
-
-    /* CTA */
-
-    .final-cta {
-      position: relative;
-      overflow: hidden;
-      padding: 48px 0 52px;
-      background: var(--wine);
-      color: #fff;
-    }
-
-    .final-cta::after {
-      content: "";
-      position: absolute;
-      right: -28px;
-      bottom: -20px;
-      width: 220px;
-      height: 145px;
-      background: url("assets/grass.png") right bottom / contain no-repeat;
-      opacity: 0.10;
-      pointer-events: none;
-    }
-
-    .final-cta-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0,1fr) auto;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .final-cta h2 {
-      margin: 0;
-      color: #fff;
-      font-family: "Aubrey", serif;
-      font-size: clamp(40px,2.9vw,47px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .final-cta p {
-      max-width: 620px;
-      margin: 13px 0 0;
-      color: rgba(255,255,255,0.84);
-      font-size: 16px;
-      line-height: 1.65;
-    }
-
-    .final-cta-button {
-      min-height: 49px;
-      padding: 0 25px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9px;
-      background: var(--warm-white);
+    .faq-link:focus-visible {
       color: var(--wine);
-      font-size: 14px;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
     }
 
     /* FOOTER */
@@ -931,9 +943,16 @@
       .daycare-hero-inner,
       .pack-grid { gap: 40px; }
 
+      .basics-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
       .basics-grid { gap: 44px; }
 
       .basic-column + .basic-column { padding-left: 44px; }
+
+      .answer-top { gap: 36px; }
     }
 
     @media (max-width: 830px) {
@@ -972,12 +991,17 @@
 
       .basics-grid {
         grid-template-columns: 1fr;
-        gap: 42px;
+        gap: 34px;
       }
 
       .basic-column + .basic-column {
         padding-left: 0;
         border-left: 0;
+      }
+
+      .answer-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
       .day-grid {
@@ -991,12 +1015,7 @@
         grid-template-columns: 42px 190px 1fr;
       }
 
-      .know-grid { grid-template-columns: 1fr; }
-
-      .final-cta-inner {
-        grid-template-columns: 1fr;
-        gap: 23px;
-      }
+      .know-list { max-width: none; }
     }
 
     @media (max-width: 620px) {
@@ -1053,10 +1072,8 @@
       .section-title { font-size: 37px; }
 
       .pack-copy p,
-      .basics-intro p:last-child,
       .day-copy > p,
-      .start-heading p:last-child,
-      .answer-heading p:last-child {
+      .start-heading p:last-child {
         font-size: 16px;
       }
 
@@ -1065,11 +1082,17 @@
         padding-top: 16px;
       }
 
-      .basics-intro { margin-bottom: 27px; }
+      .basics-intro {
+        margin-bottom: 27px;
+        gap: 19px;
+      }
 
-      .basic-column h3 {
-        margin-bottom: 18px;
-        font-size: 29px;
+      .flexibility-note {
+        padding-left: 18px;
+      }
+
+      .flexibility-note p {
+        font-size: 15px;
       }
 
       .info-row {
@@ -1104,54 +1127,30 @@
 
       .start-step p { grid-column: 2; }
 
-      .know-section { padding: 48px 0 50px; }
+      .know-section { padding: 46px 0 48px; }
 
-      .know-heading { margin-bottom: 26px; }
+      .know-heading { margin-bottom: 20px; }
 
-      .know-item {
-        padding: 16px 0;
-        grid-template-columns: 1fr;
-        gap: 5px;
+      .know-detail summary {
+        min-height: 56px;
+        padding-right: 36px;
       }
 
-      .answer-section { padding: 52px 0 56px; }
+      .know-detail-body {
+        padding-right: 18px;
+      }
+
+      .answer-section { padding: 40px 0 42px; }
 
       .answer-inner { width: 89%; }
 
-      .search-wrap { margin-top: 23px; }
+      .answer-top { gap: 18px; }
 
       .search-box input { min-height: 57px; }
 
-      .final-cta {
-        padding: 42px 0 46px;
-        text-align: center;
-      }
+      .start-action { margin-top: 23px; }
 
-      .final-cta::after {
-        width: 150px;
-        height: 105px;
-        right: -22px;
-        bottom: -15px;
-        opacity: 0.08;
-      }
-
-      .final-cta-inner {
-        width: 89%;
-        margin: 0 auto;
-        gap: 21px;
-      }
-
-      .final-cta h2 { font-size: 37px; }
-
-      .final-cta p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .final-cta-button {
-        min-width: 205px;
-        margin: 0 auto;
-      }
+      .start-button { width: 100%; }
 
       .site-footer { padding: 38px 0 23px; }
 
@@ -1186,8 +1185,7 @@
     @media (max-width: 390px) {
       .daycare-hero h1 { font-size: 41px; }
 
-      .section-title,
-      .final-cta h2 { font-size: 34px; }
+      .section-title { font-size: 34px; }
 
       .day-item {
         grid-template-columns: 1fr;
@@ -1278,9 +1276,8 @@
         </h1>
 
         <p class="daycare-hero-lede">
-          A small, familiar group supervised throughout the day, with
-          hours, rates, meals, booking, half days, and how getting
-          started all easy to find.
+          A small, familiar group supervised throughout the day,
+          with the practical details easy to find.
         </p>
       </div>
 
@@ -1297,11 +1294,11 @@
   <nav class="quick-nav" aria-label="Daycare page sections">
     <div class="quick-nav-inner">
       <a href="#the-group">The group</a>
-      <a href="#hours-rates">Hours & rates</a>
+      <a href="#find-an-answer">Find an answer</a>
+      <a href="#hours-rates">Hours, rates & flexibility</a>
       <a href="#typical-day">A typical day</a>
       <a href="#getting-started">Getting started</a>
       <a href="#good-to-know">Good to know</a>
-      <a href="#find-an-answer">Find an answer</a>
     </div>
   </nav>
 
@@ -1339,17 +1336,83 @@
     </div>
   </section>
 
+  <section class="answer-section" id="find-an-answer">
+    <div class="answer-inner">
+
+      <div class="answer-top">
+
+        <div class="answer-heading">
+          <h2 class="section-title">Find an answer.</h2>
+
+          <p>
+            Looking for one specific thing? Search the daycare info
+            without having to scroll for it.
+          </p>
+        </div>
+
+        <div class="search-wrap">
+
+          <div class="search-box">
+            <label for="daycareSearch" class="sr-only">
+              Search daycare information
+            </label>
+
+            <input
+              id="daycareSearch"
+              type="search"
+              autocomplete="off"
+              placeholder="Try “vaccines,” “half days,” or “last minute”"
+            >
+
+            <span class="search-icon" aria-hidden="true">⌕</span>
+          </div>
+
+          <p class="search-help">
+            Try:
+            <button type="button" data-search="closed pack">closed pack</button>,
+            <button type="button" data-search="vaccines">vaccines</button>,
+            <button type="button" data-search="half day">half days</button>,
+            or
+            <button type="button" data-search="last minute">last-minute booking</button>.
+          </p>
+
+          <a href="faqs.html" class="faq-link">
+            Browse all FAQs →
+          </a>
+
+        </div>
+
+      </div>
+
+      <div
+        class="answer-results"
+        id="answerResults"
+        aria-live="polite"
+      ></div>
+
+    </div>
+  </section>
+
   <section class="basics-section" id="hours-rates">
     <div class="page-inner">
 
       <div class="basics-intro">
-        <h2 class="section-title">Hours & rates.</h2>
+        <h2 class="section-title">Hours, rates & flexibility.</h2>
+
+        <div class="flexibility-note">
+          <strong>Daycare can fit around your week.</strong>
+          <p>
+            Regular clients do not have to commit to the same days every
+            week or book a month at a time. If there is space, bookings can
+            often be made the night before or even the morning of.
+          </p>
+        </div>
       </div>
 
       <div class="basics-grid">
 
         <div class="basic-column">
-          <h3>Hours</h3>
+          <h3 class="sr-only">Daycare hours</h3>
 
           <div class="info-row">
             <div class="info-label">Full-day drop-off</div>
@@ -1379,7 +1442,7 @@
         </div>
 
         <div class="basic-column">
-          <h3>Rates</h3>
+          <h3 class="sr-only">Daycare rates</h3>
 
           <div class="info-row">
             <div class="info-label">Full day</div>
@@ -1400,10 +1463,6 @@
             <div class="info-label">5 days/week</div>
             <div class="info-value">$23/day + tax</div>
           </div>
-
-          <p class="basic-note">
-            There is no required weekly or monthly commitment.
-          </p>
         </div>
 
       </div>
@@ -1472,8 +1531,8 @@
         </h2>
 
         <p>
-          We start with a conversation and a visit so everyone gets
-          a chance to make sure daycare feels like a good fit.
+          We start with a conversation and a visit to make sure
+          daycare feels like a good fit.
         </p>
       </div>
 
@@ -1482,30 +1541,23 @@
         <div class="start-step">
           <div class="step-number">1</div>
           <h3>Tell us about your dog.</h3>
-          <p>
-            Reach out by phone, text, email, Facebook, or Instagram.
-            We’ll give you the basics and ask a few questions about
-            your dog.
-          </p>
+          <p>Reach out and we’ll ask a few questions.</p>
         </div>
 
         <div class="start-step">
           <div class="step-number">2</div>
           <h3>Come by for a visit.</h3>
           <p>
-            If it sounds like it could be a good fit, we’ll arrange
-            a time for you and your dog to see the Farmhouse when
-            the daycare group is not here.
+            If it sounds like a good fit, we’ll arrange a time
+            to see the Farmhouse when the daycare group is not here.
           </p>
         </div>
 
         <div class="start-step">
           <div class="step-number">3</div>
-          <h3>Set up your account.</h3>
+          <h3>Set up Time To Pet.</h3>
           <p>
-            Once everyone feels good about the fit, you’ll receive
-            a Time To Pet activation link and we’ll choose a first
-            daycare day.
+            You’ll receive your account invitation and choose a first day.
           </p>
         </div>
 
@@ -1513,13 +1565,18 @@
           <div class="step-number">4</div>
           <h3>Start with what works.</h3>
           <p>
-            Some dogs begin with a half day. Once we know daycare
-            is working well for them, they can settle into the
-            regular group.
+            Some dogs begin with a half day before joining the regular group.
           </p>
         </div>
 
       </div>
+
+      <div class="start-action">
+        <a href="waitlist.html" class="start-button">
+          Join the wait-list →
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1528,146 +1585,65 @@
 
       <div class="know-heading">
         <h2 class="section-title">Good to know.</h2>
+
+        <p>
+          A few of the questions that matter once you’re getting
+          into the details.
+        </p>
       </div>
 
-      <div class="know-grid">
+      <div class="know-list">
 
-        <div class="know-item">
-          <strong>Closed pack</strong>
-          <span>
-            Most daycare dogs are regulars, so the group stays
-            familiar. New dogs join as space opens and the group
-            changes over time.
-          </span>
-        </div>
-
-        <div class="know-item">
-          <strong>Supervision</strong>
-          <span>
-            Dogs are supervised throughout the daycare day,
-            inside and outside.
-          </span>
-        </div>
-
-        <div class="know-item">
-          <strong>Meals</strong>
-          <span>
+        <details class="know-detail">
+          <summary>Meals</summary>
+          <div class="know-detail-body">
             Dogs who bring lunch are fed separately at lunchtime.
-          </span>
-        </div>
+          </div>
+        </details>
 
-        <div class="know-item">
-          <strong>Booking</strong>
-          <span>
-            Regular clients can often book the night before or
-            even the morning of, depending on availability.
-          </span>
-        </div>
-
-        <div class="know-item">
-          <strong>Vaccinations</strong>
-          <span>
+        <details class="know-detail">
+          <summary>Vaccinations</summary>
+          <div class="know-detail-body">
             Vaccinations are required. The signed Client Agreement
             contains the current vaccination terms.
-          </span>
-        </div>
+          </div>
+        </details>
 
-        <div class="know-item">
-          <strong>Intact dogs</strong>
-          <span>
-            Intact dogs are considered case by case, including
-            age, temperament, and fit with the group.
-          </span>
-        </div>
+        <details class="know-detail">
+          <summary>Intact dogs</summary>
+          <div class="know-detail-body">
+            Intact dogs are considered case by case, including age,
+            temperament, and fit with the group.
+          </div>
+        </details>
 
-        <div class="know-item">
-          <strong>Payment</strong>
-          <span>
-            Payment can be made by e-transfer, cash, or card
-            through Time To Pet.
-          </span>
-        </div>
+        <details class="know-detail">
+          <summary>Payment</summary>
+          <div class="know-detail-body">
+            Payment can be made by e-transfer, cash, or card through Time To Pet.
+          </div>
+        </details>
 
-        <div class="know-item">
-          <strong>Client Agreement</strong>
-          <span>
+        <details class="know-detail">
+          <summary>Someone else picking up your dog</summary>
+          <div class="know-detail-body">
+            Someone else can pick up your dog, but Farmhouse & Fields
+            needs to know who will be coming. Payment also needs to be
+            arranged before your dog is released.
+          </div>
+        </details>
+
+        <details class="know-detail">
+          <summary>Client Agreement</summary>
+          <div class="know-detail-body">
             Clients sign the agreement through Time To Pet.
             <a href="farmhouse-fields-client-agreement.pdf" target="_blank">
               Read a copy here.
             </a>
-          </span>
-        </div>
+          </div>
+        </details>
 
       </div>
-    </div>
-  </section>
-
-  <section class="answer-section" id="find-an-answer">
-    <div class="answer-inner">
-
-      <div class="answer-heading">
-        <h2 class="section-title">
-          Find an answer.
-        </h2>
-
-        <p>
-          Type a word or a question and we’ll pull up the
-          daycare information that matches.
-        </p>
-      </div>
-
-      <div class="search-wrap">
-
-        <div class="search-box">
-          <label for="daycareSearch" class="sr-only">
-            Search daycare information
-          </label>
-
-          <input
-            id="daycareSearch"
-            type="search"
-            autocomplete="off"
-            placeholder="Try “vaccines,” “fixed,” or “last minute”"
-          >
-
-          <span class="search-icon" aria-hidden="true">⌕</span>
-        </div>
-
-        <p class="search-help">
-          Try:
-          <button type="button" data-search="closed pack">closed pack</button>,
-          <button type="button" data-search="vaccines">vaccines</button>,
-          <button type="button" data-search="half day">half days</button>,
-          <button type="button" data-search="last minute">last-minute booking</button>,
-          or
-          <button type="button" data-search="vet">vet care</button>.
-        </p>
-
-        <div class="answer-results" id="answerResults" aria-live="polite"></div>
-
-        <a href="faqs.html" class="faq-link">
-          Browse all FAQs →
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <div class="page-inner final-cta-inner">
-
-      <div>
-        <h2>Think your dog would like it here?</h2>
-
-        <p>
-          Tell us a little about them. If it sounds like a good fit,
-          we’ll arrange a visit and take it from there.
-        </p>
-      </div>
-
-      <a href="waitlist.html" class="final-cta-button">
-        Join the wait-list →
-      </a>
 
     </div>
   </section>
@@ -1811,23 +1787,15 @@
     const clean = normalize(query);
 
     if (!clean) {
-      const featuredIds = [
-        "closed-pack",
-        "supervision",
-        "hours",
-        "rates"
-      ];
-
-      window.FARMHOUSE_FAQS
-        .filter(function (item) {
-          return featuredIds.includes(item.id);
-        })
-        .forEach(addResult);
-
+      answerResults.classList.remove("has-results");
       return;
     }
 
-    const matches = window.FARMHOUSE_FAQS
+    const faqItems = Array.isArray(window.FARMHOUSE_FAQS)
+      ? window.FARMHOUSE_FAQS
+      : [];
+
+    const matches = faqItems
       .map(function (item) {
         return {
           item: item,
@@ -1841,6 +1809,8 @@
         return b.score - a.score;
       })
       .slice(0, 5);
+
+    answerResults.classList.add("has-results");
 
     if (!matches.length) {
       const empty = document.createElement("div");
