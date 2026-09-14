@@ -388,89 +388,75 @@
     /* HOURS + RATES */
 
     .basics-section {
-      padding: 60px 0 65px;
+      padding: 66px 0 70px;
       background: var(--oat-soft);
     }
 
-    .basics-intro {
-      margin-bottom: 32px;
+    .basics-section .section-title {
+      margin-bottom: 34px;
+    }
+
+    .basics-editorial {
       display: grid;
-      grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
-      gap: 58px;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 78px;
       align-items: start;
     }
 
-    .flexibility-note {
-      padding: 2px 0 2px 24px;
-      border-left: 3px solid rgba(110,20,19,0.35);
+    .hours-copy {
+      max-width: 560px;
     }
 
-
-    .flexibility-note p {
-      margin: 0;
+    .hours-copy p,
+    .rates-copy p {
+      margin: 0 0 18px;
       color: var(--body);
       font-size: 16px;
-      line-height: 1.68;
+      line-height: 1.72;
     }
 
-    .basics-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 68px;
+    .hours-copy p:last-child,
+    .rates-copy p:last-child {
+      margin-bottom: 0;
     }
 
-    .basic-column + .basic-column {
-      padding-left: 68px;
-      border-left: 1px solid rgba(56,93,107,0.14);
-    }
-
-    .info-row {
-      padding: 15px 0;
-      display: grid;
-      grid-template-columns: minmax(0,1fr) auto;
-      gap: 24px;
-      align-items: start;
-      border-bottom: 1px solid rgba(56,93,107,0.13);
-    }
-
-    .info-row:first-of-type {
-      border-top: 1px solid rgba(56,93,107,0.13);
-    }
-
-    .info-label {
-      color: var(--body);
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .info-label small {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .info-value {
+    .hours-copy strong {
       color: var(--ink);
-      font-size: 15px;
-      line-height: 1.5;
       font-weight: 700;
-      text-align: right;
-      white-space: nowrap;
+    }
+
+    .rates-copy {
+      max-width: 610px;
+      padding-left: 48px;
+      border-left: 1px solid rgba(56,93,107,0.16);
+    }
+
+    .rate-lead {
+      display: flex;
+      align-items: baseline;
+      gap: 9px;
+      margin-bottom: 20px !important;
+      color: var(--ink) !important;
+    }
+
+    .rate-lead span {
+      color: var(--wine);
+      font-family: "Aubrey", serif;
+      font-size: 48px;
+      line-height: 0.9;
     }
 
     /* TYPICAL DAY */
 
     .day-section {
-      padding: 66px 0;
+      padding: 68px 0;
       background: #fff;
     }
 
     .day-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 58px;
+      gap: 62px;
       align-items: center;
     }
 
@@ -486,95 +472,57 @@
       object-position: center;
     }
 
-    .day-copy { max-width: 620px; }
+    .day-copy {
+      max-width: 630px;
+    }
 
-    .day-copy > p {
-      margin: 17px 0 28px;
+    .day-copy .section-title {
+      margin-bottom: 24px;
+    }
+
+    .day-copy p {
+      margin: 0 0 17px;
       color: var(--body);
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.72;
     }
 
-    .day-list {
-      border-top: 1px solid var(--border);
-    }
-
-    .day-item {
-      padding: 19px 0;
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      gap: 22px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .day-time {
-      color: var(--wine);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .day-item p {
-      margin: 0;
-      color: var(--body);
-      font-size: 15px;
-      line-height: 1.63;
+    .day-copy p:last-child {
+      margin-bottom: 0;
     }
 
     /* GETTING STARTED */
 
     .start-section {
-      padding: 60px 0 62px;
+      padding: 64px 0 68px;
       background: var(--oat-soft);
     }
 
-    .start-heading {
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-
-    .start-list {
-      max-width: 960px;
-      border-top: 1px solid rgba(56,93,107,0.14);
-    }
-
-    .start-step {
-      padding: 18px 0;
+    .start-grid {
       display: grid;
-      grid-template-columns: 42px 205px 1fr;
-      gap: 20px;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 72px;
       align-items: start;
-      border-bottom: 1px solid rgba(56,93,107,0.14);
     }
 
-    .step-number {
-      color: var(--wine);
-      font-family: "Aubrey", serif;
-      font-size: 28px;
-      line-height: 1;
+    .start-heading {
+      max-width: 420px;
     }
 
-    .start-step h3 {
-      margin: 1px 0 0;
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.5;
-      font-weight: 700;
+    .start-copy {
+      max-width: 650px;
     }
 
-    .start-step p {
-      margin: 0;
+    .start-copy p {
+      margin: 0 0 18px;
       color: var(--body);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .start-action {
-      margin-top: 26px;
+      font-size: 16px;
+      line-height: 1.72;
     }
 
     .start-button {
       min-height: 47px;
+      margin-top: 5px;
       padding: 0 22px;
       display: inline-flex;
       align-items: center;
@@ -592,84 +540,58 @@
       background: var(--wine-dark);
     }
 
-    /* GOOD TO KNOW */
+    /* FAQ BRIDGE */
 
-    .know-section {
-      padding: 56px 0 60px;
+    .faq-bridge {
+      padding: 48px 0 50px;
       background: var(--river);
       color: #fff;
     }
 
-    .know-heading {
-      max-width: 650px;
-      margin-bottom: 24px;
-    }
-
-    .know-heading .section-title {
-      color: #fff;
-    }
-
-
-    .know-list {
-      max-width: 980px;
-      border-top: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .know-detail {
-      border-bottom: 1px solid rgba(255,255,255,0.18);
-    }
-
-    .know-detail summary {
-      min-height: 58px;
-      padding: 15px 42px 15px 0;
-      position: relative;
-      display: flex;
+    .faq-bridge-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 54px;
       align-items: center;
+    }
+
+    .faq-bridge .section-title {
       color: #fff;
+      font-size: clamp(34px, 2.6vw, 43px);
+    }
+
+    .faq-bridge p {
+      max-width: 700px;
+      margin: 13px 0 0;
+      color: rgba(255,255,255,0.84);
       font-size: 15px;
-      line-height: 1.5;
-      font-weight: 700;
-      cursor: pointer;
-      list-style: none;
+      line-height: 1.68;
     }
 
-    .know-detail summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .know-detail summary::after {
-      content: "+";
-      position: absolute;
-      right: 4px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(255,255,255,0.82);
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .know-detail[open] summary::after {
-      content: "−";
-    }
-
-    .know-detail-body {
-      max-width: 760px;
-      padding: 0 42px 18px 0;
-      color: rgba(255,255,255,0.86);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .know-detail-body a {
+    .faq-bridge-link {
+      min-height: 48px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.34);
+      border-radius: 9px;
       color: #fff;
-      text-underline-offset: 3px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .faq-bridge-link:hover,
+    .faq-bridge-link:focus-visible {
+      background: rgba(255,255,255,0.08);
     }
 
     /* SEARCH */
 
     .answer-section {
-      padding: 44px 0 46px;
+      padding: 30px 0 32px;
       background: var(--warm-white);
       border-bottom: 1px solid var(--border);
     }
@@ -677,24 +599,35 @@
     .answer-inner {
       width: min(88%, var(--page));
       margin: 0 auto;
-    }
-
-    .answer-top {
       display: grid;
-      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-      gap: 54px;
+      grid-template-columns: auto minmax(360px, 1fr);
+      gap: 44px;
       align-items: center;
     }
 
-    .answer-heading p {
-      margin: 13px 0 0;
+    .answer-copy {
+      min-width: 270px;
+    }
+
+    .answer-copy strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .answer-copy span {
       color: var(--body);
-      font-size: 15px;
-      line-height: 1.65;
+      font-size: 13px;
+      line-height: 1.5;
     }
 
     .search-wrap {
-      margin: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
     }
 
     .search-box {
@@ -703,13 +636,13 @@
 
     .search-box input {
       width: 100%;
-      min-height: 58px;
-      padding: 0 52px 0 19px;
+      min-height: 52px;
+      padding: 0 48px 0 17px;
       border: 1px solid #D9D1C7;
       border-radius: 9px;
       background: #fff;
       color: var(--ink);
-      font-size: 16px;
+      font-size: 15px;
       outline: none;
       transition: border-color 0.18s ease, box-shadow 0.18s ease;
     }
@@ -722,35 +655,32 @@
     .search-icon {
       position: absolute;
       top: 50%;
-      right: 19px;
+      right: 17px;
       transform: translateY(-50%);
       color: var(--river);
-      font-size: 20px;
+      font-size: 19px;
       pointer-events: none;
     }
 
-    .search-help {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
+    .faq-link {
+      color: var(--river);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .search-help button {
-      padding: 0;
-      border: 0;
-      background: transparent;
-      color: var(--river);
-      font-size: inherit;
-      cursor: pointer;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .faq-link:hover,
+    .faq-link:focus-visible {
+      color: var(--wine);
     }
 
     .answer-results {
       display: none;
+      grid-column: 1 / -1;
       max-width: 900px;
-      margin: 26px auto 0;
+      margin: 4px auto 0;
+      width: 100%;
       border-top: 1px solid var(--border);
     }
 
@@ -759,7 +689,7 @@
     }
 
     .answer-item {
-      padding: 18px 0;
+      padding: 17px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -779,25 +709,11 @@
     }
 
     .no-results {
-      padding: 20px 0;
+      padding: 18px 0;
       color: var(--body);
       font-size: 15px;
       line-height: 1.65;
       border-bottom: 1px solid var(--border);
-    }
-
-    .faq-link {
-      margin-top: 12px;
-      display: inline-block;
-      color: var(--river);
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .faq-link:hover,
-    .faq-link:focus-visible {
-      color: var(--wine);
     }
 
     /* FOOTER */
@@ -923,17 +839,6 @@
 
       .daycare-hero-inner,
       .pack-grid { gap: 40px; }
-
-      .basics-intro {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .basics-grid { gap: 44px; }
-
-      .basic-column + .basic-column { padding-left: 44px; }
-
-      .answer-top { gap: 36px; }
     }
 
     @media (max-width: 830px) {
@@ -970,31 +875,12 @@
         gap: 23px;
       }
 
-      .basics-grid {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
-
-      .basic-column + .basic-column {
-        padding-left: 0;
-        border-left: 0;
-      }
-
-      .answer-top {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
       .day-grid {
         grid-template-columns: 1fr;
         gap: 34px;
       }
 
       .day-photo { height: 395px; }
-
-      .start-step {
-        grid-template-columns: 42px 190px 1fr;
-      }
 
       .know-list { max-width: none; }
     }
@@ -1061,69 +947,15 @@
         padding-top: 16px;
       }
 
-      .basics-intro {
-        margin-bottom: 27px;
-        gap: 19px;
-      }
-
-      .flexibility-note {
-        padding-left: 18px;
-      }
-
-      .flexibility-note p {
-        font-size: 15px;
-      }
-
-      .info-row {
-        padding: 13px 0;
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .info-value { text-align: left; }
-
       .day-grid { gap: 29px; }
 
       .day-photo {
         height: clamp(270px, 75vw, 340px);
       }
 
-      .day-copy > p { margin: 15px 0 23px; }
-
-      .day-item {
-        padding: 16px 0;
-        grid-template-columns: 72px 1fr;
-        gap: 14px;
-      }
-
-      .start-heading { margin-bottom: 28px; }
-
-      .start-step {
-        padding: 19px 0;
-        grid-template-columns: 34px 1fr;
-        gap: 5px 13px;
-      }
-
-      .start-step p { grid-column: 2; }
-
-      .know-section { padding: 46px 0 48px; }
-
-      .know-heading { margin-bottom: 20px; }
-
-      .know-detail summary {
-        min-height: 56px;
-        padding-right: 36px;
-      }
-
-      .know-detail-body {
-        padding-right: 18px;
-      }
-
       .answer-section { padding: 40px 0 42px; }
 
       .answer-inner { width: 89%; }
-
-      .answer-top { gap: 18px; }
 
       .search-box input { min-height: 57px; }
 
@@ -1161,15 +993,105 @@
       }
     }
 
+
+    @media (max-width: 830px) {
+      .answer-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .search-wrap {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+
+      .basics-editorial,
+      .start-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .rates-copy {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .day-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .faq-bridge-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .faq-bridge-link {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .answer-section {
+        padding: 27px 0 30px;
+      }
+
+      .answer-inner {
+        width: 89%;
+      }
+
+      .search-wrap {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .faq-link {
+        justify-self: start;
+      }
+
+      .basics-section,
+      .day-section,
+      .start-section {
+        padding: 50px 0 53px;
+      }
+
+      .basics-section .section-title,
+      .day-copy .section-title {
+        margin-bottom: 20px;
+      }
+
+      .basics-editorial {
+        gap: 26px;
+      }
+
+      .rate-lead span {
+        font-size: 43px;
+      }
+
+      .day-photo {
+        height: clamp(270px, 75vw, 340px);
+      }
+
+      .start-grid {
+        gap: 18px;
+      }
+
+      .start-button {
+        width: 100%;
+      }
+
+      .faq-bridge {
+        padding: 43px 0 46px;
+      }
+
+      .faq-bridge-link {
+        width: 100%;
+      }
+    }
+
     @media (max-width: 390px) {
       .daycare-hero h1 { font-size: 41px; }
 
       .section-title { font-size: 34px; }
-
-      .day-item {
-        grid-template-columns: 1fr;
-        gap: 5px;
-      }
 
       .footer-details { grid-template-columns: 1fr; }
 
@@ -1273,11 +1195,11 @@
   <nav class="quick-nav" aria-label="Daycare page sections">
     <div class="quick-nav-inner">
       <a href="#the-group">The group</a>
-      <a href="#find-an-answer">Find an answer</a>
+      <a href="#find-an-answer">Search</a>
       <a href="#hours-rates">Hours & rates</a>
       <a href="#typical-day">A typical day</a>
       <a href="#getting-started">Getting started</a>
-      <a href="#good-to-know">Good to know</a>
+      <a href="faqs.html">FAQs</a>
     </div>
   </nav>
 
@@ -1317,47 +1239,31 @@
   <section class="answer-section" id="find-an-answer">
     <div class="answer-inner">
 
-      <div class="answer-top">
+      <div class="answer-copy">
+        <strong>Looking for something specific?</strong>
+        <span>Search the daycare info, or head straight to the FAQs.</span>
+      </div>
 
-        <div class="answer-heading">
-          <h2 class="section-title">Find an answer.</h2>
+      <div class="search-wrap">
 
-          <p>
-            Looking for something specific? Search below.
-          </p>
+        <div class="search-box">
+          <label for="daycareSearch" class="sr-only">
+            Search daycare information
+          </label>
+
+          <input
+            id="daycareSearch"
+            type="search"
+            autocomplete="off"
+            placeholder="Try “vaccines,” “half days,” or “last minute”"
+          >
+
+          <span class="search-icon" aria-hidden="true">⌕</span>
         </div>
 
-        <div class="search-wrap">
-
-          <div class="search-box">
-            <label for="daycareSearch" class="sr-only">
-              Search daycare information
-            </label>
-
-            <input
-              id="daycareSearch"
-              type="search"
-              autocomplete="off"
-              placeholder="Try “vaccines,” “half days,” or “last minute”"
-            >
-
-            <span class="search-icon" aria-hidden="true">⌕</span>
-          </div>
-
-          <p class="search-help">
-            Try:
-            <button type="button" data-search="closed pack">closed pack</button>,
-            <button type="button" data-search="vaccines">vaccines</button>,
-            <button type="button" data-search="half day">half days</button>,
-            or
-            <button type="button" data-search="last minute">last-minute booking</button>.
-          </p>
-
-          <a href="faqs.html" class="faq-link">
-            Browse all FAQs →
-          </a>
-
-        </div>
+        <a href="faqs.html" class="faq-link">
+          Browse all FAQs →
+        </a>
 
       </div>
 
@@ -1373,75 +1279,43 @@
   <section class="basics-section" id="hours-rates">
     <div class="page-inner">
 
-      <div class="basics-intro">
-        <h2 class="section-title">Hours & rates.</h2>
+      <h2 class="section-title">Hours & rates.</h2>
 
-        <div class="flexibility-note">
+      <div class="basics-editorial">
+
+        <div class="hours-copy">
+          <p>
+            <strong>Full days:</strong> drop-off is between 7:30 and 9:00 a.m.,
+            with pick-up between 4:00 and 5:00 p.m.
+          </p>
+
+          <p>
+            Morning half-days use the regular morning drop-off and finish
+            between 12:00 and 1:00. Afternoon half-days start between
+            12:00 and 1:00 and finish with the regular 4:00 to 5:00 pick-up.
+          </p>
+        </div>
+
+        <div class="rates-copy">
+          <p class="rate-lead">
+            <span>$27</span>
+            per full day + tax
+          </p>
+
+          <p>
+            For regular weekly attendance, the daily rate is $25 for
+            3 days, $24 for 4 days, and $23 for 5 days.
+          </p>
+
           <p>
             Regular clients don’t have to commit to the same days every week.
             Book the days you need, depending on availability. Often that can
             be as late as the night before or even the morning of.
           </p>
         </div>
-      </div>
-
-      <div class="basics-grid">
-
-        <div class="basic-column">
-          <h3 class="sr-only">Daycare hours</h3>
-
-          <div class="info-row">
-            <div class="info-label">Full-day drop-off</div>
-            <div class="info-value">7:30–9:00 a.m.</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">Full-day pick-up</div>
-            <div class="info-value">4:00–5:00 p.m.</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">
-              Morning half-day
-              <small>Regular morning drop-off</small>
-            </div>
-            <div class="info-value">Pick-up 12:00–1:00</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">
-              Afternoon half-day
-              <small>Drop-off 12:00–1:00</small>
-            </div>
-            <div class="info-value">Pick-up 4:00–5:00</div>
-          </div>
-        </div>
-
-        <div class="basic-column">
-          <h3 class="sr-only">Daycare rates</h3>
-
-          <div class="info-row">
-            <div class="info-label">Full day</div>
-            <div class="info-value">$27/day + tax</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">3 days/week</div>
-            <div class="info-value">$25/day + tax</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">4 days/week</div>
-            <div class="info-value">$24/day + tax</div>
-          </div>
-
-          <div class="info-row">
-            <div class="info-label">5 days/week</div>
-            <div class="info-value">$23/day + tax</div>
-          </div>
-        </div>
 
       </div>
+
     </div>
   </section>
 
@@ -1460,41 +1334,28 @@
           A typical day at the Farmhouse.
         </h2>
 
-        <div class="day-list">
+        <p>
+          Mornings are mostly about getting everyone settled in and giving
+          the dogs lots of time to play, move around, and burn off some energy.
+        </p>
 
-          <div class="day-item">
-            <div class="day-time">Morning</div>
-            <p>
-              Dogs arrive and there is lots of time to play,
-              move around, and get the day started.
-            </p>
-          </div>
+        <p>
+          Around midday, dogs who bring lunch are fed separately. Morning
+          half-day dogs head home, afternoon dogs arrive, and things usually
+          get a little quieter for a while.
+        </p>
 
-          <div class="day-item">
-            <div class="day-time">Midday</div>
-            <p>
-              Dogs who bring lunch are fed separately. Morning
-              half-day dogs head home, afternoon dogs arrive,
-              and the group gets some quieter time.
-            </p>
-          </div>
-
-          <div class="day-item">
-            <div class="day-time">Afternoon</div>
-            <p>
-              There is time for another round of play before
-              everyone starts heading home.
-            </p>
-          </div>
-
-        </div>
+        <p>
+          Then it is back outside or into another round of play before
+          everyone starts heading home for the day.
+        </p>
       </div>
 
     </div>
   </section>
 
   <section class="start-section" id="getting-started">
-    <div class="page-inner">
+    <div class="page-inner start-grid">
 
       <div class="start-heading">
         <h2 class="section-title">
@@ -1502,42 +1363,20 @@
         </h2>
       </div>
 
-      <div class="start-list">
+      <div class="start-copy">
+        <p>
+          Start by telling us a little about your dog. If it sounds like
+          daycare could be a good fit, we’ll arrange a visit outside regular
+          daycare hours so you can see the Farmhouse without the daycare
+          group here.
+        </p>
 
-        <div class="start-step">
-          <div class="step-number">1</div>
-          <h3>Tell us about your dog.</h3>
-          <p>Get in touch and tell us a bit about your dog.</p>
-        </div>
+        <p>
+          From there, we’ll send you a Time To Pet invitation and sort out
+          a first day. Some dogs start with a half day. We’ll go with what
+          makes sense for yours.
+        </p>
 
-        <div class="start-step">
-          <div class="step-number">2</div>
-          <h3>Come by for a visit.</h3>
-          <p>
-            If it sounds like a fit, we’ll arrange a time for you and your dog
-            to come by. Visits happen outside regular daycare hours.
-          </p>
-        </div>
-
-        <div class="start-step">
-          <div class="step-number">3</div>
-          <h3>Set up Time To Pet.</h3>
-          <p>
-            We’ll send you a Time To Pet invitation and sort out a first day.
-          </p>
-        </div>
-
-        <div class="start-step">
-          <div class="step-number">4</div>
-          <h3>Start with what works.</h3>
-          <p>
-            Some dogs start with a half day. We’ll go with what makes sense for yours.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="start-action">
         <a href="waitlist.html" class="start-button">
           Join the wait-list →
         </a>
@@ -1546,63 +1385,21 @@
     </div>
   </section>
 
-  <section class="know-section" id="good-to-know">
-    <div class="page-inner">
+  <section class="faq-bridge" id="good-to-know">
+    <div class="page-inner faq-bridge-inner">
 
-      <div class="know-heading">
-        <h2 class="section-title">Good to know.</h2>
+      <div>
+        <h2 class="section-title">Questions about the details?</h2>
+
+        <p>
+          Vaccinations, intact dogs, meals, payment, pick-up arrangements,
+          and the Client Agreement are all covered in the FAQs.
+        </p>
       </div>
 
-      <div class="know-list">
-
-        <details class="know-detail">
-          <summary>Meals</summary>
-          <div class="know-detail-body">
-            Dogs who bring lunch are fed separately at lunchtime.
-          </div>
-        </details>
-
-        <details class="know-detail">
-          <summary>Vaccinations</summary>
-          <div class="know-detail-body">
-            Vaccinations are required. The Client Agreement has the current requirements.
-          </div>
-        </details>
-
-        <details class="know-detail">
-          <summary>Intact dogs</summary>
-          <div class="know-detail-body">
-            Intact dogs are considered case by case, including age,
-            temperament, and fit with the group.
-          </div>
-        </details>
-
-        <details class="know-detail">
-          <summary>Payment</summary>
-          <div class="know-detail-body">
-            Payment can be made by e-transfer, cash, or card through Time To Pet.
-          </div>
-        </details>
-
-        <details class="know-detail">
-          <summary>Someone else picking up your dog</summary>
-          <div class="know-detail-body">
-            Yes. Just let Melissa know who will be coming. Payment needs
-            to be arranged before your dog is released.
-          </div>
-        </details>
-
-        <details class="know-detail">
-          <summary>Client Agreement</summary>
-          <div class="know-detail-body">
-            Clients sign the agreement through Time To Pet.
-            <a href="farmhouse-fields-client-agreement.pdf" target="_blank">
-              Read a copy here.
-            </a>
-          </div>
-        </details>
-
-      </div>
+      <a href="faqs.html" class="faq-bridge-link">
+        Browse the FAQs →
+      </a>
 
     </div>
   </section>
