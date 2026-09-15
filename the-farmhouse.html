@@ -677,25 +677,21 @@
       color: #fff;
     }
 
-    .page-cta::after {
-      content: "";
-
+    .page-cta-dogs {
       position: absolute;
+      z-index: 1;
 
       right: -22px;
-      bottom: -18px;
+      bottom: -24px;
 
-      width: 225px;
-      height: 155px;
+      width: 330px;
+      height: auto;
 
-      background:
-        url("assets/grass.png")
-        right bottom / contain
-        no-repeat;
-
-      opacity: 0.14;
+      opacity: 0.24;
+      filter: brightness(0) invert(1);
 
       pointer-events: none;
+      user-select: none;
     }
 
     .page-cta-inner {
@@ -1216,14 +1212,13 @@
 
       /* CTA */
 
-      .page-cta::after {
-        width: 155px;
-        height: 110px;
+      .page-cta-dogs {
+        right: -52px;
+        bottom: -16px;
 
-        right: -22px;
-        bottom: -13px;
+        width: 235px;
 
-        opacity: 0.12;
+        opacity: 0.20;
       }
 
       .page-cta-inner {
@@ -1734,6 +1729,13 @@
     ====================================================== -->
 
     <section class="page-cta">
+
+      <img
+        src="assets/dog1.png"
+        alt=""
+        class="page-cta-dogs"
+        aria-hidden="true"
+      >
 
       <div class="page-cta-inner">
 
