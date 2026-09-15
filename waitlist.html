@@ -283,17 +283,22 @@
     .waitlist-hero::after {
       content: "";
       position: absolute;
-      right: -10px;
-      bottom: -24px;
-      width: 320px;
-      height: 230px;
-      background: rgba(255,255,255,0.12);
-      -webkit-mask: url("assets/grass.png") right bottom / contain no-repeat;
-      mask: url("assets/grass.png") right bottom / contain no-repeat;
+      right: 24px;
+      bottom: -34px;
+
+      width: 420px;
+      height: 285px;
+
+      background: url("assets/dog1.png") right bottom / contain no-repeat;
+      opacity: 0.22;
+
       pointer-events: none;
     }
 
     .waitlist-hero-inner {
+      position: relative;
+      z-index: 1;
+
       width: min(88%, 930px);
       margin: 0 auto;
     }
@@ -778,10 +783,13 @@
       }
 
       .waitlist-hero::after {
-        right: -36px;
-        bottom: -28px;
-        width: 220px;
-        height: 170px;
+        right: -58px;
+        bottom: -22px;
+
+        width: 270px;
+        height: 190px;
+
+        opacity: 0.16;
       }
 
       .waitlist-aside {
