@@ -762,32 +762,33 @@
       z-index: 3;
 
       width: min(84%, 1120px);
-      min-height: 285px;
+      min-height: 315px;
 
       margin: 0 auto;
-      padding: 52px 0 52px 31%;
+      padding: 54px 0 54px 42%;
 
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr) 190px;
 
       align-items: center;
 
-      gap: 48px;
+      gap: 38px;
     }
 
     .final-cta-copy {
-      max-width: 620px;
+      max-width: 560px;
+      min-width: 0;
     }
 
     .final-cta h2 {
-      max-width: 660px;
+      max-width: 560px;
 
       margin: 0;
 
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(45px, 3.15vw, 55px);
+      font-size: clamp(42px, 3vw, 52px);
       font-weight: 400;
       line-height: 0.98;
     }
@@ -809,16 +810,18 @@
 
     .final-cta-actions {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: stretch;
 
-      gap: 15px;
+      gap: 12px;
 
+      width: 190px;
       flex: 0 0 auto;
     }
 
     .cta-button {
       min-height: 50px;
-      padding: 0 25px;
+      padding: 0 20px;
 
       display: inline-flex;
       align-items: center;
@@ -848,9 +851,16 @@
     }
 
     .cta-link {
+      min-height: 46px;
+      padding: 0 18px;
+
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
+
+      border: 1px solid rgba(255,255,255,0.30);
+      border-radius: 9px;
 
       color: #fff;
 
@@ -863,6 +873,11 @@
 
     .cta-link span {
       transition: transform 0.18s ease;
+    }
+
+    .cta-link:hover,
+    .cta-link:focus-visible {
+      background: rgba(255,255,255,0.08);
     }
 
     .cta-link:hover span,
@@ -879,13 +894,13 @@
       position: absolute;
       z-index: 1;
 
-      left: -18px;
-      bottom: -8px;
+      left: 2%;
+      bottom: -10px;
 
-      width: min(41vw, 560px);
+      width: min(38vw, 500px);
       height: auto;
 
-      opacity: 0.28;
+      opacity: 0.30;
 
       filter: brightness(0) invert(1);
 
@@ -1071,14 +1086,19 @@
 
       .final-cta-inner {
         width: 86%;
-        padding-left: 28%;
-        gap: 38px;
+        padding-left: 38%;
+        grid-template-columns: minmax(0, 1fr) 180px;
+        gap: 28px;
+      }
+
+      .final-cta-actions {
+        width: 180px;
       }
 
       .cta-dogs {
-        left: -24px;
-        width: min(39vw, 455px);
-        opacity: 0.25;
+        left: 1%;
+        width: min(36vw, 420px);
+        opacity: 0.27;
       }
 
       .footer-main {
@@ -1173,17 +1193,18 @@
       }
 
       .final-cta-inner {
-        width: 74%;
+        width: 76%;
 
         grid-template-columns: 1fr;
 
         gap: 24px;
 
-        padding: 48px 0 185px;
+        padding: 48px 0 190px;
       }
 
       .final-cta-actions {
-        justify-content: flex-start;
+        width: min(100%, 260px);
+        align-items: stretch;
       }
 
       .cta-dogs {
@@ -1427,15 +1448,14 @@
 
         margin-top: 23px;
 
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
 
-      .cta-button {
-        width: 100%;
-      }
-
+      .cta-button,
       .cta-link {
-        display: none;
+        width: 100%;
       }
 
 
