@@ -4,14 +4,14 @@ window.FARMHOUSE_FAQS = [
     category: "before-starting",
     question: "How do I get my dog started?",
     answer: "Start by telling us a little about your dog. If it sounds like they could be a good fit for the group, we’ll arrange a visit outside regular daycare hours. From there, we’ll sort out Time To Pet and a first day.",
-    keywords: "new start getting started join wait list waitlist visit tour time to pet first day"
+    keywords: "new start getting started join waitlist waitlist visit tour time to pet first day"
   },
   {
     id: "space-available",
     category: "before-starting",
     question: "What if there isn’t a space right away?",
-    answer: "The daycare group stays small, so there are only so many spaces at a time. Spots do open up as schedules change and dogs move on. If there is not a suitable opening right away, we can keep your dog on the waitlist and reach out when one comes up.",
-    keywords: "space spaces full opening openings availability available wait list waitlist limited room spot spots"
+    answer: "Because the daycare group stays small, spaces are limited. Spots do open up as schedules change and dogs move on. If there is not a suitable opening right away, we can keep your dog on the Waitlist and reach out when one comes up.",
+    keywords: "space spaces full opening openings availability available waitlist waitlist limited room spot spots"
   },
   {
     id: "visit-first",
