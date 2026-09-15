@@ -59,7 +59,7 @@ window.FARMHOUSE_FAQS = [
     "id": "typical-day",
     "category": "daycare-booking",
     "question": "What does a typical daycare day look like?",
-    "answer": "Mornings are mostly about getting everyone settled in and giving the dogs lots of time to play, move around, and burn off some energy. Around midday, dogs who bring lunch are fed separately. Morning half-day dogs head home, afternoon dogs arrive, and things usually get a little quieter for a while. Then it is back outside or into another round of play before everyone starts heading home for the day.\nTEST",
+    "answer": "Mornings are mostly about getting everyone settled in and giving the dogs lots of time to play, move around, and burn off some energy. Around midday, dogs who bring lunch are fed separately. Morning half-day dogs head home, afternoon dogs arrive, and things usually get a little quieter for a while. Then it is back outside or into another round of play before everyone starts heading home for the day.",
     "keywords": "typical day schedule routine play nap rest lunch morning afternoon"
   },
   {
@@ -73,7 +73,7 @@ window.FARMHOUSE_FAQS = [
     "id": "rates",
     "category": "daycare-booking",
     "question": "How much is daycare?",
-    "answer": "A full day is $30 plus tax. For regular weekly attendance, the daily rate is $25 for 3 days, $24 for 4 days, and $23 for 5 days.",
+    "answer": "A full day is $27 plus tax. For regular weekly attendance, the daily rate is $25 for 3 days, $24 for 4 days, and $23 for 5 days.",
     "keywords": "price prices pricing rate rates cost costs money full day three days four days five days"
   },
   {
