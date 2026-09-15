@@ -23,7 +23,7 @@ window.FARMHOUSE_SITE_CONTENT = {
     "teamHeading": "Meet Melissa.",
     "teamParagraph1": "Melissa worked in dog boarding before spending about ten years working on a dairy farm. She loved farm life, but she missed working with dogs. Farmhouse & Fields gave her a way to come back to it, right here at the farmhouse.",
     "teamParagraph2": "Dogs have always been a big part of life for Melissa and her family. They have five of their own now and have had as many as seven, so a house full of dogs is nothing new. Keeping daycare small means she gets to know the dogs who come through the door, how they fit into the group, and when somebody might need a little more space or downtime.",
-    "teamBlurb": "",
+    "teamBlurb": "YESY",
     "certification": "Canine Health Canada certified in Canine CPR & Emergency First Aid."
   },
   "homepage": {
