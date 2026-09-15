@@ -571,29 +571,21 @@
       color: #fff;
     }
 
-    .faq-bridge::after {
-      content: "";
-
+    .faq-bridge-dogs {
       position: absolute;
-      right: -28px;
-      bottom: -34px;
+      z-index: 1;
 
-      width: 300px;
-      height: 230px;
+      right: -18px;
+      bottom: -28px;
 
-      background: rgba(255,255,255,0.14);
+      width: 330px;
+      height: auto;
 
-      -webkit-mask:
-        url("assets/grass.png")
-        right bottom / contain
-        no-repeat;
-
-      mask:
-        url("assets/grass.png")
-        right bottom / contain
-        no-repeat;
+      opacity: 0.28;
+      filter: brightness(0) invert(1);
 
       pointer-events: none;
+      user-select: none;
     }
 
     .faq-bridge-inner {
@@ -1143,12 +1135,13 @@
         width: 100%;
       }
 
-      .faq-bridge::after {
-        right: -42px;
-        bottom: -30px;
+      .faq-bridge-dogs {
+        right: -34px;
+        bottom: -18px;
 
-        width: 220px;
-        height: 170px;
+        width: 235px;
+
+        opacity: 0.22;
       }
     }
 
@@ -1458,6 +1451,14 @@
   </section>
 
   <section class="faq-bridge" id="good-to-know">
+
+    <img
+      src="assets/dog2.png"
+      alt=""
+      class="faq-bridge-dogs"
+      aria-hidden="true"
+    >
+
     <div class="page-inner faq-bridge-inner">
 
       <div>
