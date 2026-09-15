@@ -822,16 +822,23 @@
 
     .footer-main {
       display: grid;
-      grid-template-columns: 0.85fr 1.65fr;
+      grid-template-columns: 1.65fr 0.85fr;
 
       gap: 90px;
 
       align-items: start;
     }
 
+    .footer-brand {
+      justify-self: end;
+      text-align: right;
+    }
+
     .footer-brand-logo {
       width: 250px;
       height: auto;
+
+      margin-left: auto;
     }
 
     .footer-tagline {
@@ -1083,6 +1090,16 @@
         grid-template-columns: 1fr;
 
         gap: 34px;
+      }
+
+      .footer-brand {
+        order: -1;
+        justify-self: start;
+        text-align: left;
+      }
+
+      .footer-brand-logo {
+        margin-left: 0;
       }
 
       .footer-details {
@@ -1831,23 +1848,7 @@
 
       <div class="footer-main">
 
-
-        <div class="footer-brand">
-
-          <img
-            src="assets/fandf2.png"
-            alt="Farmhouse & Fields Dog Daycare"
-            class="footer-brand-logo"
-          >
-
-          <p class="footer-tagline">
-            A good day to be a dog.
-          </p>
-
-        </div>
-
-
-        <div class="footer-details">
+<div class="footer-details">
 
 
           <div>
@@ -1920,6 +1921,19 @@
 
         </div>
 
+<div class="footer-brand">
+
+          <img
+            src="assets/fandf2.png"
+            alt="Farmhouse & Fields Dog Daycare"
+            class="footer-brand-logo"
+          >
+
+          <p class="footer-tagline">
+            A good day to be a dog.
+          </p>
+
+        </div>
 
       </div>
 
