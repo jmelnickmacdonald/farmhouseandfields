@@ -1743,7 +1743,58 @@
 
     }
 
-  </style>
+  
+    /* FINAL SHARED FOOTER */
+    .footer-main {
+      display: grid !important;
+      grid-template-columns: 1.65fr 0.85fr !important;
+      gap: 76px !important;
+      align-items: start !important;
+    }
+
+    .footer-brand {
+      justify-self: end !important;
+      text-align: right !important;
+    }
+
+    .footer-brand-logo {
+      width: 300px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+    }
+
+    .footer-tagline {
+      margin: 13px 0 0 !important;
+      color: var(--body) !important;
+      font-family: "DM Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 1.45 !important;
+    }
+
+    @media (max-width: 830px) {
+      .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .footer-brand {
+        order: -1;
+        justify-self: start !important;
+        text-align: left !important;
+      }
+      .footer-brand-logo {
+        width: 250px !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .footer-brand-logo { width: 235px !important; }
+      .footer-tagline { font-size: 14px !important; }
+    }
+
+</style>
 </head>
 
 
@@ -1798,13 +1849,6 @@
           class="nav-link"
         >
           Daycare
-        </a>
-
-        <a
-          href="gallery.html"
-          class="nav-link"
-        >
-          Gallery
         </a>
 
         <a
@@ -1872,10 +1916,6 @@
 
         <a href="daycare.html">
           Daycare
-        </a>
-
-        <a href="gallery.html">
-          Gallery
         </a>
 
         <a href="faqs.html">
@@ -2047,7 +2087,7 @@
           </div>
 
 
-          <p class="social-caption">
+          <p class="social-caption" data-site-text="homepage.caption1">
             Zoomy mode activated first thing this morning!
           </p>
 
@@ -2056,6 +2096,7 @@
 
             <img
               src="assets/1.jpg"
+              data-site-src="homepage.photo1"
               alt="Dogs playing together at Farmhouse & Fields Dog Daycare"
             >
 
@@ -2093,7 +2134,7 @@
           </div>
 
 
-          <p class="social-caption">
+          <p class="social-caption" data-site-text="homepage.caption2">
             Full house this morning! Everybody found their spot,
             their buddy, or something to get into.
           </p>
@@ -2103,6 +2144,7 @@
 
             <img
               src="assets/2.jpg"
+              data-site-src="homepage.photo2"
               alt="A group of dogs together inside Farmhouse & Fields Dog Daycare"
             >
 
@@ -2182,123 +2224,50 @@
   ======================================================== -->
 
   <footer class="site-footer">
-
-    <div class="container">
-
-      <div class="footer-main">
-
-<div class="footer-details">
-
-
-          <div>
-
-            <span class="footer-detail-label">
-              Find us
-            </span>
-
-            <div class="footer-detail-value">
-              571 Woodside Rd.<br>
-              Canning, Nova Scotia
-            </div>
-
-          </div>
-
-
-          <div>
-
-            <span class="footer-detail-label">
-              Call
-            </span>
-
-            <div class="footer-detail-value">
-
-              <a href="tel:+19028241979">
-                (902) 824-1979
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div>
-
-            <span class="footer-detail-label">
-              Keep in touch
-            </span>
-
-            <div class="footer-links">
-
-              <a href="mailto:farmhousefieldsdaycare@gmail.com">
-                Email
-              </a>
-
-              <a
-                href="https://www.facebook.com/profile.php?id=61568074120165"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-
-              <a
-                href="https://www.instagram.com/farmhousefieldsdogdaycare/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-
-              <a href="current-clients.html">
-                Current Clients
-              </a>
-
-            </div>
-
-          </div>
-
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-details">
+        <div>
+          <span class="footer-detail-label">Find us</span>
+          <div class="footer-detail-value">571 Woodside Rd.<br>Canning, Nova Scotia</div>
         </div>
-
-<div class="footer-brand">
-
-          <img
-            src="assets/fandf2.png"
-            alt="Farmhouse & Fields Dog Daycare"
-            class="footer-brand-logo"
-          >
-
-          <p class="footer-tagline">
-            A good day to be a dog.
-          </p>
-
+        <div>
+          <span class="footer-detail-label">Call</span>
+          <div class="footer-detail-value"><a href="tel:+19028241979">(902) 824-1979</a></div>
         </div>
-
+        <div>
+          <span class="footer-detail-label">Keep in touch</span>
+          <div class="footer-links">
+            <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
+            <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="current-clients.html">Current Clients</a>
+          </div>
+        </div>
       </div>
 
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="currentYear"></span>
-          Farmhouse & Fields Dog Daycare
-        </span>
-
-        <span class="footer-bottom-location">
-          Canning, Nova Scotia
-        </span>
-
+      <div class="footer-brand">
+        <img src="assets/fandf2.png" alt="Farmhouse & Fields Dog Daycare" class="footer-brand-logo">
+        <p class="footer-tagline">A good day to be a dog.</p>
       </div>
-
     </div>
 
-  </footer>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Farmhouse &amp; Fields Dog Daycare</span>
+      <span class="footer-bottom-location">Canning, Nova Scotia</span>
+    </div>
+  </div>
+</footer>
 
 
   <!-- =======================================================
        JAVASCRIPT
   ======================================================== -->
 
-  <script>
+    <script src="site-content.js"></script>
+  <script src="site-runtime.js"></script>
+
+<script>
 
     const menuToggle =
       document.getElementById("menuToggle");
