@@ -762,33 +762,31 @@
       z-index: 3;
 
       width: min(84%, 1120px);
-      min-height: 315px;
+      min-height: 330px;
 
       margin: 0 auto;
-      padding: 54px 0 54px 42%;
+      padding: 54px 0;
 
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 190px;
-
+      display: flex;
       align-items: center;
-
-      gap: 38px;
+      justify-content: flex-end;
     }
 
     .final-cta-copy {
-      max-width: 560px;
+      width: min(58%, 650px);
+      max-width: 650px;
       min-width: 0;
     }
 
     .final-cta h2 {
-      max-width: 560px;
+      max-width: 640px;
 
       margin: 0;
 
       color: #fff;
 
       font-family: "Aubrey", serif;
-      font-size: clamp(42px, 3vw, 52px);
+      font-size: clamp(45px, 3.15vw, 55px);
       font-weight: 400;
       line-height: 0.98;
     }
@@ -809,17 +807,18 @@
     }
 
     .final-cta-actions {
+      width: 210px;
+
+      margin-top: 24px;
+
       display: flex;
       flex-direction: column;
       align-items: stretch;
-
-      gap: 12px;
-
-      width: 190px;
-      flex: 0 0 auto;
+      gap: 10px;
     }
 
     .cta-button {
+      width: 100%;
       min-height: 50px;
       padding: 0 20px;
 
@@ -851,6 +850,7 @@
     }
 
     .cta-link {
+      width: 100%;
       min-height: 46px;
       padding: 0 18px;
 
@@ -894,10 +894,10 @@
       position: absolute;
       z-index: 1;
 
-      left: 2%;
-      bottom: -10px;
+      left: 2.5%;
+      bottom: -8px;
 
-      width: min(38vw, 500px);
+      width: min(40vw, 540px);
       height: auto;
 
       opacity: 0.30;
@@ -1086,18 +1086,19 @@
 
       .final-cta-inner {
         width: 86%;
-        padding-left: 38%;
-        grid-template-columns: minmax(0, 1fr) 180px;
-        gap: 28px;
+      }
+
+      .final-cta-copy {
+        width: min(60%, 610px);
       }
 
       .final-cta-actions {
-        width: 180px;
+        width: 205px;
       }
 
       .cta-dogs {
         left: 1%;
-        width: min(36vw, 420px);
+        width: min(38vw, 450px);
         opacity: 0.27;
       }
 
@@ -1194,17 +1195,20 @@
 
       .final-cta-inner {
         width: 76%;
-
-        grid-template-columns: 1fr;
-
-        gap: 24px;
+        min-height: 0;
 
         padding: 48px 0 190px;
+
+        display: block;
+      }
+
+      .final-cta-copy {
+        width: 100%;
+        max-width: 620px;
       }
 
       .final-cta-actions {
         width: min(100%, 260px);
-        align-items: stretch;
       }
 
       .cta-dogs {
@@ -1418,6 +1422,7 @@
       }
 
       .final-cta-copy {
+        width: 100%;
         max-width: 340px;
       }
 
@@ -1990,25 +1995,24 @@
             we’ll arrange a visit and take it from there.
           </p>
 
-        </div>
+          <div class="final-cta-actions">
 
+            <a
+              href="waitlist.html"
+              class="cta-button"
+            >
+              Join the Waitlist&nbsp; →
+            </a>
 
-        <div class="final-cta-actions">
+            <a
+              href="daycare.html"
+              class="cta-link"
+            >
+              See daycare details
+              <span aria-hidden="true">→</span>
+            </a>
 
-          <a
-            href="waitlist.html"
-            class="cta-button"
-          >
-            Join the Waitlist&nbsp; →
-          </a>
-
-          <a
-            href="daycare.html"
-            class="cta-link"
-          >
-            See daycare details
-            <span aria-hidden="true">→</span>
-          </a>
+          </div>
 
         </div>
 
