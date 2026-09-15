@@ -677,17 +677,24 @@
       color: #fff;
     }
 
+    .page-cta-art {
+      min-width: 0;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      align-self: stretch;
+    }
+
     .page-cta-dogs {
-      position: absolute;
-      z-index: 1;
-
-      right: -22px;
-      bottom: -24px;
-
-      width: 330px;
+      width: 100%;
+      max-width: 500px;
       height: auto;
 
-      opacity: 0.24;
+      margin: 0 -18px -10px 0;
+
+      opacity: 0.27;
       filter: brightness(0) invert(1);
 
       pointer-events: none;
@@ -701,18 +708,21 @@
       width: min(88%, var(--page));
 
       margin: 0 auto;
-      padding: 42px 0;
+      padding: 44px 0 0;
 
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns:
+        minmax(0, 0.95fr)
+        minmax(360px, 1.05fr);
 
-      gap: 45px;
+      gap: 44px;
 
       align-items: center;
     }
 
     .page-cta-copy {
-      max-width: 630px;
+      max-width: 560px;
+      padding-bottom: 44px;
     }
 
     .page-cta h2 {
@@ -735,6 +745,10 @@
 
       font-size: 16px;
       line-height: 1.63;
+    }
+
+    .page-cta-actions {
+      margin-top: 22px;
     }
 
     .page-cta-button {
@@ -765,6 +779,33 @@
     .page-cta-button:focus-visible {
       background: #fff;
       transform: translateY(-1px);
+    }
+
+
+    @media (min-width: 1280px) {
+
+      .page-cta-inner {
+        width: min(90%, 1280px);
+
+        grid-template-columns:
+          minmax(0, 0.88fr)
+          minmax(470px, 1.12fr);
+
+        gap: 58px;
+      }
+
+      .page-cta-copy {
+        max-width: 575px;
+      }
+
+      .page-cta-dogs {
+        max-width: 610px;
+
+        margin-right: -28px;
+
+        opacity: 0.29;
+      }
+
     }
 
 
@@ -1021,13 +1062,31 @@
       /* CTA */
 
       .page-cta-inner {
-        width: 78%;
+        width: 82%;
 
         grid-template-columns: 1fr;
 
         gap: 22px;
 
-        padding: 42px 0 48px;
+        padding: 42px 0 0;
+      }
+
+      .page-cta-copy {
+        max-width: 620px;
+        padding-bottom: 0;
+      }
+
+      .page-cta-art {
+        justify-content: center;
+      }
+
+      .page-cta-dogs {
+        width: min(82vw, 520px);
+        max-width: none;
+
+        margin: 0 auto -8px;
+
+        opacity: 0.24;
       }
 
       .page-cta-button {
@@ -1213,26 +1272,30 @@
       /* CTA */
 
       .page-cta-dogs {
-        right: -52px;
-        bottom: -16px;
+        width: 116%;
+        max-width: 430px;
 
-        width: 235px;
+        margin: 0 -8% -6px;
 
-        opacity: 0.20;
+        opacity: 0.22;
       }
 
       .page-cta-inner {
         width: 89%;
 
-        padding: 42px 0 48px;
+        padding: 42px 0 0;
 
-        gap: 22px;
+        gap: 24px;
 
         text-align: center;
       }
 
       .page-cta-copy {
+        max-width: 360px;
+
         margin: 0 auto;
+
+        padding-bottom: 0;
       }
 
       .page-cta h2 {
@@ -1730,13 +1793,6 @@
 
     <section class="page-cta">
 
-      <img
-        src="assets/dog1.png"
-        alt=""
-        class="page-cta-dogs"
-        aria-hidden="true"
-      >
-
       <div class="page-cta-inner">
 
 
@@ -1751,15 +1807,26 @@
             and what a typical day at the Farmhouse looks like.
           </p>
 
+          <div class="page-cta-actions">
+            <a
+              href="daycare.html"
+              class="page-cta-button"
+            >
+              See daycare details&nbsp; →
+            </a>
+          </div>
+
         </div>
 
 
-        <a
-          href="daycare.html"
-          class="page-cta-button"
-        >
-          See daycare details&nbsp; →
-        </a>
+        <div class="page-cta-art">
+          <img
+            src="assets/dog1.png"
+            alt=""
+            class="page-cta-dogs"
+            aria-hidden="true"
+          >
+        </div>
 
 
       </div>
