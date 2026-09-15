@@ -762,21 +762,21 @@
       z-index: 3;
 
       width: min(84%, 1120px);
-      min-height: 275px;
+      min-height: 285px;
 
       margin: 0 auto;
-      padding: 52px 0;
+      padding: 52px 0 52px 31%;
 
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
 
       align-items: center;
 
-      gap: 64px;
+      gap: 48px;
     }
 
     .final-cta-copy {
-      max-width: 680px;
+      max-width: 620px;
     }
 
     .final-cta h2 {
@@ -872,45 +872,25 @@
 
 
     /* =========================================================
-       GRASS
+       CTA DOG ART
     ========================================================= */
 
-    .cta-grass {
+    .cta-dogs {
       position: absolute;
       z-index: 1;
 
-      bottom: -20px;
+      left: -18px;
+      bottom: -8px;
 
-      width: 420px;
-      height: 330px;
+      width: min(41vw, 560px);
+      height: auto;
 
-      background: rgba(255, 255, 255, 0.20);
+      opacity: 0.28;
 
-      -webkit-mask:
-        url("assets/grass.png")
-        center bottom / contain
-        no-repeat;
-
-      mask:
-        url("assets/grass.png")
-        center bottom / contain
-        no-repeat;
+      filter: brightness(0) invert(1);
 
       pointer-events: none;
-    }
-
-    .cta-grass-left {
-      left: -55px;
-
-      transform: scaleX(-1);
-    }
-
-    .cta-grass-right {
-      right: -55px;
-    }
-
-    .cta-grass-mobile {
-      display: none;
+      user-select: none;
     }
 
 
@@ -1091,12 +1071,14 @@
 
       .final-cta-inner {
         width: 86%;
-        gap: 42px;
+        padding-left: 28%;
+        gap: 38px;
       }
 
-      .cta-grass {
-        width: 350px;
-        height: 290px;
+      .cta-dogs {
+        left: -24px;
+        width: min(39vw, 455px);
+        opacity: 0.25;
       }
 
       .footer-main {
@@ -1197,16 +1179,22 @@
 
         gap: 24px;
 
-        padding: 48px 0 68px;
+        padding: 48px 0 185px;
       }
 
       .final-cta-actions {
         justify-content: flex-start;
       }
 
-      .cta-grass {
-        width: 300px;
-        height: 250px;
+      .cta-dogs {
+        left: 50%;
+        bottom: -12px;
+
+        width: min(78vw, 520px);
+
+        transform: translateX(-50%);
+
+        opacity: 0.24;
       }
 
       .footer-main {
@@ -1403,7 +1391,7 @@
         padding:
           46px
           0
-          145px;
+          185px;
 
         display: block;
       }
@@ -1451,39 +1439,17 @@
       }
 
 
-      /* MOBILE GRASS */
+      /* MOBILE DOG ART */
 
-      .cta-grass {
-        display: none;
-      }
-
-      .cta-grass-mobile {
-        position: absolute;
-        z-index: 1;
-
-        display: block;
-
+      .cta-dogs {
         left: 50%;
-        bottom: -25px;
+        bottom: -4px;
 
-        width: 108%;
-        height: 178px;
+        width: 118%;
 
         transform: translateX(-50%);
 
-        background: rgba(255, 255, 255, 0.20);
-
-        -webkit-mask:
-          url("assets/grass.png")
-          center bottom / contain
-          no-repeat;
-
-        mask:
-          url("assets/grass.png")
-          center bottom / contain
-          no-repeat;
-
-        pointer-events: none;
+        opacity: 0.24;
       }
 
 
@@ -1816,12 +1782,10 @@
         <div class="regulars-story">
 
           <p>
-            <p>
-  Some arrive ready to wrestle. Others head straight for the yard, a favourite toy,
-  or the nap spot they claimed weeks ago. We get to know those routines, and over
-  time the Farmhouse becomes a place they know, trust, and are genuinely happy to
-  come back to.
-</p>
+            Some arrive ready to wrestle. Others head straight for the yard, a favourite toy,
+            or the nap spot they claimed weeks ago. We get to know those routines, and over
+            time the Farmhouse becomes a place they know, trust, and are genuinely happy to
+            come back to.
           </p>
 
           <div class="regulars-link">
@@ -1984,20 +1948,12 @@
 
     <section class="final-cta">
 
-      <div
-        class="cta-grass cta-grass-left"
+      <img
+        src="assets/dog3.png"
+        alt=""
+        class="cta-dogs"
         aria-hidden="true"
-      ></div>
-
-      <div
-        class="cta-grass cta-grass-right"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="cta-grass-mobile"
-        aria-hidden="true"
-      ></div>
+      >
 
 
       <div class="final-cta-inner">
