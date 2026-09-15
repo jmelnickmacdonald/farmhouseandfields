@@ -597,22 +597,39 @@
     ========================================================= */
 
     .faq-contact {
+      position: relative;
+      overflow: hidden;
+
       padding: 42px 0 44px;
 
       background: var(--river);
       color: #fff;
     }
 
-    .faq-contact-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .faq-contact::after {
+      content: "";
+      position: absolute;
+      right: 6%;
+      bottom: -30px;
 
-      gap: 36px;
+      width: 360px;
+      height: 230px;
+
+      background: url("assets/dog2.png") right bottom / contain no-repeat;
+      opacity: 0.24;
+
+      pointer-events: none;
+    }
+
+    .faq-contact-inner {
+      position: relative;
+      z-index: 1;
+
+      display: block;
     }
 
     .faq-contact-copy {
-      max-width: 720px;
+      max-width: 700px;
     }
 
     .faq-contact h2 {
@@ -637,6 +654,7 @@
 
     .contact-link {
       min-height: 47px;
+      margin-top: 20px;
       padding: 0 22px;
 
       display: inline-flex;
@@ -850,11 +868,11 @@
         max-width: none;
       }
 
-      .faq-contact-inner {
-        align-items: flex-start;
-        flex-direction: column;
-
-        gap: 22px;
+      .faq-contact::after {
+        right: -18px;
+        width: 300px;
+        height: 205px;
+        opacity: 0.19;
       }
 
     }
@@ -938,12 +956,26 @@
         padding: 39px 0 42px;
       }
 
+      .faq-contact::after {
+        right: -70px;
+        bottom: -18px;
+
+        width: 245px;
+        height: 170px;
+
+        opacity: 0.14;
+      }
+
       .faq-contact h2 {
         font-size: 34px;
       }
 
+      .faq-contact-copy {
+        max-width: 82%;
+      }
+
       .contact-link {
-        width: 100%;
+        width: auto;
       }
 
       .site-footer {
@@ -1300,7 +1332,7 @@
       class="empty-state"
       id="emptyState"
     >
-      We couldn’t find that one. Try another word, or send Melissa a message.
+      We couldn’t find that one. Try another word, or send us a message.
     </div>
 
 
@@ -1315,17 +1347,17 @@
           </h2>
 
           <p>
-            Send Melissa a message and ask.
+            Send us a message and ask.
           </p>
 
-        </div>
+          <a
+            href="mailto:farmhousefieldsdaycare@gmail.com"
+            class="contact-link"
+          >
+            Contact us →
+          </a>
 
-        <a
-          href="mailto:farmhousefieldsdaycare@gmail.com"
-          class="contact-link"
-        >
-          Send an email →
-        </a>
+        </div>
 
       </div>
 
