@@ -902,7 +902,58 @@
         transition: none !important;
       }
     }
-  </style>
+  
+    /* FINAL SHARED FOOTER */
+    .footer-main {
+      display: grid !important;
+      grid-template-columns: 1.65fr 0.85fr !important;
+      gap: 76px !important;
+      align-items: start !important;
+    }
+
+    .footer-brand {
+      justify-self: end !important;
+      text-align: right !important;
+    }
+
+    .footer-brand-logo {
+      width: 300px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+    }
+
+    .footer-tagline {
+      margin: 13px 0 0 !important;
+      color: var(--body) !important;
+      font-family: "DM Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 1.45 !important;
+    }
+
+    @media (max-width: 830px) {
+      .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .footer-brand {
+        order: -1;
+        justify-self: start !important;
+        text-align: left !important;
+      }
+      .footer-brand-logo {
+        width: 250px !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .footer-brand-logo { width: 235px !important; }
+      .footer-tagline { font-size: 14px !important; }
+    }
+
+</style>
 </head>
 
 <body>
@@ -926,7 +977,6 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="the-farmhouse.html" class="nav-link">The Farmhouse</a>
         <a href="daycare.html" class="nav-link">Daycare</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="faqs.html" class="nav-link">FAQs</a>
       </nav>
 
@@ -969,7 +1019,6 @@
         <a href="index.html">Home</a>
         <a href="the-farmhouse.html">The Farmhouse</a>
         <a href="daycare.html">Daycare</a>
-        <a href="gallery.html">Gallery</a>
         <a href="faqs.html">FAQs</a>
         <a href="current-clients.html" class="mobile-client">Current Clients</a>
         <a href="waitlist.html" class="mobile-waitlist">Join the Waitlist</a>
@@ -1525,96 +1574,40 @@
 
 
   <footer class="site-footer">
-
-    <div class="container">
-
-      <div class="footer-main">
-
-        <div class="footer-brand">
-
-          <p class="footer-brand-name">
-            Farmhouse &amp; Fields
-          </p>
-
-          <p class="footer-brand-type">
-            Dog Daycare
-          </p>
-
-          <p class="footer-tagline">
-            A good day to be a dog.
-          </p>
-
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-details">
+        <div>
+          <span class="footer-detail-label">Find us</span>
+          <div class="footer-detail-value">571 Woodside Rd.<br>Canning, Nova Scotia</div>
         </div>
-
-
-        <div class="footer-details">
-
-          <div>
-            <span class="footer-detail-label">Find us</span>
-            <div class="footer-detail-value">
-              571 Woodside Rd.<br>
-              Canning, Nova Scotia
-            </div>
-          </div>
-
-          <div>
-            <span class="footer-detail-label">Call</span>
-            <div class="footer-detail-value">
-              <a href="tel:+19028241979">
-                (902) 824-1979
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <span class="footer-detail-label">Keep in touch</span>
-
-            <div class="footer-links">
-              <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
-
-              <a
-                href="https://www.facebook.com/profile.php?id=61568074120165"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-
-              <a
-                href="https://www.instagram.com/farmhousefieldsdogdaycare/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-
-              <a href="current-clients.html">
-                Current Clients
-              </a>
-            </div>
-          </div>
-
+        <div>
+          <span class="footer-detail-label">Call</span>
+          <div class="footer-detail-value"><a href="tel:+19028241979">(902) 824-1979</a></div>
         </div>
-
+        <div>
+          <span class="footer-detail-label">Keep in touch</span>
+          <div class="footer-links">
+            <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
+            <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="current-clients.html">Current Clients</a>
+          </div>
+        </div>
       </div>
 
-
-      <div class="footer-bottom">
-
-        <span>
-          © <span id="currentYear"></span>
-          Farmhouse &amp; Fields Dog Daycare
-        </span>
-
-        <span class="footer-bottom-location">
-          Canning, Nova Scotia
-        </span>
-
+      <div class="footer-brand">
+        <img src="assets/fandf2.png" alt="Farmhouse & Fields Dog Daycare" class="footer-brand-logo">
+        <p class="footer-tagline">A good day to be a dog.</p>
       </div>
-
     </div>
 
-  </footer>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Farmhouse &amp; Fields Dog Daycare</span>
+      <span class="footer-bottom-location">Canning, Nova Scotia</span>
+    </div>
+  </div>
+</footer>
 
 
   <script>
