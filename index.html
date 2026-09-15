@@ -1888,6 +1888,13 @@
       }
     }
 
+  
+    /* =========================================================
+       HOMEPAGE NOTICE
+    ========================================================= */
+    .site-notice{padding:11px 4%;color:#fff;text-align:center;font-size:14px;font-weight:700;line-height:1.45}.site-notice.notice-wine{background:var(--wine)}.site-notice.notice-river{background:var(--river)}.site-notice[hidden]{display:none!important}
+    @media(max-width:760px){.site-notice{padding:10px 6%;font-size:12px}}
+
   </style>
 </head>
 
@@ -2029,6 +2036,10 @@
     </div>
 
   </header>
+
+  <div class="site-notice notice-wine" data-site-if="notice.enabled" data-site-tone="notice.tone" hidden>
+    <span data-site-text="notice.text">Important update</span>
+  </div>
 
 
   <main>
@@ -2247,6 +2258,7 @@
 
         <a
           href="https://www.facebook.com/profile.php?id=61568074120165"
+          data-site-href="contact.facebook"
           class="text-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -2317,18 +2329,18 @@
       <div class="footer-details">
         <div>
           <span class="footer-detail-label">Find us</span>
-          <div class="footer-detail-value">571 Woodside Rd.<br>Canning, Nova Scotia</div>
+          <div class="footer-detail-value"><span data-site-text="contact.address1">571 Woodside Rd.</span><br><span data-site-text="contact.address2">Canning, Nova Scotia</span></div>
         </div>
         <div>
           <span class="footer-detail-label">Call</span>
-          <div class="footer-detail-value"><a href="tel:+19028241979">(902) 824-1979</a></div>
+          <div class="footer-detail-value"><a href="tel:+19028241979" data-site-href="contact.phoneHref"><span data-site-text="contact.phoneDisplay">(902) 824-1979</span></a></div>
         </div>
         <div>
           <span class="footer-detail-label">Keep in touch</span>
           <div class="footer-links">
-            <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
-            <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="mailto:farmhousefieldsdaycare@gmail.com" data-site-href="contact.email" data-site-href-prefix="mailto:">Email</a>
+            <a href="https://www.facebook.com/profile.php?id=61568074120165" data-site-href="contact.facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" data-site-href="contact.instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.timetopet.com/portal" target="_blank" rel="noopener noreferrer">Current Clients</a>
           </div>
         </div>

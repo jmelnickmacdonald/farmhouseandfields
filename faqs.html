@@ -1244,6 +1244,111 @@
       }
     }
 
+  
+
+    /* =========================================================
+       FAQ CONTACT ART — MATCH FARMHOUSE CTA
+    ========================================================= */
+    .faq-contact::after {
+      content: none !important;
+    }
+
+    .faq-contact-inner {
+      width: min(88%, var(--page)) !important;
+      margin: 0 auto !important;
+      padding: 42px 0 0 !important;
+
+      display: grid !important;
+      grid-template-columns: minmax(0, .95fr) minmax(360px, 1.05fr) !important;
+      gap: 44px !important;
+      align-items: center !important;
+    }
+
+    .faq-contact-copy {
+      max-width: 620px !important;
+      padding-bottom: 42px !important;
+    }
+
+    .faq-contact-art {
+      min-width: 0;
+      align-self: stretch;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .faq-contact-dogs {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+
+      margin: 0 -18px 22px 0;
+
+      opacity: .27;
+      filter: brightness(0) invert(1);
+
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @media (min-width: 1280px) {
+      .faq-contact-inner {
+        width: min(90%, 1280px) !important;
+        grid-template-columns: minmax(0, .88fr) minmax(470px, 1.12fr) !important;
+        gap: 58px !important;
+      }
+
+      .faq-contact-dogs {
+        max-width: 590px;
+        margin-right: -28px;
+        margin-bottom: 24px;
+        opacity: .29;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .faq-contact-inner {
+        width: min(88%, var(--page)) !important;
+        padding: 34px 0 14px !important;
+
+        grid-template-columns: 1fr !important;
+        gap: 4px !important;
+      }
+
+      .faq-contact-copy {
+        max-width: none !important;
+        padding-bottom: 8px !important;
+        text-align: center !important;
+      }
+
+      .faq-contact-copy p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .faq-contact-art {
+        justify-content: center !important;
+      }
+
+      .faq-contact-dogs {
+        width: 112% !important;
+        max-width: 470px !important;
+
+        margin: -2px -6% 12px !important;
+
+        opacity: .24 !important;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .faq-contact-dogs {
+        width: 118% !important;
+        margin-left: -9% !important;
+        margin-right: -9% !important;
+      }
+    }
+
   </style>
 </head>
 
@@ -1480,11 +1585,21 @@
 
           <a
             href="mailto:farmhousefieldsdaycare@gmail.com"
+            data-site-href="contact.email"
+            data-site-href-prefix="mailto:"
             class="contact-link"
           >
             Contact us →
           </a>
 
+        </div>
+
+        <div class="faq-contact-art" aria-hidden="true">
+          <img
+            src="assets/dog2.png"
+            alt=""
+            class="faq-contact-dogs"
+          >
         </div>
 
       </div>
@@ -1500,18 +1615,18 @@
       <div class="footer-details">
         <div>
           <span class="footer-detail-label">Find us</span>
-          <div class="footer-detail-value">571 Woodside Rd.<br>Canning, Nova Scotia</div>
+          <div class="footer-detail-value"><span data-site-text="contact.address1">571 Woodside Rd.</span><br><span data-site-text="contact.address2">Canning, Nova Scotia</span></div>
         </div>
         <div>
           <span class="footer-detail-label">Call</span>
-          <div class="footer-detail-value"><a href="tel:+19028241979">(902) 824-1979</a></div>
+          <div class="footer-detail-value"><a href="tel:+19028241979" data-site-href="contact.phoneHref"><span data-site-text="contact.phoneDisplay">(902) 824-1979</span></a></div>
         </div>
         <div>
           <span class="footer-detail-label">Keep in touch</span>
           <div class="footer-links">
-            <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
-            <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="mailto:farmhousefieldsdaycare@gmail.com" data-site-href="contact.email" data-site-href-prefix="mailto:">Email</a>
+            <a href="https://www.facebook.com/profile.php?id=61568074120165" data-site-href="contact.facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" data-site-href="contact.instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.timetopet.com/portal" target="_blank" rel="noopener noreferrer">Current Clients</a>
           </div>
         </div>

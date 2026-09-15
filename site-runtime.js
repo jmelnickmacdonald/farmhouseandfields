@@ -30,6 +30,21 @@
     element.hidden = !String(value || "").trim();
   });
 
+
+  document.querySelectorAll("[data-site-href]").forEach(function (element) {
+    const value = valueAt(element.dataset.siteHref);
+    if (value !== undefined && value !== null && String(value).trim()) {
+      const prefix = element.dataset.siteHrefPrefix || "";
+      element.href = prefix + String(value).trim();
+    }
+  });
+
+  document.querySelectorAll("[data-site-tone]").forEach(function (element) {
+    const value = String(valueAt(element.dataset.siteTone) || "wine").toLowerCase();
+    element.classList.remove("notice-wine", "notice-river");
+    element.classList.add(value === "river" ? "notice-river" : "notice-wine");
+  });
+
   document.querySelectorAll("[data-site-list]").forEach(function (container) {
     const list = valueAt(container.dataset.siteList);
     if (!Array.isArray(list)) return;

@@ -31,5 +31,19 @@ window.FARMHOUSE_SITE_CONTENT = {
     "caption1": "Zoomy mode activated first thing this morning!",
     "photo2": "assets/2.jpg",
     "caption2": "Full house this morning! Everybody found their spot, their buddy, or something to get into."
+  },
+  "notice": {
+    "enabled": false,
+    "text": "",
+    "tone": "wine"
+  },
+  "contact": {
+    "address1": "571 Woodside Rd.",
+    "address2": "Canning, Nova Scotia",
+    "phoneDisplay": "(902) 824-1979",
+    "phoneHref": "tel:+19028241979",
+    "email": "farmhousefieldsdaycare@gmail.com",
+    "facebook": "https://www.facebook.com/profile.php?id=61568074120165",
+    "instagram": "https://www.instagram.com/farmhousefieldsdogdaycare/"
   }
 };
