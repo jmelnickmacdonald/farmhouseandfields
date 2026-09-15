@@ -1165,7 +1165,99 @@
         transition: none !important;
       }
     }
-  </style>
+  
+    /* FINAL SHARED FOOTER */
+    .footer-main {
+      display: grid !important;
+      grid-template-columns: 1.65fr 0.85fr !important;
+      gap: 76px !important;
+      align-items: start !important;
+    }
+
+    .footer-brand {
+      justify-self: end !important;
+      text-align: right !important;
+    }
+
+    .footer-brand-logo {
+      width: 300px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+    }
+
+    .footer-tagline {
+      margin: 13px 0 0 !important;
+      color: var(--body) !important;
+      font-family: "DM Sans", sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 400 !important;
+      line-height: 1.45 !important;
+    }
+
+    @media (max-width: 830px) {
+      .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .footer-brand {
+        order: -1;
+        justify-self: start !important;
+        text-align: left !important;
+      }
+      .footer-brand-logo {
+        width: 250px !important;
+        margin-left: 0 !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .footer-brand-logo { width: 235px !important; }
+      .footer-tagline { font-size: 14px !important; }
+    }
+
+
+    /* FINAL FAQ BRIDGE */
+    .faq-bridge { padding: 42px 0 0 !important; }
+    .faq-bridge-inner {
+      grid-template-columns: minmax(0, 1fr) minmax(290px, 0.55fr) !important;
+      gap: 36px !important;
+      align-items: end !important;
+    }
+    .faq-bridge-copy { padding-bottom: 44px; }
+    .faq-bridge-link {
+      margin-top: 20px;
+      width: fit-content;
+    }
+    .faq-bridge-art {
+      align-self: stretch;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+    .faq-bridge-dogs {
+      position: static !important;
+      width: 100% !important;
+      max-width: 430px !important;
+      height: auto !important;
+      margin: 0 -28px -8px 0 !important;
+      opacity: 0.27 !important;
+      filter: brightness(0) invert(1);
+    }
+    @media (max-width: 830px) {
+      .faq-bridge-inner { grid-template-columns: 1fr !important; gap: 8px !important; }
+      .faq-bridge-copy { padding-bottom: 0; }
+      .faq-bridge-art { justify-content: center; }
+      .faq-bridge-dogs { width: min(88vw, 430px) !important; margin: 0 auto -8px !important; }
+    }
+    @media (max-width: 620px) {
+      .faq-bridge { padding-top: 40px !important; }
+      .faq-bridge-link { width: 100%; }
+      .faq-bridge-dogs { width: 112% !important; margin: 0 -6% -8px !important; opacity: 0.23 !important; }
+    }
+
+</style>
 </head>
 
 <body>
@@ -1181,12 +1273,11 @@
       <a href="index.html" class="nav-link">Home</a>
       <a href="the-farmhouse.html" class="nav-link">The Farmhouse</a>
       <a href="daycare.html" class="nav-link active" aria-current="page">Daycare</a>
-      <a href="gallery.html" class="nav-link">Gallery</a>
       <a href="faqs.html" class="nav-link">FAQs</a>
     </nav>
 
     <div class="nav-actions">
-      <a href="current-clients.html" class="client-link">Current Clients</a>
+      <a class="client-link" href="https://www.timetopet.com/portal" target="_blank" rel="noopener noreferrer">Current Clients</a>
       <a href="waitlist.html" class="waitlist-button">Join the Waitlist</a>
     </div>
 
@@ -1208,9 +1299,8 @@
       <a href="index.html">Home</a>
       <a href="the-farmhouse.html">The Farmhouse</a>
       <a href="daycare.html">Daycare</a>
-      <a href="gallery.html">Gallery</a>
       <a href="faqs.html">FAQs</a>
-      <a href="current-clients.html" class="mobile-client">Current Clients</a>
+      <a class="mobile-client" href="https://www.timetopet.com/portal" target="_blank" rel="noopener noreferrer">Current Clients</a>
       <a href="waitlist.html" class="mobile-waitlist">Join the Waitlist</a>
     </nav>
   </div>
@@ -1336,27 +1426,24 @@
       <div class="basics-editorial">
 
         <div class="hours-copy">
-          <p>
-            <strong>Full days:</strong> drop-off is between 7:30 and 9:00 a.m.,
-            with pick-up between 4:00 and 5:00 p.m.
+          <p data-site-text="daycare.fullDayHours">
+            Full days: drop-off is between 7:30 and 9:00 a.m., with pick-up between 4:00 and 5:00 p.m.
           </p>
 
-          <p>
-            Morning half-days use the regular morning drop-off and finish
-            between 12:00 and 1:00. Afternoon half-days start between
-            12:00 and 1:00 and finish with the regular 4:00 to 5:00 pick-up.
+          <p data-site-text="daycare.halfDayHours">
+            Morning half-days use the regular morning drop-off and finish between 12:00 and 1:00. Afternoon half-days start between 12:00 and 1:00 and finish with the regular 4:00 to 5:00 pick-up.
           </p>
         </div>
 
         <div class="rates-copy">
           <p class="rate-lead">
-            <span>$27</span>
+            <span>$<span data-site-text="daycare.rates.fullDay">27</span></span>
             per full day + tax
           </p>
 
           <p>
-            For regular weekly attendance, the daily rate is $25 for
-            3 days, $24 for 4 days, and $23 for 5 days.
+            For regular weekly attendance, the daily rate is $<span data-site-text="daycare.rates.threeDay">25</span> for
+            3 days, $<span data-site-text="daycare.rates.fourDay">24</span> for 4 days, and $<span data-site-text="daycare.rates.fiveDay">23</span> for 5 days.
           </p>
 
           <p>
@@ -1386,21 +1473,11 @@
           A typical day at the Farmhouse.
         </h2>
 
-        <p>
-          Mornings are mostly about getting everyone settled in and giving
-          the dogs lots of time to play, move around, and burn off some energy.
-        </p>
-
-        <p>
-          Around midday, dogs who bring lunch are fed separately. Morning
-          half-day dogs head home, afternoon dogs arrive, and things usually
-          get a little quieter for a while.
-        </p>
-
-        <p>
-          Then it is back outside or into another round of play before
-          everyone starts heading home for the day.
-        </p>
+        <div data-site-list="daycare.typicalDay" data-site-list-tag="p">
+          <p>Mornings are mostly about getting everyone settled in and giving the dogs lots of time to play, move around, and burn off some energy.</p>
+          <p>Around midday, dogs who bring lunch are fed separately. Morning half-day dogs head home, afternoon dogs arrive, and things usually get a little quieter for a while.</p>
+          <p>Then it is back outside or into another round of play before everyone starts heading home for the day.</p>
+        </div>
       </div>
 
     </div>
@@ -1416,26 +1493,11 @@
       </div>
 
       <div class="start-copy">
-        <p>
-          Because the daycare group stays small, there are only so many
-          spaces at a time. Spots do open up as schedules change and dogs
-          move on, so it is always worth getting in touch.
-        </p>
-
-        <p>
-          Start by telling us a little about your dog. If it sounds like
-          they could be a good fit for the group, we’ll arrange a visit
-          outside regular daycare hours so you can see the Farmhouse
-          without the daycare dogs here.
-        </p>
-
-        <p>
-          If there is not a space right away, we can keep your dog on the
-          waitlist and reach out when an opening looks like it might suit
-          them. When the timing is right, we’ll send you a Time To Pet
-          invitation and sort out a first day. Some dogs start with a half
-          day. We’ll go with what makes sense for yours.
-        </p>
+        <div data-site-list="daycare.gettingStarted" data-site-list-tag="p">
+          <p>Because the daycare group stays small, spaces are limited. Spots do open up as schedules change and dogs move on, so it is always worth getting in touch.</p>
+          <p>Start by telling us a little about your dog. If it sounds like they could be a good fit for the group, we’ll arrange a visit outside regular daycare hours so you can see the Farmhouse without the daycare dogs here.</p>
+          <p>If there is not a space right away, we can keep your dog on the Waitlist and reach out when an opening looks like it might suit them. When the timing is right, we’ll send you a Time To Pet invitation and sort out a first day. Some dogs start with a half day. We’ll go with what makes sense for yours.</p>
+        </div>
 
         <a href="waitlist.html" class="start-button">
           Join the Waitlist →
@@ -1446,29 +1508,19 @@
   </section>
 
   <section class="faq-bridge" id="good-to-know">
-
-    <img
-      src="assets/dog2.png"
-      alt=""
-      class="faq-bridge-dogs"
-      aria-hidden="true"
-    >
-
     <div class="page-inner faq-bridge-inner">
-
-      <div>
+      <div class="faq-bridge-copy">
         <h2 class="section-title">Questions about the details?</h2>
-
         <p>
           Vaccinations, intact dogs, meals, payment, pick-up arrangements,
           and the Client Agreement are all covered in the FAQs.
         </p>
+        <a href="faqs.html" class="faq-bridge-link">Browse the FAQs →</a>
       </div>
 
-      <a href="faqs.html" class="faq-bridge-link">
-        Browse the FAQs →
-      </a>
-
+      <div class="faq-bridge-art" aria-hidden="true">
+        <img src="assets/dog2.png" alt="" class="faq-bridge-dogs">
+      </div>
     </div>
   </section>
 
@@ -1476,63 +1528,43 @@
 
 <footer class="site-footer">
   <div class="container">
-
     <div class="footer-main">
-
-<div class="footer-details">
-
+      <div class="footer-details">
         <div>
           <span class="footer-detail-label">Find us</span>
-          <div class="footer-detail-value">
-            571 Woodside Rd.<br>
-            Canning, Nova Scotia
-          </div>
+          <div class="footer-detail-value">571 Woodside Rd.<br>Canning, Nova Scotia</div>
         </div>
-
         <div>
           <span class="footer-detail-label">Call</span>
-          <div class="footer-detail-value">
-            <a href="tel:+19028241979">(902) 824-1979</a>
-          </div>
+          <div class="footer-detail-value"><a href="tel:+19028241979">(902) 824-1979</a></div>
         </div>
-
         <div>
           <span class="footer-detail-label">Keep in touch</span>
           <div class="footer-links">
             <a href="mailto:farmhousefieldsdaycare@gmail.com">Email</a>
             <a href="https://www.facebook.com/profile.php?id=61568074120165" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a href="https://www.instagram.com/farmhousefieldsdogdaycare/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="current-clients.html">Current Clients</a>
+            <a href="https://www.timetopet.com/portal" target="_blank" rel="noopener noreferrer">Current Clients</a>
           </div>
         </div>
-
-<div class="footer-brand">
-        <img
-          src="assets/fandf2.png"
-          alt="Farmhouse & Fields Dog Daycare"
-          class="footer-brand-logo"
-        >
-        <p class="footer-tagline">A good day to be a dog.</p>
       </div>
 
-    </div>
+      <div class="footer-brand">
+        <img src="assets/fandf2.png" alt="Farmhouse & Fields Dog Daycare" class="footer-brand-logo">
+        <p class="footer-tagline">A good day to be a dog.</p>
+      </div>
     </div>
 
     <div class="footer-bottom">
-      <span>
-        © <span id="currentYear"></span>
-        Farmhouse &amp; Fields Dog Daycare
-      </span>
-
-      <span class="footer-bottom-location">
-        Canning, Nova Scotia
-      </span>
+      <span>© <span id="currentYear"></span> Farmhouse &amp; Fields Dog Daycare</span>
+      <span class="footer-bottom-location">Canning, Nova Scotia</span>
     </div>
-
   </div>
 </footer>
 
-<script src="faq-data.js"></script>
+  <script src="site-content.js"></script>
+  <script src="faq-data.js"></script>
+  <script src="site-runtime.js"></script>
 
 <script>
   const menuToggle = document.getElementById("menuToggle");
