@@ -1273,6 +1273,144 @@
       }
     }
 
+  
+
+    /* =========================================================
+       MOBILE FOOTER — FINAL POLISH
+    ========================================================= */
+    @media (max-width: 830px) {
+      .site-footer {
+        padding: 34px 0 22px !important;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 26px !important;
+      }
+
+      .footer-brand {
+        order: -1 !important;
+        width: 100% !important;
+        justify-self: center !important;
+        text-align: center !important;
+      }
+
+      .footer-brand-logo {
+        width: 250px !important;
+        max-width: 78vw !important;
+        margin: 0 auto !important;
+      }
+
+      .footer-tagline {
+        margin: 10px 0 0 !important;
+        text-align: center !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+      }
+
+      .footer-details {
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 0 auto !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px 24px !important;
+      }
+
+      .footer-details > div:last-child {
+        grid-column: 1 / -1 !important;
+        text-align: center !important;
+      }
+
+      .footer-details > div:last-child .footer-links {
+        justify-content: center !important;
+      }
+
+      .footer-bottom {
+        margin-top: 24px !important;
+        padding-top: 15px !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        align-items: center !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .footer-brand-logo {
+        width: 235px !important;
+      }
+
+      .footer-details {
+        gap: 18px 14px !important;
+      }
+
+      .footer-detail-value,
+      .footer-detail-value a,
+      .footer-links a {
+        font-size: 12px !important;
+      }
+    }
+
+  
+
+    /* =========================================================
+       DAYCARE MOBILE QUICK NAV — FINAL
+    ========================================================= */
+    @media (max-width: 620px) {
+      .quick-nav {
+        box-shadow: 0 5px 14px rgba(42,41,38,0.06) !important;
+      }
+
+      .quick-nav-inner {
+        width: 100% !important;
+        min-height: 0 !important;
+        padding: 6px 8px !important;
+
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 2px 4px !important;
+
+        overflow: visible !important;
+      }
+
+      .quick-nav a {
+        min-width: 0 !important;
+        padding: 7px 3px !important;
+
+        text-align: center !important;
+        white-space: normal !important;
+
+        font-size: 11px !important;
+        line-height: 1.18 !important;
+
+        border-radius: 5px !important;
+      }
+
+      .quick-nav a:hover,
+      .quick-nav a:focus-visible {
+        background: rgba(255,255,255,0.07) !important;
+      }
+    }
+
+    /* =========================================================
+       DAYCARE FAQ BRIDGE — MORE TEAL BELOW ART ON MOBILE
+    ========================================================= */
+    @media (max-width: 760px) {
+      .faq-bridge {
+        padding-bottom: 16px !important;
+      }
+
+      .faq-bridge-dogs {
+        margin-bottom: 12px !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .faq-bridge-dogs {
+        margin: 0 -6% 14px !important;
+      }
+    }
+
   </style>
 </head>
 
