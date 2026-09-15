@@ -1,7 +1,7 @@
 window.FARMHOUSE_SITE_CONTENT = {
   "daycare": {
     "rates": {
-      "fullDay": "27",
+      "fullDay": "30",
       "threeDay": "25",
       "fourDay": "24",
       "fiveDay": "23"
@@ -11,7 +11,7 @@ window.FARMHOUSE_SITE_CONTENT = {
     "typicalDay": [
       "Mornings are mostly about getting everyone settled in and giving the dogs lots of time to play, move around, and burn off some energy.",
       "Around midday, dogs who bring lunch are fed separately. Morning half-day dogs head home, afternoon dogs arrive, and things usually get a little quieter for a while.",
-      "Then it is back outside or into another round of play before everyone starts heading home for the day."
+      "Then it is back outside or into another round of play before everyone starts heading home for the day.\nTEST"
     ],
     "gettingStarted": [
       "Because the daycare group stays small, spaces are limited. Spots do open up as schedules change and dogs move on, so it is always worth getting in touch.",
