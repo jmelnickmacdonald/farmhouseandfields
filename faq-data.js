@@ -45,21 +45,21 @@ window.FARMHOUSE_FAQS = [
     "id": "hours",
     "category": "daycare-booking",
     "question": "What are drop-off and pick-up times?",
-    "answer": "Full-day drop-off is between 7:30 and 9:00 a.m., with pick-up between 4:00 and 5:00 p.m.",
+    "answer": "Full days: drop-off is between 7:30 and 9:00 a.m., with pick-up between 4:00 and 5:00 p.m.",
     "keywords": "hours time times opening drop off drop-off pickup pick up full day morning afternoon"
   },
   {
     "id": "half-days",
     "category": "daycare-booking",
     "question": "Are half days available?",
-    "answer": "Yes. Morning half-days use the regular morning drop-off and finish between 12:00 and 1:00. Afternoon half-days start between 12:00 and 1:00 and finish with the regular 4:00 to 5:00 pick-up.",
+    "answer": "Morning half-days use the regular morning drop-off and finish between 12:00 and 1:00. Afternoon half-days start between 12:00 and 1:00 and finish with the regular 4:00 to 5:00 pick-up.",
     "keywords": "half day half-day morning afternoon noon twelve 12 1"
   },
   {
     "id": "typical-day",
     "category": "daycare-booking",
     "question": "What does a typical daycare day look like?",
-    "answer": "Mornings are mostly for arrivals and play. Around midday, dogs who bring lunch are fed separately, half-day dogs come and go, and the group usually gets some quieter time. There is more play in the afternoon before everyone heads home.",
+    "answer": "Mornings are mostly about getting everyone settled in and giving the dogs lots of time to play, move around, and burn off some energy. Around midday, dogs who bring lunch are fed separately. Morning half-day dogs head home, afternoon dogs arrive, and things usually get a little quieter for a while. Then it is back outside or into another round of play before everyone starts heading home for the day.",
     "keywords": "typical day schedule routine play nap rest lunch morning afternoon"
   },
   {
