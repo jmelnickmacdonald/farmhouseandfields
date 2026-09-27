@@ -4,11 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Daycare | Farmhouse & Fields Dog Daycare</title>
-  <meta
-    name="description"
-    content="Hours, rates, booking, meals, closed-pack daycare, supervision, and what a typical day looks like at Farmhouse & Fields Dog Daycare in Canning, Nova Scotia."
-  >
+  <title>Dog Daycare in Canning, NS | Farmhouse & Fields</title>
+  <meta name="description" content="See hours, rates, full and half days, booking, meals, supervision, the daily routine, and how to get started at Farmhouse & Fields Dog Daycare in Canning, Nova Scotia.">
+
+  
+  <!-- SEO START -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://farmhouseandfields.ca/daycare.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Farmhouse &amp; Fields Dog Daycare">
+  <meta property="og:title" content="Dog Daycare in Canning, NS | Farmhouse & Fields">
+  <meta property="og:description" content="See hours, rates, full and half days, booking, meals, supervision, the daily routine, and how to get started at Farmhouse & Fields Dog Daycare in Canning, Nova Scotia.">
+  <meta property="og:url" content="https://farmhouseandfields.ca/daycare.html">
+  <meta property="og:image" content="https://farmhouseandfields.ca/assets/3.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dog Daycare in Canning, NS | Farmhouse & Fields">
+  <meta name="twitter:description" content="See hours, rates, full and half days, booking, meals, supervision, the daily routine, and how to get started at Farmhouse & Fields Dog Daycare in Canning, Nova Scotia.">
+  <meta name="twitter:image" content="https://farmhouseandfields.ca/assets/3.jpg">
+  <!-- SEO END -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1411,6 +1424,32 @@
       }
     }
 
+  
+    /* SITE CREDIT */
+    .site-credit {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .site-credit a { color: var(--river); font-weight: 600; text-decoration: none; }
+    .site-credit a:hover, .site-credit a:focus-visible { color: var(--wine); text-decoration: underline; text-underline-offset: 2px; }
+
+  
+    /* GETTING STARTED GUIDE */
+    .guide-section { padding: 74px 0; background: var(--oat-soft); }
+    .guide-grid { display: grid; grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr); gap: 64px; align-items: center; }
+    .guide-cover-wrap { max-width: 310px; justify-self: center; }
+    .guide-cover { width: 100%; border-radius: 4px; box-shadow: 0 18px 44px rgba(42,41,38,.12); transform: rotate(-1deg); }
+    .guide-copy { max-width: 610px; }
+    .guide-copy h2 { margin: 0; color: var(--wine); font-family: "Aubrey", serif; font-size: clamp(42px, 3.1vw, 52px); font-weight: 400; line-height: .98; }
+    .guide-copy p:not(.eyebrow) { margin: 18px 0 0; color: var(--body); font-size: 17px; line-height: 1.72; }
+    .guide-link { margin-top: 24px; min-height: 48px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 9px; background: var(--wine); color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
+    .guide-link:hover, .guide-link:focus-visible { background: var(--wine-dark); }
+    @media (max-width: 830px) { .guide-section { padding: 58px 0; } .guide-grid { grid-template-columns: 1fr; gap: 34px; } .guide-cover-wrap { max-width: 260px; } .guide-copy { text-align: center; margin: 0 auto; } }
+    @media (max-width: 620px) { .guide-section { padding: 50px 0; } .guide-cover-wrap { max-width: 220px; } .guide-copy h2 { font-size: 42px; } .guide-copy p:not(.eyebrow) { font-size: 16px; } .guide-link { width: 100%; } }
+
   </style>
 </head>
 
@@ -1495,6 +1534,7 @@
       <a href="#hours-rates">Hours & rates</a>
       <a href="#typical-day">A typical day</a>
       <a href="#getting-started">Getting started</a>
+      <a href="farmhouse-fields-getting-started-guide.pdf" target="_blank" rel="noopener">Guide</a>
       <a href="faqs.html">FAQs</a>
     </div>
   </nav>
@@ -1637,6 +1677,21 @@
     </div>
   </section>
 
+
+  <section class="guide-section" aria-labelledby="guide-title">
+    <div class="page-inner guide-grid">
+      <div class="guide-cover-wrap">
+        <img src="assets/getting-started-guide-cover.jpg" alt="Cover of the Farmhouse & Fields Getting Started guide" class="guide-cover">
+      </div>
+      <div class="guide-copy">
+        <p class="eyebrow">Take it with you</p>
+        <h2 id="guide-title">Getting started at the Farmhouse.</h2>
+        <p>A short guide to what daycare here feels like, what to expect from those first few days, and how getting started works.</p>
+        <a class="guide-link" href="farmhouse-fields-getting-started-guide.pdf" target="_blank" rel="noopener">View the getting started guide →</a>
+      </div>
+    </div>
+  </section>
+
   <section class="start-section" id="getting-started">
     <div class="page-inner start-grid">
 
@@ -1712,6 +1767,9 @@
     <div class="footer-bottom">
       <span>© <span id="currentYear"></span> Farmhouse &amp; Fields Dog Daycare</span>
       <span class="footer-bottom-location">Canning, Nova Scotia</span>
+    </div>
+    <div class="site-credit">
+      Site &amp; support by <a href="https://www.theyellowfrontdoor.ca/" target="_blank" rel="noopener noreferrer">The Yellow Front Door</a>
     </div>
   </div>
 </footer>
