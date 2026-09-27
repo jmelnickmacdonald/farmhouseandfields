@@ -1613,13 +1613,41 @@
     /* SITE CREDIT */
     .site-credit {
       margin-top: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+
       color: var(--muted);
+
       font-size: 10px;
-      line-height: 1.5;
+      line-height: 1.2;
       text-align: center;
     }
-    .site-credit a { color: var(--river); font-weight: 600; text-decoration: none; }
-    .site-credit a:hover, .site-credit a:focus-visible { color: var(--wine); text-decoration: underline; text-underline-offset: 2px; }
+
+    .site-credit a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+
+      color: var(--river);
+      font-weight: 600;
+
+      text-decoration: none;
+    }
+
+    .site-credit a:hover,
+    .site-credit a:focus-visible {
+      color: var(--wine);
+    }
+
+    .site-credit img {
+      width: auto;
+      height: 19px;
+
+      opacity: 0.92;
+    }
 
   </style>
 </head>
@@ -2061,7 +2089,21 @@
       <span class="footer-bottom-location">Canning, Nova Scotia</span>
     </div>
     <div class="site-credit">
-      Site &amp; support by <a href="https://www.theyellowfrontdoor.ca/" target="_blank" rel="noopener noreferrer">The Yellow Front Door</a>
+      <span>Site &amp; support by</span>
+
+      <a
+        href="https://www.theyellowfrontdoor.ca/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="The Yellow Front Door"
+      >
+        <img
+          src="assets/tyfd-door.png"
+          alt=""
+          aria-hidden="true"
+        >
+        <span>The Yellow Front Door</span>
+      </a>
     </div>
   </div>
 </footer>
