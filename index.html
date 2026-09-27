@@ -10,10 +10,23 @@
 
   <title>Farmhouse & Fields Dog Daycare | Canning, Nova Scotia</title>
 
-  <meta
-    name="description"
-    content="Farmhouse & Fields Dog Daycare in Canning, Nova Scotia. Your dog's home away from home, with room to run, familiar faces, and plenty of time to just be dogs."
-  >
+  <meta name="description" content="Small-group dog daycare in Canning, Nova Scotia, with a familiar group of regular dogs, indoor and outdoor supervision, full and half days, and flexible booking for regular clients.">
+
+  
+  <!-- SEO START -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://farmhouseandfields.ca/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Farmhouse &amp; Fields Dog Daycare">
+  <meta property="og:title" content="Farmhouse & Fields Dog Daycare | Canning, Nova Scotia">
+  <meta property="og:description" content="Small-group dog daycare in Canning, Nova Scotia, with a familiar group of regular dogs, indoor and outdoor supervision, full and half days, and flexible booking for regular clients.">
+  <meta property="og:url" content="https://farmhouseandfields.ca/">
+  <meta property="og:image" content="https://farmhouseandfields.ca/assets/doghero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Farmhouse & Fields Dog Daycare | Canning, Nova Scotia">
+  <meta name="twitter:description" content="Small-group dog daycare in Canning, Nova Scotia, with a familiar group of regular dogs, indoor and outdoor supervision, full and half days, and flexible booking for regular clients.">
+  <meta name="twitter:image" content="https://farmhouseandfields.ca/assets/doghero.png">
+  <!-- SEO END -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1030,6 +1043,27 @@
       font-weight: 600;
     }
 
+    .site-credit {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .site-credit a {
+      color: var(--river);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .site-credit a:hover,
+    .site-credit a:focus-visible {
+      color: var(--wine);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
 
     /* =========================================================
        LAPTOP
@@ -1057,7 +1091,27 @@
       }
 
       .hero-copy-inner {
-        width: 31%;
+        width: 34%;
+        max-width: 300px;
+      }
+
+      /* Keep the hero copy clear of the dogs on narrow desktop/laptop screens. */
+      .hero-title {
+        font-size: clamp(45px, 4.7vw, 52px);
+      }
+
+      .hero-tagline {
+        font-size: 17px;
+      }
+
+      .hero-description {
+        max-width: 290px;
+        font-size: 15.5px;
+        line-height: 1.58;
+      }
+
+      .hero-image {
+        object-position: 64% 48%;
       }
 
       .regulars-title {
@@ -1870,6 +1924,11 @@
         align-items: center !important;
         text-align: center !important;
       }
+
+      .site-credit {
+        margin-top: 9px !important;
+        text-align: center !important;
+      }
     }
 
     @media (max-width: 430px) {
@@ -1896,6 +1955,45 @@
     @media(max-width:760px){.site-notice{padding:10px 6%;font-size:12px}}
 
   </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://farmhouseandfields.ca/#business",
+  "name": "Farmhouse & Fields Dog Daycare",
+  "url": "https://farmhouseandfields.ca/",
+  "telephone": "+1-902-824-1979",
+  "email": "farmhousefieldsdaycare@gmail.com",
+  "description": "Small-group dog daycare in Canning, Nova Scotia, with a familiar group of regular dogs, indoor and outdoor supervision, full and half days, and flexible booking for regular clients.",
+  "image": "https://farmhouseandfields.ca/assets/doghero.png",
+  "logo": "https://farmhouseandfields.ca/assets/farmhouseandfieldslogo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "571 Woodside Rd.",
+    "addressLocality": "Canning",
+    "addressRegion": "NS",
+    "addressCountry": "CA"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61568074120165",
+    "https://www.instagram.com/farmhousefieldsdogdaycare/"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://farmhouseandfields.ca/#website",
+  "url": "https://farmhouseandfields.ca/",
+  "name": "Farmhouse & Fields Dog Daycare",
+  "publisher": {
+    "@id": "https://farmhouseandfields.ca/#business"
+  }
+}
+  </script>
+
 </head>
 
 
@@ -2355,6 +2453,11 @@
     <div class="footer-bottom">
       <span>© <span id="currentYear"></span> Farmhouse &amp; Fields Dog Daycare</span>
       <span class="footer-bottom-location">Canning, Nova Scotia</span>
+    </div>
+
+    <div class="site-credit">
+      Site &amp; support by
+      <a href="https://www.theyellowfrontdoor.ca/" target="_blank" rel="noopener noreferrer">The Yellow Front Door</a>
     </div>
   </div>
 </footer>
