@@ -2200,14 +2200,31 @@
     <section class="home-hero">
 
       <div class="hero-image-wrap">
+  <picture>
+    <source
+      media="(max-width: 1080px)"
+      srcset="assets/doghero-mobile.jpg"
+    >
 
-        <img
-          src="assets/doghero.png"
-          alt="Dogs gathered together outside at Farmhouse & Fields Dog Daycare"
-          class="hero-image"
-        >
+    <img
+      src="assets/doghero.png"
+      alt="Dogs gathered together outside at Farmhouse & Fields Dog Daycare"
+      class="hero-image"
+    >
+  </picture>
+</div>
 
-      </div>
+      .hero-image-wrap picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image-wrap picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
       <div class="hero-copy">
