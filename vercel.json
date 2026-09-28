@@ -1,1 +1,9 @@
-
+{
+  "redirects": [
+    {
+      "source": "/admin",
+      "destination": "https://script.google.com/macros/s/AKfycby3GX4upNM8FylutiGFT2U6XdbGYXlC4wMGtIPW7Nj0cuwf6aF-BupwjUEMHZCk6Oj5uw/exec",
+      "permanent": false
+    }
+  ]
+}
